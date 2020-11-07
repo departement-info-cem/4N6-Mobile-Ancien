@@ -12,7 +12,7 @@ public class CatchAllMapper implements ExceptionMapper<Exception> {
 
     @Override
     public Response toResponse(Exception ex) {
-        ex.printStackTrace();
+        //ex.printStackTrace();
         return Response.status(Response.Status.BAD_REQUEST).entity(ex.getClass().getSimpleName()).build();
     }
 
