@@ -1,4 +1,4 @@
-package org.bbtracker;
+package org.bbtracker.server.jersey;
 
 import com.google.gson.Gson;
 
@@ -22,7 +22,7 @@ import java.lang.reflect.Type;
 @Consumes(MediaType.APPLICATION_JSON)
 public class GSONMapper  implements
         MessageBodyWriter<Object>,
-    MessageBodyReader<Object> {
+        MessageBodyReader<Object> {
 
     private static final String UTF_8 = "UTF-8";
 
@@ -37,7 +37,7 @@ public class GSONMapper  implements
     }
 
     public boolean isReadable(Class<?> type, Type genericType,
-                              java.lang.annotation.Annotation[] annotations, MediaType mediaType) {
+                              Annotation[] annotations, MediaType mediaType) {
         return true;
     }
 

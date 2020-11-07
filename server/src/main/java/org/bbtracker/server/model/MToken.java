@@ -1,4 +1,4 @@
-package org.bbtracker.model;
+package org.bbtracker.server.model;
 
 import org.joda.time.DateTime;
 

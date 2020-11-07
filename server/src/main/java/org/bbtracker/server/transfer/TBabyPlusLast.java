@@ -1,6 +1,6 @@
-package org.bbtracker.transfer;
+package org.bbtracker.server.transfer;
 
-import org.bbtracker.model.MBabyEvent;
+import org.bbtracker.server.model.MBabyEvent;
 
 import java.util.UUID;
 

@@ -1,18 +1,19 @@
-package org.bbtracker;
+package org.bbtracker.server.jersey;
 
 //import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
 
 @Path("/employees")
 public class EmployeeResource {
  
 //    @Autowired
-    private Service employeeRepository;
+    //private Service employeeRepository;
  
     @GET
     @Path("/{id}")

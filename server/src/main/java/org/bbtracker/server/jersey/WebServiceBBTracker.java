@@ -1,18 +1,21 @@
-package org.bbtracker;
+package org.bbtracker.server.jersey;
 
 import com.google.gson.Gson;
-import org.bbtracker.transfer.AddBabyRequest;
-import org.bbtracker.transfer.SignupRequest;
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.bbtracker.server.transfer.AddBabyRequest;
+import org.bbtracker.server.transfer.SignupRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 @Path("/")
 public class WebServiceBBTracker {
 
-//	@Autowired // Spring finds automatically the @Component that fits the interface
+	@Autowired // Spring finds automatically the @Component that fits the interface
 	private Service service;
 
     public static class NoCookie extends Exception{}
@@ -25,13 +28,14 @@ public class WebServiceBBTracker {
 		gson = new Gson();
 	}
 
-	@POST					@Path("/signin")
+	@POST
+	@Path("/signin")
 	public Response signin(String s) {
         System.out.println("WS SOCIAL : SIGNIN request " + s);
         String fakeToken = UUID.randomUUID().toString();
         NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", null, "id token", 604800, false);
 		System.out.println("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
-        return Response.ok(gson.toJson(fakeToken),MediaType.APPLICATION_JSON)
+        return Response.ok(gson.toJson(fakeToken), MediaType.APPLICATION_JSON)
                 .cookie(cookiee)
                 .build();
 	}
@@ -64,15 +68,16 @@ public class WebServiceBBTracker {
 		return res;
 	}
 
-	@POST
+	@POST @Path("/addbaby")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String addBaby(
 			AddBabyRequest request, @Context UriInfo uriInfo) {
-		// TODO
-		return "";
+		service.addBaby(request);
+		return "pipo";
 	}
 
-    @GET					@Path("/all")
+    @GET
+	@Path("/all")
     @Produces(MediaType.APPLICATION_JSON)
     public String all(@CookieParam(Cookie) Cookie cookie) throws NoCookie {
 		System.out.println("WS SOCIAL : ALL REQUEST  with cookie ::: " + cookie);

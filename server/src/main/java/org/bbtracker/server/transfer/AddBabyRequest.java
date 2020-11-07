@@ -1,4 +1,4 @@
-package org.bbtracker.transfer;
+package org.bbtracker.server.transfer;
 
 public class AddBabyRequest {
 

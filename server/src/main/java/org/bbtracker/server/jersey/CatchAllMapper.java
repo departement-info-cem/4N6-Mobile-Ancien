@@ -1,5 +1,6 @@
-package org.bbtracker;
+package org.bbtracker.server.jersey;
 
+import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
@@ -10,9 +11,9 @@ import javax.ws.rs.ext.Provider;
 public class CatchAllMapper implements ExceptionMapper<Exception> {
 
     @Override
-    public javax.ws.rs.core.Response toResponse(Exception ex) {
+    public Response toResponse(Exception ex) {
         ex.printStackTrace();
-        return javax.ws.rs.core.Response.status(javax.ws.rs.core.Response.Status.BAD_REQUEST).entity(ex.getClass().getSimpleName()).build();
+        return Response.status(Response.Status.BAD_REQUEST).entity(ex.getClass().getSimpleName()).build();
     }
 
 }
