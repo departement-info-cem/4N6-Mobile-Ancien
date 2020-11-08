@@ -1,7 +1,10 @@
 package org.bbtracker.server.jersey;
 
 import com.google.gson.Gson;
+import org.bbtracker.server.exceptions.BadCredentials;
 import org.bbtracker.server.transfer.AddBabyRequest;
+import org.bbtracker.server.transfer.SigninRequest;
+import org.bbtracker.server.transfer.SigninResponse;
 import org.bbtracker.server.transfer.SignupRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,12 +33,13 @@ public class WebServiceBBTracker {
 
 	@POST
 	@Path("/signin")
-	public Response signin(String s) {
+	public Response signin(SigninRequest s) throws BadCredentials {
         System.out.println("WS SOCIAL : SIGNIN request " + s);
+        SigninResponse resp = service.signin(s);
         String fakeToken = UUID.randomUUID().toString();
         NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", null, "id token", 604800, false);
 		System.out.println("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
-        return Response.ok(gson.toJson(fakeToken), MediaType.APPLICATION_JSON)
+        return Response.ok(gson.toJson(resp), MediaType.APPLICATION_JSON)
                 .cookie(cookiee)
                 .build();
 	}
@@ -45,6 +49,7 @@ public class WebServiceBBTracker {
 		System.out.println("WS SOCIAL : SIGNUP request " + s);
 		service.signup(s);
 		String fakeToken = UUID.randomUUID().toString();
+		// TODO token and storage
 		NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", null, "id token", 604800, false);
 		System.out.println("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
 		return Response.ok(gson.toJson(fakeToken),MediaType.APPLICATION_JSON)

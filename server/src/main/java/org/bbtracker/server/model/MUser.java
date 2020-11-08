@@ -1,9 +1,5 @@
 package org.bbtracker.server.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +10,7 @@ import java.util.List;
 public class MUser {
 
     public Long id;
-    public String email;
+    public String username;
     public byte[] password;
 
     public List<Long> babiesIDs = new ArrayList<>();
@@ -22,7 +18,7 @@ public class MUser {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("MUser{");
-        sb.append("email='").append(email).append('\'');
+        sb.append("email='").append(username).append('\'');
         sb.append(", password='").append(password).append('\'');
         sb.append(", babiesIDs=").append(babiesIDs);
         sb.append('}');

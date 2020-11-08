@@ -7,7 +7,7 @@ import java.util.UUID;
 /**
  * Created by joris on 15-09-15.
  */
-public class TBabyPlusLast {
+public class BabyHomeResponse {
 
     public String name;
 
@@ -22,7 +22,7 @@ public class TBabyPlusLast {
         return sb.toString();
     }
 
-    public UUID id; // used to go the page afterwards.
+    public Long id;
 
     public MBabyEvent last;
 
