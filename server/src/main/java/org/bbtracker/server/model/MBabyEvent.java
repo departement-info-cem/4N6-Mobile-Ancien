@@ -1,13 +1,19 @@
 package org.bbtracker.server.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * Created by joris on 15-09-15.
  */
+@Entity
 public class MBabyEvent  {
 
-    public Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id     public Long id;
     public enum Type {Nap30m, Nap1h, Poop, Pee, Drink, Eat}
     public Type type;
     public Date timestamp;

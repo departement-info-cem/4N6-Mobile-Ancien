@@ -1,15 +1,16 @@
-package org.bbtracker.server.model;
+package org.bbtracker.server.repo;
 
-import org.springframework.data.repository.CrudRepository;
+import org.bbtracker.server.model.MUser;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface UserRepository extends PagingAndSortingRepository<TestEntity, Long> {
+public interface MUserRepository extends PagingAndSortingRepository<MUser, Long> {
 
     // this is magical, it is generated if your respect some name conventions
     // https://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
-    List<TestEntity> findByPipo(String pipo);
+    Optional<MUser> findByUsername(String username);
 }

@@ -1,5 +1,6 @@
 package org.bbtracker.server.model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,21 +8,15 @@ import java.util.List;
  * Created by joris on 15-09-15.
  */
 
+@Entity
 public class MUser {
 
-    public Long id;
-    public String username;
-    public byte[] password;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id     public Long id;
+    @Basic  public String username;
+    @Basic  public byte[] password;
 
-    public List<Long> babiesIDs = new ArrayList<>();
+    @OneToMany(fetch=FetchType.EAGER)
+    public List<MBaby> babies = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("MUser{");
-        sb.append("email='").append(username).append('\'');
-        sb.append(", password='").append(password).append('\'');
-        sb.append(", babiesIDs=").append(babiesIDs);
-        sb.append('}');
-        return sb.toString();
-    }
 }

@@ -2,10 +2,8 @@ package org.bbtracker.server.jersey;
 
 import com.google.gson.Gson;
 import org.bbtracker.server.exceptions.BadCredentials;
-import org.bbtracker.server.transfer.AddBabyRequest;
-import org.bbtracker.server.transfer.SigninRequest;
-import org.bbtracker.server.transfer.SigninResponse;
-import org.bbtracker.server.transfer.SignupRequest;
+import org.bbtracker.server.exceptions.Existing;
+import org.bbtracker.server.transfer.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
@@ -45,7 +43,7 @@ public class WebServiceBBTracker {
 	}
 
 	@POST					@Path("/signup")
-	public Response signup(SignupRequest s) {
+	public Response signup(SignupRequest s) throws BadCredentials {
 		System.out.println("WS SOCIAL : SIGNUP request " + s);
 		service.signup(s);
 		String fakeToken = UUID.randomUUID().toString();
@@ -76,20 +74,17 @@ public class WebServiceBBTracker {
 	@POST @Path("/addbaby")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String addBaby(
-			AddBabyRequest request, @Context UriInfo uriInfo) {
+			AddBabyRequest request, @Context UriInfo uriInfo) throws Existing {
 		service.addBaby(request);
 		return "pipo";
 	}
 
     @GET
-	@Path("/all")
+	@Path("/home/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String all(@CookieParam(Cookie) Cookie cookie) throws NoCookie {
-		System.out.println("WS SOCIAL : ALL REQUEST  with cookie ::: " + cookie);
-        if (cookie == null) throw new NoCookie();
-        // build the list
-        List<String> res = Arrays.asList("Jo","Mo","To","Yo");
-        return res.subList(0,new Random().nextInt(res.size())).toString();
+    public List<BabyHomeResponse> home(@CookieParam(Cookie) Cookie cookie, @PathParam("id") long id) throws NoCookie {
+		System.out.println("WS SOCIAL : HOME REQUEST  with cookie ::: " + cookie);
+        return service.home(id);
     }
 
 }

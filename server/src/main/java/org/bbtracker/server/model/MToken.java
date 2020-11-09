@@ -1,14 +1,19 @@
 package org.bbtracker.server.model;
 
+import com.google.common.base.Objects;
 import org.joda.time.DateTime;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class MToken  {
-	public Long id;
-	public Long userID;
-	
-	public Date expirationDate;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Basic		public Long id;
+	@Basic		public Long userID;
+	@Basic		public Date expirationDate;
 
 	public static MToken forUser(MUser p, int validityInDays) {
 		MToken t = new MToken();
@@ -16,11 +21,4 @@ public class MToken  {
 		t.userID = p.id;
 		return t;
 	}
-
-	@Override
-	public String toString() {
-		return "MToken [userID=" + userID + ", expirationDate=" + expirationDate
-				+ ", getId()=" + id + "]";
-	}
-	
 }
