@@ -1,4 +1,4 @@
-package org.bbtracker.server.jersey;
+package org.bbtracker.server.service;
 
 import org.bbtracker.server.exceptions.BadCredentials;
 import org.bbtracker.server.exceptions.Existing;
@@ -10,7 +10,6 @@ import org.bbtracker.server.repo.MUserRepository;
 import org.bbtracker.server.transfer.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -98,7 +97,7 @@ public class ServiceWithDB implements Service{
     public static byte[] hash(String s) {
         try{
             MessageDigest md;
-            md = MessageDigest.getInstance("SHA-256");
+            md = MessageDigest.getInstance("SHA-256"); // TODO changer pour changer l'algorithme de hash.
             md.update(s.getBytes("UTF-8"));
             byte[] digest = md.digest();
             return digest;

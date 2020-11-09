@@ -1,4 +1,4 @@
-package org.bbtracker.server.jersey;
+package org.bbtracker.server.service;
 
 import org.bbtracker.server.exceptions.BadCredentials;
 import org.bbtracker.server.model.*;
@@ -9,8 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import org.springframework.stereotype.Component;
-
+// TODO décommenter pour remplacer le service avec BD par celui avec des listes
 //@Component
 public class ServiceWithLists implements Service {
 

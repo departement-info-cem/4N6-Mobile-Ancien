@@ -1,4 +1,4 @@
-package org.bbtracker.server.jersey;
+package org.bbtracker.server.service;
 
 
 import org.bbtracker.server.exceptions.BadCredentials;
