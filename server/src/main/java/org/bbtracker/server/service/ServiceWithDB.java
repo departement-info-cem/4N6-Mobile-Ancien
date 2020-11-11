@@ -3,9 +3,11 @@ package org.bbtracker.server.service;
 import org.bbtracker.server.exceptions.BadCredentials;
 import org.bbtracker.server.exceptions.Existing;
 import org.bbtracker.server.model.MBaby;
+import org.bbtracker.server.model.MToken;
 import org.bbtracker.server.model.MUser;
 import org.bbtracker.server.repo.MBabyEventRepository;
 import org.bbtracker.server.repo.MBabyRepository;
+import org.bbtracker.server.repo.MTokenRepository;
 import org.bbtracker.server.repo.MUserRepository;
 import org.bbtracker.server.transfer.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +16,7 @@ import org.springframework.stereotype.Component;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 @Component
 public class ServiceWithDB implements Service{
@@ -25,18 +24,23 @@ public class ServiceWithDB implements Service{
     @Autowired MUserRepository repoUser;
     @Autowired MBabyRepository repoBaby;
     @Autowired MBabyEventRepository repoBabyEvent;
+    @Autowired MTokenRepository repoToken;
 
     @Override
-    public void signup(SignupRequest req) throws BadCredentials {
+    public SigninResponse signup(SignupRequest req) throws BadCredentials {
         // TODO validate username and password
         try{
-            MUser user = repoUser.findByUsername(req.username).get();
+            repoUser.findByUsername(req.username).get();
             throw new BadCredentials();
         } catch (NoSuchElementException e) {
             MUser p = new MUser();
             p.username = 			req.username.toLowerCase().trim();
             p.password = 		hash(req.password);
             repoUser.save(p);
+            SigninRequest r = new SigninRequest();
+            r.username = req.username;
+            r.password = req.password;
+            return signin(r);
         }
     }
 
@@ -46,9 +50,11 @@ public class ServiceWithDB implements Service{
             MUser user = repoUser.findByUsername(req.username).get();
             byte[] hash = hash(req.password);
             if (!Arrays.equals(hash, user.password)) throw new BadCredentials();
-            // All is good
+            // All is good create token
+            MToken tok = MToken.forUser(user, 5);
+            repoToken.save(tok);
             SigninResponse response = new SigninResponse();
-            response.userID = user.id;
+            response.token = tok.secret;
             response.username = user.username;
             return response;
         } catch (NoSuchElementException e) {
@@ -57,8 +63,30 @@ public class ServiceWithDB implements Service{
     }
 
     @Override
-    public BabyDetailResponse babyDetail(Long id) {
-        return null;
+    public void signout(String value) throws BadCredentials {
+        MToken token = repoToken.findBySecret(value).get();
+        repoToken.delete(token);
+    }
+
+    @Override
+    public MUser userFromToken(String token) throws BadCredentials {
+        try {
+            MToken tok = repoToken.findBySecret(token).get();
+            if (tok.expirationDate.before(new Date())) throw new BadCredentials();
+            MUser user = repoUser.findById(tok.userID).get();
+            return user;
+        } catch(Exception e) {
+            throw new BadCredentials();
+        }
+    }
+
+    @Override
+    public BabyDetailResponse babyDetail(Long id, MUser user) {
+        MBaby baby = user.babies.stream().filter(elt -> elt.id == id).findFirst().get();
+        BabyDetailResponse response = new BabyDetailResponse();
+        response.name = baby.name;
+        response.id = baby.id;
+        return response;
     }
 
     @Override

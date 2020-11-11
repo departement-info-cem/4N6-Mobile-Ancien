@@ -31,14 +31,15 @@ public class ServiceWithLists implements Service {
     }
 
    @Override
-    public void signup(SignupRequest req) {
+    public SigninResponse signup(SignupRequest req) {
         // TODO validation
        MUser p = new MUser();
        p.username = 			req.username.toLowerCase().trim();
        p.password = 		hash(req.password);
        p.id = idUser++;
        users.add(p);
-    }
+       return null;
+   }
 
     @Override
     public SigninResponse signin(SigninRequest req) throws BadCredentials {
@@ -47,7 +48,6 @@ public class ServiceWithLists implements Service {
                 byte[] hash = hash(req.password);
                 if (Arrays.equals(hash, user.password)) {
                     SigninResponse response = new SigninResponse();
-                    response.userID = user.id;
                     response.username = user.username;
                     return response;
                 }
@@ -57,7 +57,17 @@ public class ServiceWithLists implements Service {
     }
 
     @Override
-    public BabyDetailResponse babyDetail(Long id) {
+    public void signout(String value) throws BadCredentials {
+
+    }
+
+    @Override
+    public MUser userFromToken(String token) throws BadCredentials {
+        return null;
+    }
+
+    @Override
+    public BabyDetailResponse babyDetail(Long id, MUser user) {
         return null;
     }
 
