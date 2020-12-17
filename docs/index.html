@@ -137,135 +137,157 @@
                 <div class="col-md-12 alert ">
                     <strong>Séance par séance</strong>
                     <table class="table table-condensed">
-                        <tr><td><a class="btn btn-primary btn-xs" href="s01.html">1.1</a></td>
-                            <td>Plusieurs activités, librairies de support </td>
-                            <td rowspan="2"  class="alert alert-danger">
-                                <a class="btn btn-primary btn-sm" href="phase1.html">Phase 1 : client Android </a> :
-                                interface graphique > classes de transfert.
+                        <tr><td><a class="btn btn-primary btn-xs" href="#intro">1.1</a></td>
+                            <td>Plusieurs activités, Intent et extra, passer le minimum (souvent juste un id) </td>
+                            <td rowspan="9"  class="alert alert-danger">
+                                <a class="btn btn-primary btn-sm" href="phase1.html">Phase 1 : client Android </a>
+                                <ul>
+                                    <li>Interface graphique</li>
+                                    <li>Tout réussit toujours (signup, signin, création)</li>
+                                    <li>Aucun message d'erreur</li>
+                                    <li>Données codées en dur</li>
+                                    <li>Mise en page, navigation, recyclerview </li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s02.html">1.2</a></td>
-                            <td>Mise en page</td>
+                            <td>Mise en page, LinearLayout match_parent wrap_content et weight</td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s02.html">2.1</a></td>
-                            <td>Mise en page</td>
+                            <td>Mise en page, RecyclerView</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s02.html">2.2</a></td>
-                            <td>Mise en page</td>
+                            <td><a class="btn btn-primary btn-xs" href="s03.html">2.2</a></td><td>Navigation, drawer fonctionnement</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s03.html">3.1</a></td><td>Navigation</td>
+                            <td><a class="btn btn-primary btn-xs" href="s03.html">3.1</a></td><td>Navigation, DrawerLayout > CoordinatorLayout + FAB + SnackBar > LinearLayout</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s03.html">3.2</a></td><td>Navigation</td>
-                        </tr>
-                        <tr>
-                            <td><a class="btn btn-primary btn-xs" href="reseau.html">4.1</a></td>
+                            <td><a class="btn btn-primary btn-xs" href="reseau.html">3.2</a></td>
                             <td>Navigation</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="reseau.html">4.2</a></td>
+                            <td><a class="btn btn-primary btn-xs" href="reseau.html">4.1</a></td>
                             <td>HTTP dans Android, service et DTO</td>
                         </tr>
                          <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s07.html">5.1</a></td><td>HTTP dans Android, service et DTO</td>
+                            <td><a class="btn btn-primary btn-xs" href="s07.html">4.2</a></td><td>HTTP dans Android, service et DTO</td>
                         </tr>
                          <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s07.html">5.2</a></td><td>HTTP dans Android, service et DTO</td>
+                            <td><a class="btn btn-primary btn-xs" href="s07.html">5.1</a></td><td>Démarrer un serveur Spring Java, explication API existante</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s06.html">6.1</a></td>
-                            <td>Intégration client</td>
-                            <td rowspan="5"  class="alert alert-info">
-                                <a class="btn btn-primary btn-sm" href="phase2.html">Phase 2 : web service</a> :
-                                Mise en place du serveur applicatif et intégration client-serveur.
+                            <td><a class="btn btn-primary btn-xs" href="s06.html">5.2</a></td>
+                            <td>Cookies, fonctionnement dans un navigateur, dans Postman, dans okhttp (client de retrofit)</td>
+                            <td rowspan="10"  class="alert alert-info">
+                                <a class="btn btn-primary btn-sm" href="phase2.html">Phase 2 : Intégration avec le serveur fourni.</a> 
+                                <ul>
+                                    <li>Appels Retrofit</li>
+                                    <li>Classes de transfert</li>
+                                    <li>Token dans le cookie</li>
+                                    <li>appels (a)synchrones (app vs. tests)</li>
+                                </ul>
                             </td>
                         </tr>
                          <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s07.html">6.2</a></td><td>Intégration client</td>
+                            <td><a class="btn btn-primary btn-xs" href="s07.html">6.1</a></td><td>Intégration client</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s07.html">7.1</a></td><td>Révisions</td>
+                            <td><a class="btn btn-primary btn-xs" href="s07.html">6.2</a></td><td>Révisions Examen Intra</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-danger btn-xs" href="s07.html">7.2</a></td><td>Examen intra</td>
+                            <td><a class="btn btn-danger btn-xs" href="s07.html">7.1</a></td><td>Examen intra</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-primary btn-xs" href="s07.html">7.2</a></td><td>Debug serveur seul : postman, logs</td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s08.html">8.1</a></td>
-                            <td>Serveur et sérialisation de données HTTP</td>
+                            <td>Debug client-serveur : breakpoint sur appels asynchrones, stratégie de breakpoints entre client et serveur</td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s08.html">8.2</a></td>
-                            <td>Gestion des erreurs, message pop up, message localisé (formulaire)</td>
+                            <td>Déploiement du serveur fourni sur un cloud quelconque </td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-primary btn-xs" href="s12.html">9.1</a></td>
+                            <td>Intégration client-serveur</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-primary btn-xs" href="s12.html">9.2</a></td>
+                            <td>I18N : resources dans Android</td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s09.html">9.1</a></td>
-                            <td>Déploiement du serveur fourni sur AWS, mobiliser tests unitaires en leur faisant chercher des erreurs dans le service.</td>
+                            <td>Erreurs : HTTP, codes (200, 400), exceptions</td>
                         </tr>
                          <tr>
                             <td><a class="btn btn-primary btn-xs" href="s09.html">9.2</a></td>
-                            <td>Playstore ? Collège ? Individuel ?</td>
+                            <td>Erreurs : GUI: SnackBar/Toast, Localisés, I18N</td>
+                            <td rowspan="9" class="alert alert-danger">
+                                <a class="btn btn-primary btn-sm" href="phase3.html">TP 3 : améliorations</a> 
+                                 <ul>
+                                    <li>Gestion des erreurs, messages I18N</li>
+                                    <li>Traduction de l'interface</li>
+                                    <li>Indicateurs de l'attente, ProgressBar, ProgressDialog</li>
+                                    <li>Support API et différentes tailles / orientations</li>
+                                    <li>Failles de sécurité à trouver / patcher</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s10.html">10.1</a></td>
-                            <td>Token, cookie et sécurité, implantation client, explication serveur</td>
+                            <td>Sécurité : Spécifications et tests unitaires</td>
+                            
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s10.html">10.2</a></td>
-                            <td>Token, cookie et sécurité, cacher des failles de sécurité dans le serveur et leur en faire trouver une, décrire faille attaque possible et solution à apporter</td>
+                            <td>Sécurité : authentification et contrôle d'accès</td>
+                            
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s11.html">11.1</a></td>
-                            <td>Éléments graphiques pour l'attente</td>
-                            <td rowspan="4" class="alert alert-danger">
-                                <a class="btn btn-primary btn-sm" href="phase3.html">Phase 3 : améliorations</a> :
-                                Sécurité (token et https). Portrait / paysage. GUI pour attente.
-                            </td>
+                            <td>Sécurité : cryptographie (HTTP+S), hashing</td>
                         </tr>
                          <tr>
                             <td><a class="btn btn-primary btn-xs" href="s12.html">11.2</a></td>
-                            <td>Portrait paysage, taille écran, API 14 à 30</td>
+                            <td>Compatibilité : Portrait paysage, taille écran et interface scrollable</td>
                         </tr>
-                        <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s12.html">12.1</a></td>
-                            <td>Portrait paysage, taille écran</td>
-                        </tr>
+                        
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s12.html">12.2</a></td>
-                            <td>Portrait paysage, taille écran</td>
-                        </tr>
-                       
-                        <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s13.html">13.1</a></td>
-                            <td>Gestion de l'attente serveur : dialogues d'attentes</td>
+                            <td>Compatibilité : API 15 à 30 et tests sur émulateurs</td>
                         </tr>
                         <tr>
                             <td><a class="btn btn-primary btn-xs" href="s13.html">13.2</a></td>
-                            <td>Sécurité Access Control : cacher des failles dans le serveur fourni? Regrouper sécurité https, access control, hashing, autres.</td>
+                            <td>Gestion de l'attente serveur : dialogues d'attentes</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s13.html">14.1</a></td>
-                            <td>Intégration des améliorations</td>
-                        </tr>
-                        <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s13.html">14.2</a></td>
-                            <td>Intégration des améliorations</td>
-                        </tr>
-                         <tr>
-                            <td><a class="btn btn-primary btn-xs" href="s15.html">15.1</a></td>
+                            <td><a class="btn btn-primary btn-xs" href="s15.html">14.1</a></td>
                             <td>Révisions</td>
                         </tr>
                         <tr>
-                            <td><a class="btn btn-danger btn-xs" href="s15.html">15.2</a></td>
+                            <td><a class="btn btn-danger btn-xs" href="s15.html">14.2</a></td>
                             <td>Examen final</td>
                         </tr>
                     </table>
                 </div>
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
+ 
         </div>
+        
+        
+        
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
