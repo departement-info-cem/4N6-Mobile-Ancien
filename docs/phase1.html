@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Projet phase 1</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Mobile : <strong>Projet phase 1</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Page du cours</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row well">
+                <div class="">
+                    <div class="col-xs-4 alert">
+                        <strong>Votre application Android</strong>
+                        <p>
+                            Vous allez mettre en place l'application en commençant par l'interface graphique en version factice.
+                        </p>
+
+                    </div>
+                    <div class="col-xs-4 alert ">
+                        <strong>Interface graphique</strong>
+                        <ul>
+                            <li>Les activités affichent toujours les mêmes données</li>
+                            <li>Toutes les actions réussissent tout le temps</li>
+                            <li>Il n'y a aucun message d'erreur</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 alert ">
+                        <strong>Repository Git</strong>
+                        <ul>
+                            <li>1 point repo partagé avec le prof</li>
+                            <li>3 points repository</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activité de connexion
+                    </strong>
+                    <p>
+                        L'application doit démarrer sur une activité connexion.
+                    </p>
+                    <ul>
+                        <li>Un champ pour le nom de l'utilisateur</li>
+                        <li>Un champ pour le mot de passe qui est caché (.....)</li>
+                        <li>Un bouton de connexion qui amène à l'activité d'accueil</li>
+                        <li>Un bouton inscription qui mène à l'activité d'inscription</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activité d'inscription
+                    </strong>
+                    <p>
+                        Activité d'inscription permet à l'utilisateur de créer un compte.
+                    </p>
+                    <ul>
+                        <li>Un champ pour le nom de l'utilisateur</li>
+                        <li>Un champ pour le mot de passe qui est caché (.....)</li>
+                        <li>Un champ pour la confirmation du mot de passe qui est caché (.....)</li>
+                        <li>Un bouton inscription qui mène à l'activité principale (un utilisateur qui crée un compte est automatiquement connecté)</li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activité d'accueil
+                    </strong>
+                    <p>
+                        L'activité d'accueil affiche la liste des tâches de l'utilisateur dans l'ordre d'urgence / procratination.
+                    </p>
+                    <ul>
+                        <li>Une liste en mode recyclerView</li>
+                        <li>
+                            Chaque item de la liste contient:
+                            <ul>
+                                <li>Le nom de la tâche</li>
+                                <li>Son pourcentage d'avancement</li>
+                                <li>Le temps qu'il reste avant l'échéance</li>
+                            </ul>
+                        </li>
+                        <li>Il faut une option / menu / bouton qui mène à l'activité de création d'une tâche</li>
+                        <li>Vous devez faire preuve d'imagination pour l'affichage</li>
+                        <li>Un appui sur un item de la liste mène à l'activité de consultation</li>
+                        <li>Votre activité doit montrer une liste d'au moins 20 items codés en dur</li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activité de création
+                    </strong>
+                    <p>
+                        L'activité de création permet de créer une tâche qui s'ajoutera dans la liste des tâches de l'utilisateur.
+                    </p>
+                    <ul>
+                        <li>Un champ nom pour le nom de la tâche</li>
+                        <li>Un moyen d'entrer la date d'échéance de la tâche</li>
+                        <li>Un bouton d'ajout qui mène à l'activité d'accueil</li>
+                    </ul>
+                </div>
+                
+                
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activité de consultation
+                    </strong>
+                    <p>
+                        L'activité de consultation permet de voir le nom et la date de la tâche. Elle permet de changer le pourcentage d'avancement et d'ajouter des tags.
+                    </p>
+                    <ul>
+                        <li>On peut voir le nom et la date d'échéance de la tâche</li>
+                        <li>On peut voir les tags actuellement associés à la tâche</li>
+                        <li>On peut consulter le pourcentage d'avancement</li>
+                        <li>Il y a un moyen pour modifier le pourcentage d'avancement</li>
+                        <li>Il y a un moyen d'ajouter un tag</li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-4 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Tiroir de navigations
+                    </strong>
+                    <p>
+                        Il permet d'accéder rapidement à toutes les activités principales:
+                    </p>
+                    <ul>
+                        <li>Le tiroir est présent dans toutes les activités hors inscription et connexion</li>
+                        <li>On a le nom de l'utilisateur courant affiché</li>
+                        <li>Il y a les options Accueil, Ajout de tâche et Déconnexion</li>
+                        <li>Il y a le hamburger dans l'ActionBar qui déclenche le tiroir</li>
+                        <li>Le tiroir fonctionne dans toutes les activités hors inscription et connexion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
