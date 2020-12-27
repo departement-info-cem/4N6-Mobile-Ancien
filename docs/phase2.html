@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Projet phase 2 : serveur et API</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Mobile : <strong>Projet phase 2</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Page du cours</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="hidden-xs">
+                    <h3 id="s1">Phase 2 : code serveur et classes de transfert</h3>
+                    <div class="col-xs-4 alert">
+                        <strong>Le vrai serveur</strong>
+                        <p>
+                            Le serveur est fourni dans ce cours ainsi qu'une librairie de classes de transfert (aussi appelés DTO).
+                        </p>
+                        <p>
+                            Dans la phase 2, vous connecterez votre interface graphique de la phase 1 au serveur.
+                        </p>
+                    </div>
+                    <div class="col-xs-4 alert">
+                        <strong>Les étapes</strong>
+                        <ul>
+                            <li>Appels Retrofit</li>
+                            <li>Classes de transfert</li>
+                            <li>Cookie et authentification</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 alert">
+                        Vous pourrez utiliser le code du serveur localement puis ensuite déployé sur une instance heroku.
+                        <ul>
+                            <li>
+                                Repo Github du projet server 
+                                <a href="https://github.com/departement-info-cem/KickMyB-Server">ici</a>.
+                            </li>
+                            <li>Repo Github des classes de transfert 
+                                <a href="https://github.com/departement-info-cem/KickMyB-Library">ici</a>
+                            </li>
+                            <li>
+                                Vous trouverez l'exemple de déploiement du prof
+                                <a href="https://kickmyb-server.herokuapp.com">ici</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 alert">
+                    <strong>Inscription et (déconnexion)</strong>
+                    <p>
+                        Vous devez effectuer les appels de connexion et d'inscription depuis les écrans correspondant et la déconnexion à partir du tiroir de navigation.
+                    </p>
+                    <ul>
+                        <li>/api/id/signin en POST, classes de transfert sont SigninRequest et SigninResponse</li>
+                        <li>/api/id/signup en POST, classes de transfert sont SignupRequest et SigninResponse</li>
+                        <li>/api/id/signout en GET</li>
+                    </ul>
+                    <p>
+                        La classe de réponse est la même pour les 2 car une inscription effectue également la connexion, il s'agit de SigninResponse.
+                    </p>
+                    <p>
+                        Vous devez vous assurer que votre application gère correctement les cookies, c'est nécessaire pour que le serveur maintienne votre identité à travers les différents appels.
+                    </p>
+                </div>
+                
+                
+                <div class="col-md-4 alert">
+                    <strong>Liste et création de tâche</strong>
+                    <p>
+                        Vous codez l'appel qui permet de récupérer la liste des tâches sur l'écran d'accueil ainsi que la création d'une nouvelle tâche. Les appels sont authentifiés, vous n'avez pas à gérer les messages d'erreur (ce sera dans la phase 3).
+                    </p>
+                    <ul>
+                        <li><strong>/api/home</strong> en GET, n'envoie rien (identifié grâce à ton cookie), reçoit une List de HomeItemResponse</li>
+                        <li><strong>/api/add</strong> en POST, envoie un AddTaskRequest et ne reçoit rien</li>
+                    </ul>
+                    <p>
+                        Au niveau de l'écran de création de tâche, vous devez programmer l'appel au serveur. Il s'agit d'un appel authentifié.
+                    </p>
+                </div>
+                
+                <div class="col-md-4 alert">
+                    <strong>Consultation et avancement</strong>
+                    <p>
+                        Vous codez les appels pour l'écran de consultation / modification d'une tâche.
+                    </p>
+                    <ul>
+                        <li>ajout d'un tag</li>
+                        <li>retrait d'un tag</li>
+                        <li>Changement de l'avancement</li>
+                        <li>Ajout d'une image ???</li>
+                    </ul>
+                </div>
+                
+                
+                <div class="col-md-4 alert">
+                    <strong>Déploiement du code serveur sur une instance cloud</strong>
+                    <p>
+                        Vous devez déployer le code du serveur sur une instance heroku.
+                        Vous devez indiquer l'adresse de l'instance pour votre code dans le fichier README de votre projet.
+                        Votre projet remis doit pointer vers votre instance cloud.
+                    </p>
+                </div>
+            </div>
+            
+            
+            <div class="row ">
+                <div class="">
+                    <h3>Fonctionnement global</h3>
+                    <p>
+                        <span class="label label-danger">4 points négatifs</span> 
+                        Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
+                        Dans le cas contraire, vous perdez des points avec un maximum de 4.
+                        Essayez votre application sur un téléphone 5 pouces (Pixel 2) en mode portrait.
+                    </p>
+                    <ul>
+                        <li>plantage de l'application -1 point</li>  
+                        <li>interface illisible -1 point</li>
+                        <li>information affichée incohérente -1 point</li> 
+                        <li>autre cas ...</li> 
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
