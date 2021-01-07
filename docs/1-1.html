@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Programmation mobile</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>4N6</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s1">Premier cours, révisions</h3>
+                <div class="col-md-6 alert">
+                    <strong>Avant la séance</strong>
+                    <p>
+                        C'est la première séance, pas de travail avant.
+                    </p>
+                </div>
+                <div class="col-md-6 alert  alert-warning">
+                    <strong>Séance</strong>
+                    <p>
+                        Plan de cours, évaluations et calendrier.
+                    </p>
+                    <p>
+                        Nous discuterons de l'ensemble de l'application et de comment nous allons
+                        procéder.
+                        
+                    </p>
+                    <ul>
+                        <li>Le serveur sera fourni : <a target="_blank" href="https://github.com/departement-info-cem/KickMyB-Server">repo ici</a></li>
+                        <li>Vous devrez programmer l'application Android pour s'y connecter</li>
+                        <li>Vous programmerez l'interface graphique</li>
+                        <li>Vous programmerez les appels réseaux pour envoyer / recevoir les infos du serveur</li>
+                    </ul>
+                    <p>
+                        Nous passerons à travers les énoncés des 3 phases du projet.
+                    </p>
+                    <p>
+                        Vous complétez quelques exercices de révisions.
+                    </p>
+                </div>
+                
+                <div class="col-md-12 well">
+                    <strong>Exercices de la semaine</strong>
+                    <h3>Exercice A</h3>
+                    <p>
+                        Créez un projet appelé <strong>MultiMulti</strong> contenant 3 activités.
+                        Ajoutez un menu d'options dans le ActionBar (révisions) permettant d'accéder à chacune des activités
+                        depuis chacune des activités.
+                    </p>
+                    <h3>Exercice B</h3>
+                    <p>
+                        Créez un projet appelé <strong>CommunicationActivité</strong> contenant 2 activités.
+                    </p>
+                    <ul>
+                        <li>La première activité contient un EditText et un bouton</li>
+                        <li>Quand on appuie sur le bouton, le texte du EditText est envoyé dans un extra de l'Intent à la deuxième activité</li>
+                        <li>La 2ème activité affiche dans un TextView le texte reçu via l'Intent</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
