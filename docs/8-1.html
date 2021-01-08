@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Programmation mobile</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S8 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s8">Debug client - serveur</h3>
+                <div class="col-md-6 alert alert-success">
+                    <strong>Avant la séance (2h)</strong>
+                    <br>
+                    <p>
+                        TODO video de problèmes courants client-serveur et symptomes? Mauvaise adresse serveur (IOException), mauvaise url (404), problème d'annotation envoi dans Retrofit, Problème de désérialisation JSON sur la réponse. Breakpoints etc.
+                    </p>
+                </div>
+                <div class="col-md-6 alert alert-warning">
+                    <strong>Séance</strong>
+                    <p>
+                        On reviendra rapidement sur les avantages de rouler le serveur en local pour pouvoir déboguer, déterminer qui est fautif (client avant la requête, serveur ou client après la réponse).
+                    </p>
+                    <p>
+                        On reviendra aussi sur les avantages/inconvénients de rouler l'application android sur un émulateur ou sur un périphérique.
+                    </p>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <a class="btn btn-primary btn-xs" >
+                            Exercices de la semaine
+                        </a>
+                        <div>
+                            Exercice avec un client et un serveur et trouver un problème?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
