@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>4N6</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>4N6</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s8">Sécurité : crypto HTTP(S) et hashing</h3>
+                <div class="col-md-6 alert alert-success">
+                    <strong>Avant la séance (2h)</strong>
+                    <br>
+                    TODO video sur ça ce qui est encrypté dans HTTPS
+                    TODO video sur pourquoi le hashing, la stratégie par défaut de Spring
+
+                </div>
+                <div class="col-md-6 alert alert-warning">
+                    <strong>Cryptographie</strong>
+                    <p>
+                        On discutera de différentes possibilités cryptographiques et de leurs cas d'utilisation
+                    </p>
+                    <ul>
+                        <li>SSL et encryption asymétrique</li>
+                        <li>encryption symétrique et champs de données sensibles (NAS, carte de crédit)</li>
+                        <li>Fonction de hash et mode de passe</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <a class="btn btn-primary btn-xs" >
+                            Exercices de la semaine
+                        </a>
+                        <div >
+                            <h3>Exercice A</h3>
+                            <p>
+                                En utilisant la console de la base de données H2 regarder le format du champ gnagna dans la table XXX. 
+                            </p>
+                            <h3>Exercice B</h3>
+                            <p>
+                                En jouant dans les commentaires dans le fichier XXX, changer le PasswordEncoder pour que le mot de passe soit en clair dans votre application.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
