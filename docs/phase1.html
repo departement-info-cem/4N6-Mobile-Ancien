@@ -45,9 +45,9 @@
             <div class="row well">
                 <div class="">
                     <div class="col-xs-4 alert">
-                        <strong>Votre application Android</strong>
+                        <h2>Votre application Android</h2>
                         <p>
-                            Vous allez mettre en place l'application en commençant par l'interface graphique en version factice.
+                            Vous allez mettre en place l'application en commençant par l'<u>interface graphique</u> en version factice.
                         </p>
 
                     </div>
@@ -61,35 +61,17 @@
                     </div>
                     <div class="col-xs-4 alert ">
                         <strong>Repository Git</strong>
-                        <ul>
-                            <li>1 point repo partagé avec le prof</li>
-                            <li>3 points repository</li>
-                        </ul>
-                    </div>
-                </div>
+                        <div>
+						<span class="label label-success">1 point</span> Le nom du repo est <em>A20-4204N6-KickMyB-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="git.html">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+					</div>
+					<div>
+						<span class="label label-success">2 points</span> Un minimum de 6 commits de tailles comparables. Au moins un commit par activité. De plus, il n'y a pas un commit avec tout dedans et les autres vides. Les commits décrivent l'avancement du projet dans un français correct (passe Word).
+					</div>
             </div>
             <div class="row ">
                 <div class="col-xs-4 alert ">
                     <strong>
-                        <span class="label label-success">4 points</span>
-                        Activité de connexion
-                    </strong>
-                    <p>
-                        L'application doit démarrer sur une activité connexion.
-                    </p>
-                    <ul>
-                        <li>Un champ pour le nom de l'utilisateur</li>
-                        <li>Un champ pour le mot de passe qui est caché (.....)</li>
-                        <li>Un bouton de connexion qui amène à l'activité d'accueil</li>
-                        <li>Un bouton inscription qui mène à l'activité d'inscription</li>
-                    </ul>
-                </div>
-                
-                
-                
-                <div class="col-xs-4 alert ">
-                    <strong>
-                        <span class="label label-success">4 points</span>
+                        <span class="label label-success">2 points</span>
                         Activité d'inscription
                     </strong>
                     <p>
@@ -102,35 +84,51 @@
                         <li>Un bouton inscription qui mène à l'activité principale (un utilisateur qui crée un compte est automatiquement connecté)</li>
                     </ul>
                 </div>
-                
+				
                 <div class="col-xs-4 alert ">
                     <strong>
-                        <span class="label label-success">4 points</span>
+                        <span class="label label-success">2 points</span>
+                        Activité de connexion
+                    </strong>
+                    <p>
+                        L'application doit démarrer sur une activité connexion.
+                    </p>
+                    <ul>
+                        <li>Un champ pour le nom de l'utilisateur</li>
+                        <li>Un champ pour le mot de passe qui est caché (.....)</li>
+                        <li>Un bouton de connexion qui amène à l'activité d'accueil</li>
+                        <li>Un bouton inscription qui mène à l'activité d'inscription</li>
+                    </ul>
+                </div>
+				
+                <div class="col-xs-4 alert ">
+                    <strong>
                         Activité d'accueil
                     </strong>
                     <p>
-                        L'activité d'accueil affiche la liste des tâches de l'utilisateur dans l'ordre d'urgence / procratination.
+                        L'activité d'accueil affiche la liste des tâches de l'utilisateur.
                     </p>
                     <ul>
-                        <li>Une liste en mode recyclerView</li>
-                        <li>
+						<li><span class="label label-success">1 point</span> Il faut une option / menu / bouton qui mène à l'activité de création d'une tâche</li>
+                        <li><span class="label label-success">1 point</span> Un appui sur un item de la liste mène à l'activité de consultation</li>
+                        <li><span class="label label-success">3 points</span> Une liste en mode recyclerView.</li>
+						Pour chaque élément d'information, vous pouvez choisir d'afficher du texte et/ou un élément graphique. Vous devez faire preuve d'imagination pour l'affichage.</li>
+                        
                             Chaque item de la liste contient:
                             <ul>
                                 <li>Le nom de la tâche</li>
-                                <li>Son pourcentage d'avancement</li>
-                                <li>Le temps qu'il reste avant l'échéance</li>
+                                <li>Son pourcentage d'avancement de la tâche (ex: 30%)</li>
+								<li>Le temps écoulé depuis la création de la tâche (ex: 3 jours / 7)</li>
+                                <li>La date limite</li>
                             </ul>
-                        </li>
-                        <li>Il faut une option / menu / bouton qui mène à l'activité de création d'une tâche</li>
-                        <li>Vous devez faire preuve d'imagination pour l'affichage</li>
-                        <li>Un appui sur un item de la liste mène à l'activité de consultation</li>
-                        <li>Votre activité doit montrer une liste d'au moins 20 items codés en dur</li>
+                        
+                        Votre activité doit montrer une liste d'au moins 200 items codés en dur
                     </ul>
                 </div>
                 
                 <div class="col-xs-4 alert ">
                     <strong>
-                        <span class="label label-success">4 points</span>
+                        <span class="label label-success">2 points</span>
                         Activité de création
                     </strong>
                     <p>
@@ -146,35 +144,38 @@
                 
                 <div class="col-xs-4 alert ">
                     <strong>
-                        <span class="label label-success">4 points</span>
                         Activité de consultation
                     </strong>
                     <p>
-                        L'activité de consultation permet de voir le nom et la date de la tâche. Elle permet de changer le pourcentage d'avancement et d'ajouter des tags.
+                        L'activité de consultation permet de voir le nom et la date de la tâche. Elle permet de changer le pourcentage d'avancement.
                     </p>
                     <ul>
-                        <li>On peut voir le nom et la date d'échéance de la tâche</li>
-                        <li>On peut voir les tags actuellement associés à la tâche</li>
-                        <li>On peut consulter le pourcentage d'avancement</li>
-                        <li>Il y a un moyen pour modifier le pourcentage d'avancement</li>
-                        <li>Il y a un moyen d'ajouter un tag</li>
+                        <li><span class="label label-success">1 point</span> Présence des éléments suivants
+						<ul>
+							<li>On voit le nom et la date d'échéance de la tâche</li>
+							<li>On voit le pourcentage d'avancement</li>
+							<li>On voit le temps écoulé depuis la création de la tâche</li>
+						</ul>
+                        <li><span class="label label-success">2 points</span> Il y a un moyen pour modifier le pourcentage d'avancement</li>
+						
                     </ul>
                 </div>
                 
                 <div class="col-xs-4 alert ">
                     <strong>
-                        <span class="label label-success">4 points</span>
-                        Tiroir de navigations
+                        Tiroir de navigation
                     </strong>
                     <p>
                         Il permet d'accéder rapidement à toutes les activités principales:
                     </p>
                     <ul>
-                        <li>Le tiroir est présent dans toutes les activités hors inscription et connexion</li>
-                        <li>On a le nom de l'utilisateur courant affiché</li>
-                        <li>Il y a les options Accueil, Ajout de tâche et Déconnexion</li>
-                        <li>Il y a le hamburger dans l'ActionBar qui déclenche le tiroir</li>
-                        <li>Le tiroir fonctionne dans toutes les activités hors inscription et connexion</li>
+                        <li><span class="label label-success">1 point</span> Le tiroir est <u>présent</u> dans toutes les activités <strong>SAUF</strong> inscription et connexion.</li>
+                        On a le nom de l'utilisateur courant affiché.<br/>
+                        Il y a les options Accueil, Ajout de tâche et Déconnexion.
+						<li><span class="label label-success">3 points</span> Le tiroir <u>fonctionne</u> dans toutes les activités <strong>SAUF</strong> inscription et connexion.</li>
+						Accueil amène à l'activité d'Accueil, Ajout de tâche amène à l'activité d'Ajout de tâche et Déconnexion amène à l'activité de Connexion.
+                        <li><span class="label label-success">1 point</span> Il y a le hamburger dans l'ActionBar qui déclenche le tiroir</li>
+                        
                     </ul>
                 </div>
             </div>

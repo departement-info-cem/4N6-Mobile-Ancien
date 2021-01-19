@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>Consignes Git</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body { padding-top: 70px;}
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">Consignes Git</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <h3>Git</h3>
+            </div>
+            <div class="row">
+                <div class="col-md alert alert-success">
+                    <strong>Nom de votre compte </strong>
+                    <p>
+                        Chaque étudiant doit créer un compte pour ses travaux d’école sur GitHub.com. Le nom du compte doit permettre de facilement identifier l’étudiant en incluant ses nom et prénom.
+                    </p>
+                </div>
+                
+                <div class="col-md alert ">
+                    <strong>Nom de du dépot pour un travail </strong>
+                    <p>
+                        Chaque travail devra se trouver dans un dépôt de code source. Le nom du dépôt pour un travail individuel doit respecter le format suivant :
+                        
+                    </p>
+                    <pre>SessionAnnée-NumeroCours-NomTravail-NomPrenom</pre>
+                    <p>
+                        Par exemple le nom H19-4203N5-WebCrawler-SmithJohn correspond à :
+                    </p>
+                    <ul>
+                        <li>La session d’hiver 2019</li>
+                        <li>Dans le cours de 4203N5</li>
+                        <li>Pour le travail WebCrawler</li>
+                        <li>De JohnSmith</li>
+                        
+                    </ul>
+
+                    <p>
+                        Pour un travail d’équipe le nom devra être selon le format:
+                    </p>
+                    <pre>SessionAnnée-NumeroCours-NomTravail-Nom1Nom2...</pre>
+                </div>
+                <div class="col-md alert  alert-warning">
+                    <strong>Contributeurs du repo</strong> 
+                    <p>
+                        Tous les dépôts de code correspondant à des travaux évalués doivent être privés.
+                    </p>
+                    <p>
+                        Vous devez inclure votre professeur dans les collaborateurs de votre dépôt pour qu’il puisse y avoir accès.
+                    </p>
+                    <p>
+                        Les seuls autres collaborateurs avec accès sont les membres de l’équipe s’il s’agit d’un travail d’équipe.
+                    </p>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="row">
+                <h4>Rédaction des commits</h4>
+            </div>
+            <div class="row">
+                <div class="col-md alert alert-dark">
+                    <h4>Quand</h4>
+                    <p>
+                        Tu dois créer des « commits » régulièrement dans ton projet. Tu dois respecter les règles suivantes pour tes commits :
+                    </p>
+                    <ul>
+                        <li>Le code de ton travail compile</li>
+                        <li>S’il existe des tests unitaires dans ton projet, tu les as exécutés. Si certains ne passent pas, tu dois justifier dans la description.</li>
+                    
+                    </ul>
+                    <p>
+                        Un commit contient généralement des modifications à un ou plusieurs fichiers qui constituent un progrès dans ton projet. Tu ne dois pas attendre trop longtemps pour faire un commit mais tu ne dois pas non plus faire un commit à chaque fois que tu changes un fichier.
+                    </p>
+                    <p>
+                        Une indication pratique est de faire un commit dès que tu as gagné au moins un point dans le barème de ton travail.
+                    </p>
+                    
+                </div>
+                
+                <div class="col-md alert">
+                    <h4>Types de commits</h4>
+                    <p>
+                        On te demande d'identifier le type de commit. Tu dois commencer le titre de ton commit avec le type.
+                    </p>
+                    <ul>
+                        <li>FCT (Fonctionnalité) : tu as implanté un nouvel aspect dans ton code qui fonctionne et augmente la valeur de ton travail. Un bon indicateur peut-être que tu as un point de plus selon le barème du professeur.</li>
+                        <li>PROGRES (Progrès) : tu n'as pas fini la fonctionnalité mais il faut que tu t’arrêtes de travailler. Tu décris l’avancement.</li>
+                        <li>
+                           BUGFIX (Débogage) : tu as résolu un problème d’exécution de ton application. Tu dois t’assurer d’avoir supprimer le TODO correspondant dans le code. Tu dois décrire le problème identifié et la solution car il pourrait apparaître ailleurs plus tard.
+                        </li>
+                        <li>NETTOYAGE (Nettoyage) : tu supprimes des éléments dans ton code qui étaient nécessaires au début du développement mais qui ne le sont plus.</li>
+                        <li>REFACTOR (Refactor) : tu as changé l’organisation de ton code pour le rendre plus lisible mais le comportement reste le même.</li>
+                    
+                    </ul>
+
+                </div>
+                
+                <div class="col-md alert alert-info">
+                    <h4>Description du commit</h4>
+                    
+                    <p>
+                        La description de ton commit doit être en français. Nous évaluons la qualité du français. Assure toi que tes descriptions passent le correcteur orthographique de Word par exemple.
+                    </p>
+                    <p>
+                        Les titres de commits ne sont pas obligatoirement des phrases (ils doivent rester courts). Cependant, la description doit contenir des phrases compréhensibles par une personne extérieure. 
+                    </p>
+                    
+                    <h4>Exemple de commit</h4>
+                    
+                    <p>
+                        Tu as modifié 3 fichiers dans ton code qui permettent d'implanter la sauvegarde dans un fichier.
+                    </p>
+                    <ul>
+                        <li>titre : "FCT sauvegarde de configuration dans fichier</li>
+                        <li>description : "J'ai utilisé la librairie Guava pour simplifier la sauvegarde. Le format de sauvegarde est tel que décrit à l'URL https://exemple.com/format"</li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            
+			<div class="row">
+                <h3>Gestion des branches TODO après session 4</h3>
+            </div>
+            
+        </div>
+        <!-- /container -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
