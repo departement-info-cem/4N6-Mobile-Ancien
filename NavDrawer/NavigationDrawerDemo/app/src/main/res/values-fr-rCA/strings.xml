@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NavigationDrawerDemo</string>
+    <string name="hello">Bonjour ça va?</string>
+    <string name="drawer_open">Me fermer</string>
+    <string name="drawer_close">M\'ouvrir</string>
+</resources>
