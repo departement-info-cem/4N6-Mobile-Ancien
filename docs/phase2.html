@@ -42,20 +42,26 @@
         </div>
 
         <div class="container">
-
             <div class="row">
                 <div class="hidden-xs">
                     <h3 id="s1">Phase 2 : code serveur et classes de transfert</h3>
                     <div class="col-xs-4 alert">
                         <strong>Le vrai serveur</strong>
                         <p>
-                            Le serveur est fourni dans ce cours ainsi qu'une librairie de classes de transfert (aussi appelés DTO).
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server">Le serveur</a>
+                             est fourni ainsi qu'une 
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Library">librairie</a>
+                             de classes de transfert (aussi appelés DTO). Vous devrez intégrer cette librairie dans votre projet Android.
                         </p>
+                        <p>
+                            Vous pourrez utiliser le code du serveur localement ou une version déployée sur une instance heroku.
+                        </p>
+                        
+                    </div>
+                    <div class="col-xs-4 alert">
                         <p>
                             Dans la phase 2, vous connecterez votre interface graphique de la phase 1 au serveur.
                         </p>
-                    </div>
-                    <div class="col-xs-4 alert">
                         <strong>Les étapes</strong>
                         <ul>
                             <li>Appels Retrofit</li>
@@ -64,33 +70,29 @@
                         </ul>
                     </div>
                     <div class="col-xs-4 alert">
-                        Vous pourrez utiliser le code du serveur localement puis ensuite déployé sur une instance heroku.
-                        <ul>
-                            <li>
-                                Repo Github du projet server que vous devez lancer pour votre développement local.
-                                <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server">ici</a>.
-                            </li>
-                            <li>Repo Github des classes de transfert que vous devez inclure dans votre projet Android.
-                                <a href="https://github.com/departement-info-cem/KickMyB-Library">ici</a>
-                            </li>
-                            <li>
-                                Vous trouverez l'exemple de déploiement du prof
-                                <a href="https://kickmyb-server.herokuapp.com">ici</a>
-                            </li>
-                        </ul>
+                        
+                        <strong>Repository Git</strong>
+                        <div>
+                            Tu utilises le même repo que pour le TP1.
+                        </div>
+                        <div>
+                            <span class="label label-success">2 points</span> Un minimum de 6 commits de tailles comparables. Tu peux viser un commit par appel au serveur implanté. 
+                        </div>
+                        <div>
+                            Il n'y a pas un commit avec tout dedans et les autres vides. Les commits décrivent l'avancement du projet dans un français correct (passe Word).
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 alert">
-                    <strong>Inscription et (déconnexion)</strong>
+                    <strong>Inscription et connexion</strong>
                     <p>
-                        Vous devez effectuer les appels de connexion et d'inscription depuis les écrans correspondant et la déconnexion à partir du tiroir de navigation.
+                        Vous devez effectuer les appels de connexion et d'inscription depuis les écrans correspondant.
                     </p>
                     <ul>
-                        <li>/api/id/signin en POST, classes de transfert sont SigninRequest et SigninResponse</li>
-                        <li>/api/id/signup en POST, classes de transfert sont SignupRequest et SigninResponse</li>
-                        <li>/api/id/signout en GET</li>
+                        <li><span class="label label-success">2 points</span> <strong>/api/id/signin</strong> en <em>POST</em>, classes de transfert sont SigninRequest et SigninResponse</li>
+                        <li><span class="label label-success">2 points</span> <strong>/api/id/signup</strong> en <em>POST</em>, classes de transfert sont SignupRequest et SigninResponse</li>
                     </ul>
                     <p>
                         La classe de réponse est la même pour les 2 car une inscription effectue également la connexion, il s'agit de SigninResponse.
@@ -98,8 +100,25 @@
                     <p>
                         Vous devez vous assurer que votre application gère correctement les cookies, c'est nécessaire pour que le serveur maintienne votre identité à travers les différents appels.
                     </p>
+                    <p>
+                        <span class="label label-success">2 points</span> Suite à inscription, votre tiroir doit afficher le nom d'utilisateur récupéré à la connexion. Nous vous recommandons de le stocker dans un singleton pour y avoir accès de toutes les activités.
+                    </p>
                 </div>
                 
+                <div class="col-md-4 alert">
+                    <strong>Déconnexion</strong>
+                    <p>
+                        La déconnexion se fait à partir du tiroir de navigation. Elle doit être fonctionnel dans toutes les activités avec le tiroir.
+                    </p>
+                    <ul>
+                        <li><span class="label label-success">1 point</span> <strong>/api/id/signout</strong> en <em>GET</em></li>
+                        <li><span class="label label-success">1 point</span> la déconnexion fonctionne dans toutes les activités avec tiroir de navigation.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    ATTENTION SI VOUS NE FAITES PAS INSCRIPTION ET CONNEXION, VOUS NE POURREZ PAS FAIRE LES OPÉRATIONS SUIVANTES.
+                </div>
                 
                 <div class="col-md-4 alert">
                     <strong>Liste et création de tâche</strong>
@@ -107,12 +126,14 @@
                         Vous codez l'appel qui permet de récupérer la liste des tâches sur l'écran d'accueil ainsi que la création d'une nouvelle tâche. Les appels sont authentifiés, vous n'avez pas à gérer les messages d'erreur (ce sera dans la phase 3).
                     </p>
                     <ul>
-                        <li><strong>/api/home</strong> en GET, n'envoie rien (identifié grâce à ton cookie), reçoit une List de HomeItemResponse</li>
-                        <li><strong>/api/add</strong> en POST, envoie un AddTaskRequest et ne reçoit rien</li>
+                        <li><span class="label label-success">1 point</span> <strong>/api/add</strong> en <em>POST</em>, envoie un AddTaskRequest et ne reçoit rien</li>
+                        <li><span class="label label-success">2 points</span>  <strong>/api/home</strong> en <em>GET</em>, n'envoie rien (identifié grâce à ton cookie), reçoit une liste de HomeItemResponse</li>
+                        
                     </ul>
-                    <p>
-                        Au niveau de l'écran de création de tâche, vous devez programmer l'appel au serveur. Il s'agit d'un appel authentifié.
-                    </p>
+                </div>
+                
+                <div>
+                    ATTENTION SI VOUS POUVEZ PAS CRÉER DE TÂCHE, VOUS NE POURREZ PAS FAIRE LA SUITE.
                 </div>
                 
                 <div class="col-md-4 alert">
@@ -121,9 +142,8 @@
                         Vous codez les appels pour l'écran de consultation / modification d'une tâche.
                     </p>
                     <ul>
-                        <li>Ajout d'un tag</li>
-                        <li>Retrait d'un tag</li>
-                        <li>Changement de l'avancement</li>
+                        <li><span class="label label-success">1 point</span> <strong>/api/detail/{id}</strong> <em>GET</em> prend l'id de la tâche et renvoie un TaskDetailResponse. Permet la récupération du détail de la tâche.</li>
+                        <li><span class="label label-success">1 point</span> <strong>/api/progress/{id}/{valeur}</strong> <em>GET</em> envoie l'id de la tâche et la nouvelle valeur d'avancement entre 0 et 100. Permet de changer le pourcentage d'avancement</li>
                     </ul>
                 </div>
                 
@@ -131,7 +151,10 @@
                 <div class="col-md-4 alert">
                     <strong>Déploiement du code serveur sur une instance cloud</strong>
                     <p>
-                        Vous devez déployer le code du serveur sur une instance heroku.
+                        <span class="label label-success">2 points</span> Vous devez déployer le code du serveur sur une instance heroku.
+                    </p>
+                    <p>
+                        <span class="label label-success">1 point</span> 
                         Votre projet remis doit pointer vers votre instance cloud.
                     </p>
                 </div>
