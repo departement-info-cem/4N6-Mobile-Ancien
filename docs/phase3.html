@@ -31,7 +31,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Mobile : <strong>Projet phase 3</strong></a>
+                    <a class="navbar-brand" href="index.html">4N6 : <strong>Phase 3</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -44,40 +44,32 @@
         <div class="container">
 
             <div class="row">
-                <div class="">
-                    <h3 id="s1">Phase 3</h3>
-                    <div class="col-xs-4 alert">
-                        <strong>Améliorations variées</strong>
-                        <p>
-                            Dans cette phase 3, nous allons apporter des améliorations à votre projet.
-                        </p>
+                <div class="col-xs-4 alert">
+                    <strong>Améliorations variées</strong>
+                    <p>
+                        Dans cette phase 3, nous allons apporter des améliorations à votre projet.
+                    </p>
+                </div>
+                <div class="col-xs-4 alert">
 
-                    </div>
-                    <div class="col-xs-4 alert">
-                        <strong>Les étapes</strong>
-                        <ul>
-                            <li>Multilingue</li>
-                            <li>Gestion des erreurs</li>
-                            <li>Attente dans l'interface graphique</li>
-                            <li>Amélioration de la sécurité du serveur</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-xs-4 alert">
-                        <strong>Github</strong>
-                        Vous continuerez d'utiliser le github de la phase 2.
-                    </div>
+                </div>
+                <div class="col-xs-4 alert">
+                    <strong>Git</strong>
+                    <span class="label label-success">2 points</span> Un minimum de 4 commits de tailles comparables. Tu peux viser un commit par appel au serveur implanté. 
                 </div>
             </div>
             <div class="row well">
-            
-                
-                    
+
+
+
                 <div class="col-xs-3 alert ">
                     <strong>Multilingue</strong>
                     <p>
-                        Vous devez traduire tous les textes de l'interface graphique existante.
+                        <span class="label label-primary">2 points</span> Vous devez traduire tous les textes de l'interface graphique existante.
                         Vous devez avoir toutes les locales fr couvertes et l'application doit être en anglais par défaut.
+                    </p>
+                    <p>
+                        Toutes les portions de l'application doivent être traduites incluant les messages de notifications, les messages d'erreur etc.
                     </p>
                     <p>
                         L'orthographe doit être correcte, les textes ne doivent pas contenir de fautes dans la version française.
@@ -88,7 +80,7 @@
                 <div class="col-xs-4 alert ">
                     <strong>Gestion des erreurs</strong>
                     <p>
-                        Le serveur envoie des erreurs dans plusieurs cas. Si l'utilisateur n'est pas authentifié, s'il l'est mais que sa requête est mauvaise. 
+                        <span class="label label-primary">5 points</span> Le serveur envoie des erreurs dans plusieurs cas. Si l'utilisateur n'est pas authentifié, s'il l'est mais que sa requête est mauvaise (validation non respectée ...). 
                     </p>
                     <p>
                         Vous devez programmer un affichage d'un message d'erreur clair pour tous les cas possibles dans toutes les activités de l'application.
@@ -100,16 +92,19 @@
                         Tous les messages d'erreur doivent être traduits pour les 2 langues.
                     </p>
                 </div> 
-                
-                
+
+
                 <div class="col-xs-5 alert ">
                     <strong>Attente dans l'interface graphique</strong>
                     <p>
-                        Quand vous envoyez une requête au serveur, la réponse n'est pas immédiate. Pendant l'attente, vous devez indiquer à l'utilisateur qu'il se passe quelque chose et désactiver l'action qu'il vient de faire pour éviter qu'ils envoient des rafales de requêtes.
-                    </p>
-                    <p>
+                        <span class="label label-primary">1 point</span>
                         Vous devez inclure un délai côté serveur de 2 secondes au début de chaque méthode avec un Mapping afin de permettre de voir le délai.
                     </p>
+                    <p>
+                        <span class="label label-primary">4 points</span>
+                        Quand vous envoyez une requête au serveur, la réponse n'est pas immédiate. Pendant l'attente, vous devez indiquer à l'utilisateur qu'il se passe quelque chose et désactiver l'action qu'il vient de déclencher pour éviter qu'ils envoient des rafales de requêtes.
+                    </p>
+
                     <p>
                         Pour chaque consultation (liste et consultation) vous devez indiquer à l'utilisateur que le chargement est en cours et afficher les informations quand elles sont reçues.
                     </p>
@@ -121,25 +116,33 @@
                     </p>
                 </div> 
 
-                
+
             </div>
-            
+
 
             <div class="row well">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h3>Sécurité / failles côté serveur</h3>
                     <p>
-                        <span class="label label-primary">5 points</span> 
                         Il y a plusieurs failles ou défauts dans le serveur qui vous a été fourni pour le cours. Il peut s'agir de tous les types de problèmes qui ont été évoqués pendant le cours. Vous devez un problème et le documenter voire le régler
                     </p>
                     <ul>
-                        <li>Vous devez faire un fork github privé du projet des profs</li>  
-                        <li>Vous devez y ajouter un fichier texte avec la description de la faille, et le risque qu'il fait courir à l'application</li>
-                        <li>Si c'est approprié, vous devez le corriger dans un commit correctement décrit</li> 
-                        <li>Comment le remettre, nous le redonner, ouin c'est pas clair</li> 
+                        <li>Vous devez créer un fichier SECURITE.md à la racine de votre projet Android</li>
+                        <li>
+                            <span class="label label-primary">2 points</span> 
+                            Dans une section <strong>FAILLE</strong>, expliquer quelle est la faille au niveau du code, l'erreur de programmation ou la faille de sécurité.
+                        </li>  
+                        <li>
+                            <span class="label label-primary">2 points</span> 
+                            Dans une section <strong>EXPLOIT</strong>, expliquer précisément comment un attaquant peut tirer profit de la faille pour nuire au système ou à un utilisateur du système. Donnez les étapes détaillés afin qu'un autre étudiant puisse reproduire les étapes.
+                        </li>
+                        <li>
+                            <span class="label label-primary">1 point</span> 
+                            Dans une section <strong>CORRECTIF</strong>, expliquer comment combler la faille et éviter l'exploit. Vous pouvez indiquer quels fichiers de code modifier et donner le code source. Vous pouvez également pointer sur un commit d'un fork privé si vous en avez un.
+                        </li> 
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <h3>Fonctionnement global</h3>
                     <p>
                         <span class="label label-danger">5 points négatifs</span> 
