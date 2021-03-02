@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,40 +44,29 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Gestion de l'attente dans l'interface graphique</h3>
+                <h3 id="s8">Sécurité : spécifications et test</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
-                    
                     <p>
-                        Vous devrez regarder l'exemple d'application fournie pour les indicateurs de progression
-                        <a class="btn btn-xs btn-primary" href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Progress">ici</a>. Il s'agit du projet Progress dans le repository du 
-                        <a href="https://github.com/departement-info-cem/4N6-Mobile">cours</a>.
+                        TODO
                     </p>
-                    <p>
-                        OPTIONNEL : Regardez l'exemple de Google concernant les listes avec 
-                        <a href="https://developer.android.com/training/swipe/add-swipe-interface">swipe to refresh</a>
-                        <a class="btn btn-xs btn-primary" href="https://github.com/googlesamples/android-SwipeRefreshListFragment/">ici</a>.
-                        Vous pouvez le lancer dans Android Studio, aller à 
-                        <span class="label label-primary">File</span>  > 
-                        <span class="label label-primary">New</span>  > 
-                        <span class="label label-primary">Import sample</span> et taper "swipe" dans le champ de recherche.
-                    </p>
-                    
-                    
+
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Pendant séance</strong>
+                    <strong>Séance</strong>
                     <p>
-                        On discutera du besoin d'indiquer à l'utilisateur qu'un accès réseau est en cours pour éviter de la frustration et le fait que l'utilisateur envoie plusieurs fois une même requête.
+                        La plupart des failles de sécurité sont dues à du logiciel qui ne se comporte pas comme il devrait.
                     </p>
+                    
+                    <ul>
+                        <li>Interface trompeuse</li>
+                        <li>Injection possible</li>
+                        <li>autre</li>
+                    </ul>
                     <p>
-                        On discutera les besoins d'avoir une action de rafraîchissement, en particulier si les informations d'une page peuvent être modifiées par un tiers.
-                    </p>
-                    <p>
-                        On regardera le code des exemples en cours. En particulier, on prendra l'exemple de Google et on le simplifiera pour identifier les éléments importants pour un swipe to refresh.
+                        La plupart de ces problèmes peuvent être validés avant avec un ou plusieurs test unitaires permettant de valider que la faille n'existe pas.
                     </p>
                 </div>
-                
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
@@ -84,21 +75,10 @@
                         <div>
                             <h3>Exercice A</h3>
                             <p>
-                                Créez un projet appelé <strong>AttenteSimple</strong> avec un
-                                bouton et un textview avec un fond vert.
+                                Essayez d'injecter du javascript dans la base de données et regarder si vous pouvez la déclencher sur le /index du serveur.
                             </p>
                             <p>
-                                Faites la programmation nécessaire pour que quand on appuie sur le bouton,
-                                le textview soit remplacé par un indicateur de progression pendant une seconde puis que le textview revienne.
-                            </p>
-                            <h3>Exercice B (optionnel)</h3>
-                            <p>
-                                Créez un projet appelé <strong>AttenteListe</strong>.
-                            </p>
-                            <p>
-                                Implantez un "tirer pour rafraichir" et modifier le contenu de la liste
-                                à chaque fois avec un ensemble de 100 nombres entiers tirés au hasard entre
-                                333 et 444.
+                                Écrivez un test unitaire qui permet de vérifier que si on crée une tâche elle ne peut pas contenir 
                             </p>
                         </div>
                     </div>

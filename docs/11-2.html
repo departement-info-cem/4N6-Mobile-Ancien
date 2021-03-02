@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,26 +43,28 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Sécurité : contrôle d'accès</h3>
+                <h3 id="s8">Sécurité : spécifications et test</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Regardez également la
-                        <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+                        TODO
                     </p>
 
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        Nous discuterons de quelques erreurs habituelles de contrôle d'accès. Au niveau du code, pour contrôler l'accès, il faut
+                        La plupart des failles de sécurité sont dues à du logiciel qui ne se comporte pas comme il devrait.
                     </p>
                     
                     <ul>
-                        <li>Vérifier si l'utilisateur est authentifié, si ce n'est pas le cas exception</li>
-                        <li>Si c'est une lecture, il faut ensuite vérifier que l'utilisateur est le propriétaire (ou a le droit d'accès) sur l'objet demandé</li>
-                        <li>Si c'est une écriture, il faut s'assurer qu'on ne peut pas créer des données dans le compte d'un autre utilisateur</li>
+                        <li>Interface trompeuse</li>
+                        <li>Injection possible</li>
+                        <li>autre</li>
                     </ul>
+                    <p>
+                        La plupart de ces problèmes peuvent être validés avant avec un ou plusieurs test unitaires permettant de valider que la faille n'existe pas.
+                    </p>
                 </div>
                 <div class="col-md-12 well">
                     <div>
@@ -71,7 +74,10 @@
                         <div>
                             <h3>Exercice A</h3>
                             <p>
-                                Il y a une erreur de contrôle d'accès dans le web service au niveau de la méthode XXX.
+                                Essayez d'injecter du javascript dans la base de données et regarder si vous pouvez la déclencher sur le /index du serveur.
+                            </p>
+                            <p>
+                                Écrivez un test unitaire qui permet de vérifier que si on crée une tâche elle ne peut pas contenir 
                             </p>
                         </div>
                     </div>
@@ -82,3 +88,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
+

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +9,7 @@
         <meta name="description" content="page du cours programmation mobile">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-        <title>4N6</title>
+        <title>Programmation mobile</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><strong>4N6</strong></a>
+                    <a class="navbar-brand" href="index.html">S8 : <strong>Programmation mobile</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -42,53 +44,37 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Sécurité : crypto HTTP(S) et hashing</h3>
+                <h3 id="s8">Sécurité : contrôle d'accès</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
-                    <br>
-                    TODO video sur ça ce qui est encrypté dans HTTPS
-                    TODO video sur pourquoi le hashing, la stratégie par défaut de Spring
+                    <p>
+                        Regardez également la
+                        <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+                    </p>
 
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Cryptographie</strong>
+                    <strong>Séance</strong>
                     <p>
-                        On discutera de différentes possibilités cryptographiques et de leurs cas d'utilisation
+                        Nous discuterons de quelques erreurs habituelles de contrôle d'accès. Au niveau du code, pour contrôler l'accès, il faut
                     </p>
+                    
                     <ul>
-                        <li>SSL et encryption asymétrique</li>
-                        <li>encryption symétrique et champs de données sensibles (NAS, carte de crédit)</li>
-                        <li>Fonction de hash et mode de passe</li>
+                        <li>Vérifier si l'utilisateur est authentifié, si ce n'est pas le cas exception</li>
+                        <li>Si c'est une lecture, il faut ensuite vérifier que l'utilisateur est le propriétaire (ou a le droit d'accès) sur l'objet demandé</li>
+                        <li>Si c'est une écriture, il faut s'assurer qu'on ne peut pas créer des données dans le compte d'un autre utilisateur</li>
                     </ul>
-
                 </div>
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div >
+                        <div>
                             <h3>Exercice A</h3>
                             <p>
-                                Sur votre serveur en utilisant l'url http://localhost:8080/h2-console vous pouvez ouvrir une console qui permet d'explorer la base de données.
+                                Il y a une erreur de contrôle d'accès dans le web service au niveau de la méthode XXX.
                             </p>
-                            <p>
-                                Vous devez trouver le champ encrypté symétrique. Tu dois créer un fichier Symetrique.txt à la racine de ton projet où tu expliqueras : 
-                            </p>
-                            <ul>
-                                <li>Quel champ dans quelle classe a été encrypté ?</li>
-                                <li>Est-ce que c'était nécessaire d'encrypter ?</li>
-                                <li>Est-ce qu'il y a un ou plusieurs champ(s) dans le projet qui devraient être encryptés?</li>
-                            </ul>
-                            <h3>Exercice B</h3>
-                            <p>
-                                En cherchant dans le projet, vous devez trouver où se trouve la configuration du "password encoder". Tu dois créer un fichier EncodageMotDePasse.txt à la racine de ton projet où tu expliqueras : 
-                            </p>
-                            <ul>
-                                <li>Où se trouvait la configuration à modifier ?</li>
-                                <li>Qu'est-ce que ça change dans l'application ?</li>
-                                <li>Comment en pratique tu peux voir la différence, avec quel outil?</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
