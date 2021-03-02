@@ -48,17 +48,27 @@
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Regardez également la
-                        <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+                        Le contrôle d'accès (<a href="https://fr.wikipedia.org/wiki/Contr%C3%B4le_d%27acc%C3%A8s_logique">ici</a>) consiste à s'assurer
+                        que seules les utilisateurs autorisés peuvent accéder / lire / modifier les données du système.
                     </p>
+                    <p>
+                        Nous allons voir plusieurs exemples de serveurs et identifier des problèmes d'accès de plus en plus subtiles. Familiarisez-vous avec avant le cours:
+                    </p>
+                    <ul>
+                        <li>NoToken, juste ID</li>
+                        <li>Token mais ne vérifie pas ownership</li>
+                        <li>Create mais pas update</li>
+                    </ul>
 
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        Nous discuterons de quelques erreurs habituelles de contrôle d'accès. Au niveau du code, pour contrôler l'accès, il faut
+                        Nous discuterons des différences entre les différents projets.
                     </p>
-                    
+                    <p>
+                        Nous verrons également comment rédiger une FAILLE, un EXPLOIT et un CORRECTIF sur un des exemples.
+                    </p>
                     <ul>
                         <li>Vérifier si l'utilisateur est authentifié, si ce n'est pas le cas exception</li>
                         <li>Si c'est une lecture, il faut ensuite vérifier que l'utilisateur est le propriétaire (ou a le droit d'accès) sur l'objet demandé</li>
@@ -71,9 +81,10 @@
                             Exercices de la semaine
                         </a>
                         <div>
-                            <h3>Exercice A</h3>
+                            <h3>Exercice</h3>
                             <p>
-                                Il y a une erreur de contrôle d'accès dans le web service au niveau de la méthode XXX.
+                                Vous devez corriger le code d'au moins un exemple de la semaine pour éliminer la faille de contrôle d'accès. Vous devez rédiger 
+                                FAILLE EXPLOIT et CORRECTIF.
                             </p>
                         </div>
                     </div>
