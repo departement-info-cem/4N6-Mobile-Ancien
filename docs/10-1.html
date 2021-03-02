@@ -45,25 +45,24 @@
                 <h3 id="s8">HTTP réponses et codes d'erreur, exceptions</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
-                    <br>
-                
-
                     <p>
-                        Regardez également la
-                        <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+                        Vous trouverez plusieurs exemples de serveur qui utilisent des éléments différents d'HTTP pour
+                        représenter les erreurs.
                     </p>
-
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>HTTP et erreurs</strong>
                     <p>
-                        On discutera de la gestion des erreurs côté serveur
+                        On discutera de la gestion des erreurs côté serveur et des différentes stratégies
                     </p>
                     <ul>
                         <li>Envoyer la première ou toutes les erreurs (surtout pour les long formulaires)</li>  
-                        <li>Utiliser le code d'erreur, le corps de la réponse</li>  
+                        <li>Utiliser le code d'erreur, le message ou le corps de la réponse</li>  
                         <li>Dans quelle langue doit être le message d'erreur, traduit sur le serveur ou dans la langue de programmation et traduit sur le client</li>
                     </ul>
+                    <p>
+                        On expliquera la stratégie utilisée par le serveur fourni dans le cours.
+                    </p>
                 </div>
             
                 <div class="col-md-12 well">
@@ -71,8 +70,8 @@
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div >
-                            <h3>Exercice A</h3>
+                        <div>
+                            <h3>Exercice</h3>
                             <p>
                                 Vous devez faire une copie du projet serveur des profs et voir comment construire une réponse d'erreur HTTP en y indiquant un code 499 et un corps avec la String "Ayoye"
                             </p>
