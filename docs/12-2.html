@@ -46,7 +46,14 @@
                 <h3 id="s8">Sécurité : crypto HTTP(S) et hashing</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
-                    <br>
+                    <p>
+                        La cryptographie, ce sont des moyens de cacher certaines informations à des utilisateurs
+                        qui ne devraient pas y avoir accès quand on ne peut pas tout simplement leur en empêcher l'accès.
+                    </p>
+                    <ul>
+                        <li>Pendant que l'information transite sur le réseau, on ne contrôle pas tout le chemin pris par les données</li>
+                        <li>Si la BD est accédée par un employé ou si un pirate arrive à faire une copie de la BD</li>
+                    </ul>
                     TODO video sur ça ce qui est encrypté en HTTPS ou pas
                     TODO video sur l'encryption symétrique
                     TODO video sur pourquoi le hashing, la stratégie par défaut de Spring
@@ -62,7 +69,9 @@
                         <li>encryption symétrique et champs de données sensibles (NAS, carte de crédit)</li>
                         <li>Fonction de hash et mode de passe</li>
                     </ul>
-
+                    <p>
+                        Les solutions de crypto sont en général diffiles à coder et très sensibles aux erreurs. Il s'agit donc ici de les utiliser correctement, en comprenant ce qu'on fait. 
+                    </p>
                 </div>
                 <div class="col-md-12 well">
                     <div>
