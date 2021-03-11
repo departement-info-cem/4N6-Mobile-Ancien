@@ -55,23 +55,44 @@
                         en position 5.
                     </p>
                     <p>
-                        C'est aussi la source de failles qu'on observe le plus souvent dans les projet des finissants. La raison principale est que le contrôle d'accès nécessite souvent du travail sans apporter de nouvelles fonctionnalités.
-                    </p>
-                    
-                    <p>
-                        VIDEO TODO Avec le code
-                        Le contrôle d'accès (<a href="https://fr.wikipedia.org/wiki/Contr%C3%B4le_d%27acc%C3%A8s_logique">ici</a>) consiste à s'assurer
-                        que seules les utilisateurs autorisés peuvent accéder / lire / modifier les données du système.
+                        C'est aussi la source de failles qu'on observe le plus souvent dans les projet des finissants.
                     </p>
                     <p>
-                        Nous allons voir plusieurs exemples de serveurs et identifier des problèmes d'accès de plus en plus subtiles. Familiarisez-vous avec avant le cours:
+                        La raison principale est que le contrôle d'accès nécessite souvent du travail
+                        sans apporter de nouvelles fonctionnalités.
+                    </p>
+                    <p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/xKUarGFeDyo" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p>
+                        Vous trouverez ici les différentes branches du code du serveur de démo ici:
                     </p>
                     <ul>
-                        <li>NoToken, juste ID</li>
-                        <li>Token mais ne vérifie pas ownership</li>
-                        <li>Create mais pas update</li>
+                        <li>
+                            Aucun contrôle d'accès
+                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/open-bar">
+                                ici
+                            </a>
+                        </li>
+                        <li>
+                            Spring Security et authentification
+                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-basic">
+                                ici
+                            </a>
+                        </li>
+                        <li>
+                            Spring Security, authentification et extraction de l'utilisateur authentifié courant
+                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-auth">
+                                ici
+                            </a>
+                        </li>
+                        <li>
+                            Spring Security, authentification et extraction de l'utilisateur authentifié courant et test de propriété
+                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/test-proprio">
+                                ici
+                            </a>
+                        </li>
                     </ul>
-
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
@@ -79,7 +100,8 @@
                         Nous discuterons des différences entre les différents projets.
                     </p>
                     <p>
-                        Nous verrons également comment rédiger une FAILLE, un EXPLOIT et un CORRECTIF sur un des exemples.
+                        Nous verrons également comment rédiger une FAILLE, un EXPLOIT et un CORRECTIF sur l'exemple <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-basic">
+                        spring sec et authentification</a>.
                     </p>
                     <ul>
                         <li>Vérifier si l'utilisateur est authentifié, si ce n'est pas le cas exception</li>
@@ -95,8 +117,9 @@
                         <div>
                             <h3>Exercice</h3>
                             <p>
-                                Vous devez corriger le code d'au moins un exemple de la semaine pour éliminer la faille de contrôle d'accès. Vous devez rédiger 
-                                FAILLE EXPLOIT et CORRECTIF.
+                                Vous devez rédiger
+                                FAILLE EXPLOIT et CORRECTIF pour la branche <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-auth">
+                                spring sec et utilisateur courant</a>.
                             </p>
                         </div>
                     </div>
