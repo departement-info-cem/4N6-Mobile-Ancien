@@ -46,7 +46,8 @@
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Vous pouvez regarder le projet serveur sur le github:
+                        Déboguer un serveur (ou confirmer qu'il fonctionne bien) vous aidera à préciser davantage d'où provient une erreur.
+						Dans ce cours, nous allons exécuter le <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/DebugServer">serveur fourni</a> et nous montrerons les étapes pour déboguer la première erreur.
                     </p>
                 </div>
                 <div class="col-md-6 alert alert-warning">
@@ -72,8 +73,18 @@
                         <div>
                             <strong>Exercice</strong>
                             <p>
-                                Vous devez compléter le débogage du projet vu en cours afin de le rendre opérationnel.
+                                Vous devez compléter le débogage du projet vu en cours afin de le rendre opérationnel. Voici la liste des requêtes à effectuer dans Postman : 
                             </p>
+							<p>1 - Indiquez les lignes de code causant les problèmes et pourquoi selon vous.</p>
+							<ul>
+							<li>localhost:8080/req1 en POST avec, dans le Body, un Raw JSON contenant ["Tomate", "Jambon"]</li>
+							<li>localhost:8080/req2 en GET</li>
+							</ul>
+							<p>2 - Expliquez pourquoi cette requête semble fonctionner, alors que non. Trouvez ensuite quelle méthode cause problème.</p>
+							<ul>
+							<li>localhost:8080/req3 en GET</li>
+							</ul>
+
                         </div>
                     </div>
                 </div>
