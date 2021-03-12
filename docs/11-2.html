@@ -43,28 +43,38 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Sécurité : spécifications et test</h3>
+                <h3 id="s8">Sécurité : injections</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Exemples et démo
+                        Les injections (SQL et javascript) sont souvent les failles de sécurité qui viennent les premières en tête.
                     </p>
-
+                    
+                    
+                    <p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/je2xjYPOqZU" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    
+                    
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        La plupart des failles de sécurité sont dues à du logiciel qui ne se comporte pas comme il devrait.
+                        On parlera de la confusion entre données et commandes qui arrive par le biais de langages qui ne sont pas compilés mais interprétés et des langages qui permettent un mode interprété.
                     </p>
-                    
-                    <ul>
-                        <li>Interface trompeuse</li>
-                        <li>Injection possible</li>
-                        <li>autre</li>
-                    </ul>
                     <p>
-                        La plupart de ces problèmes peuvent être validés avant avec un ou plusieurs test unitaires permettant de valider que la faille n'existe pas.
+                        Paradoxalement, les injections sont aussi les moins susceptibles d'arriver sur des systèmes récents:
                     </p>
+                    <ul>
+                        <li>La plupart des frameworks récents contiennent des protections</li>
+                        <li>Pour injection SQL, quand on utilise un ORM comme Hibernate, SpringData ou EntityFramework, on est protégés</li>
+                        <li>Pour l'injection Javascript, Angular Vue ou encore React vont par défaut désactiver les commandes JS avant de les inclure dans la page.</li>
+                    </ul>
+                    Les systèmes exposés sont habituellement:
+                    <ul>
+                        <li>Systèmes legacy ou patrimoniaux avec un lien très direct avec SQL ou html</li>
+                        <li>Systèmes produits par des programmeurs très juniors non sensibilisés</li>
+                    </ul>
                 </div>
                 <div class="col-md-12 well">
                     <div>
@@ -72,12 +82,12 @@
                             Exercices de la semaine
                         </a>
                         <div>
-                            <h3>Exercice A</h3>
+                            <h3>Exercice</h3>
                             <p>
-                                Essayez d'injecter du javascript dans la base de données et regarder si vous pouvez la déclencher sur le /index du serveur.
+                                Essayez d'injecter du javascript dans la base de données et regarder si vous pouvez la déclencher sur le /index du serveur fourni dans le cours.
                             </p>
                             <p>
-                                Écrivez un test unitaire qui permet de vérifier que si on crée une tâche elle ne peut pas contenir 
+                                Entrainez-vous à décrire dans un fichier texte, la FAILLE que vous avez découvert, décrivez étape par étape comment en tirer partie dans une session EXPLOIT et dans CORRECTIF, expliquez comment vous avez combler la faille.
                             </p>
                         </div>
                     </div>
