@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Accueil</a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </div>
 
@@ -45,20 +45,30 @@
                 <h3 id="s8">Erreurs dans l'interface graphique</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
-                    
-
                     <p>
-                        TODO liens vers la doc de Toast et Snackbar
+                        Vous pouvez lire la doc d'Android sur les différents moyens d'afficher des erreurs
+                        dans un formulaire <a href="https://material.io/archive/guidelines/patterns/errors.html#errors-user-input-errors">ici</a>.
                     </p>
-
+                    <p>
+                        Vous pouvez également regarder la doc technique sur les 
+                        <a href="https://material.io/components/snackbars/android#using-snackbars">snackbars</a>
+                        et les 
+                        <a href="https://material.io/components/dialogs#behavior">dialogues</a>.
+                    </p>
+                    <p>
+                        Vous vous familiariserez avec la démo de la semaine 
+                        <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/AffichageErreur">ici</a>.
+                    </p>
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Affichage des erreurs</strong>
                     <p>
-                        On discutera des différents moyens d'afficher un message d'erreur, un Toast ou un Snackbar. 
+                        On discutera des différents moyens d'afficher un message d'erreur: Toast, Snackbar, dialogues et erreur sur un champ texte. 
                     </p>
                     <p>
-                        Comment gérer les cas ou un appel peut envoyer plusieurs messages d'erreur différents.
+                        On discutera du cas où il peut y avoir plusieurs erreurs au cours d'un seul appel au serveur
+                        comme dans un formulaire avec de nombreux champs. Quelle stratégie adopter: envoyer seulement la
+                        première erreur à l'utilisateur ou toutes les erreurs.
                     </p>
                     <p>
                         On montrera comment traduire les messages d'erreur dans l'interface.
@@ -75,10 +85,11 @@
                         <div >
                             <h3>Exercice</h3>
                             <p>
-                                Écrivez un client qui envoie une requête à un des serveurs de la séance précédente. Vous devez afficher 
-                                soit le résultat
-                                soit une erreur due à une mauvaise valeur
-                                soit une erreur due à l'absence de réseau (mode avion)
+                                Copier un de vos exercices qui envoyait une requête à un web service. 
+                            </p>
+                            <p>Vous devez modifier votre application pour afficher 
+                                soit le résultat si ça a fonctionné
+                                soit une erreur si il n'y a pas de réseau (vous testerez avec l'appareil en mode avion)
                             </p>
                         </div>
                     </div>
