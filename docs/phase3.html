@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-xs-4 alert">
                     <strong>Git</strong>
-                    <span class="label label-success">2 points</span> Un minimum de 4 commits de tailles comparables. Tu peux viser un commit par appel au serveur implanté. 
+                    <span class="label label-success">1 point</span> Un minimum de 4 commits de tailles comparables. 
                 </div>
             </div>
             <div class="row well">
@@ -80,16 +80,20 @@
                 <div class="col-xs-4 alert ">
                     <strong>Gestion des erreurs</strong>
                     <p>
-                        <span class="label label-primary">5 points</span> Le serveur envoie des erreurs dans plusieurs cas. Si l'utilisateur n'est pas authentifié, s'il l'est mais que sa requête est mauvaise (validation non respectée ...). 
+                        <span class="label label-primary">5 points</span> Votre application doit gérer les différents cas d'erreurs. Par exemple, 
+						<ul>
+							<li>si l'utilisateur n'est pas authentifié</li>
+							<li>si l'utilisateur n'est plus authentifié ou a été déconnecté</li>
+							<li>si l'utilisateur envoie une requête erronée (nombre de caractères minimum, nom de tâche existant, ...)</li>
+							<li>si le réseau n'est pas disponible (vous pouvez tester en passant l'appareil en mode avion)</li>
+							<li>etc.</li>
+						</ul>
                     </p>
                     <p>
-                        Vous devez programmer un affichage d'un message d'erreur clair pour tous les cas possibles dans toutes les activités de l'application.
+                        Vous devez programmer l'affichage d'un message d'erreur clair dans l'<strong>interface</strong> pour tous les cas possibles dans toutes les activités de l'application.
                     </p>
                     <p>
-                        Vous devez prévoir un message d'erreur dans le cas où le réseau n'est pas disponible (vous pouvez tester en passant l'appareil en mode avion).
-                    </p>
-                    <p>
-                        Tous les messages d'erreur doivent être traduits pour les 2 langues.
+                         <strong>RAPPEL :</strong> Tous les messages d'erreur doivent être traduits pour les 2 langues.
                     </p>
                 </div> 
 
@@ -98,7 +102,7 @@
                     <strong>Attente dans l'interface graphique</strong>
                     <p>
                         <span class="label label-primary">1 point</span>
-                        Vous devez inclure un délai côté serveur de 2 secondes au début de chaque méthode avec un Mapping afin de permettre de voir le délai.
+                        Vous devez inclure un délai côté serveur de 2 secondes au début de chaque méthode avec un @PostMapping ou @GetMapping afin de permettre de voir le délai.
                     </p>
                     <p>
                         <span class="label label-primary">4 points</span>
@@ -112,7 +116,7 @@
                         Pour toutes les actions de l'utilisateur, vous devez indiquer l'attente mais également désactiver l'action.
                     </p>
                     <p>
-                        L'interface doit revenir dans un état fonctionnel après le chargement, que le résultat soit correct ou une erreur.
+                        L'interface doit revenir dans un état fonctionnel après le chargement, que le résultat soit correct ou en cas d'erreur.
                     </p>
                 </div> 
 
@@ -129,12 +133,12 @@
                     <ul>
                         <li>Vous devez créer un fichier SECURITE.md à la racine de votre projet Android</li>
                         <li>
-                            <span class="label label-primary">2 points</span> 
+                            <span class="label label-primary">1 point</span> 
                             Dans une section <strong>FAILLE</strong>, expliquer quelle est la faille au niveau du code, l'erreur de programmation ou la faille de sécurité.
                         </li>  
                         <li>
                             <span class="label label-primary">2 points</span> 
-                            Dans une section <strong>EXPLOIT</strong>, expliquer précisément comment un attaquant peut tirer profit de la faille pour nuire au système ou à un utilisateur du système. Donnez les étapes détaillés afin qu'un autre étudiant puisse reproduire les étapes.
+                            Dans une section <strong>EXPLOIT</strong>, expliquer précisément comment un attaquant peut tirer profit de la faille pour nuire au système ou à un utilisateur du système. Donnez les <strong> étapes numérotées détaillées </strong> afin qu'un autre étudiant puisse reproduire les étapes.
                         </li>
                         <li>
                             <span class="label label-primary">1 point</span> 
