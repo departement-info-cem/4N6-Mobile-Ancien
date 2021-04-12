@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class LoginController {
+public class MyController {
 
     //401
     @PostMapping("/ajouterMot")

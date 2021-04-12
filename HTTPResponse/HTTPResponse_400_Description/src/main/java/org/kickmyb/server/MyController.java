@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @Controller
-public class LoginController {
+public class MyController {
 
     @PostMapping("/ajouterMot")
     public @ResponseBody String ajouterMot(@RequestBody Map<String, String> json) throws UnauthorizedException {

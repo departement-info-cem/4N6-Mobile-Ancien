@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @Controller
-public class LoginController {
+public class MyController {
 
     //TODO : Aller voir dans le README.md et trouver la description des codes
 
