@@ -23,13 +23,14 @@
                 android:layout_margin="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="@string/enter_firstname"
                 app:errorEnabled="true">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tape ton prénom" />
+                     />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,13 +61,14 @@
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Tape ton nom"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tape ton nom" />
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 

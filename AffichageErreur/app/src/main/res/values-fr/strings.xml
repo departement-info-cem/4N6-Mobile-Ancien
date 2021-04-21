@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Erreurs</string>
+    <string name="error_example">le message doit clairement indiquer comment résoudre la situation</string>
+    <string name="snack_message">Le snack bar mieux que Toast?</string>
+    <string name="error_password">Erreur ou indice ancienne façon</string>
+    <string name="no_network">Pas de réseau</string>
+    <string name="ok">Ok</string>
+    <string name="retry">Retry</string>
+    <string name="go_there">Voir</string>
+    <string name="enter_firstname">Tape ton prénom</string>
+</resources>
