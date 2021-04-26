@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         swiperefresh.setOnRefreshListener(
                 () -> {
                     Toast.makeText(MainActivity.this, "REFRESH", Toast.LENGTH_LONG).show();
-
                     //Part l'animation de loading
                     swiperefresh.setRefreshing(true);
 
@@ -60,18 +60,25 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void myUpdateOperation() throws InterruptedException {
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.refresh, menu);
+        return true;
+    }
+
+    public void myUpdateOperation() {
 
         // Utilise le thread UI et bloque l'animation
         // Thread.sleep(3000);
-
-        for (int i = 0 ; i < 3000 ; i ++){
+        listeItems.clear();
+        for (int i = 0 ; i < 100 ; i ++){
             listeItems.add(i+ " ! ");
             adapter.notifyDataSetChanged();
         }
 
         //Arrête l'animation de loading
         swiperefresh.setRefreshing(false);
+        listeView.smoothScrollToPosition(0);        // nécessaire si pas déjà en haut de la liste
     }
 
     private class DummyBackgroundTask extends AsyncTask<Void, Void, List<String>> {
@@ -90,19 +97,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<String> result) {
             super.onPostExecute(result);
-            try {
-                myUpdateOperation();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
+            myUpdateOperation();
         }
-
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.refresh, menu);
-        return true;
-    }
 }
