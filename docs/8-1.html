@@ -7,7 +7,7 @@
         <meta name="description" content="page du cours programmation mobile">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-        <title>4N6 applis mobiles</title>
+        <title>Programmation mobile</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,32 +30,46 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">4N6 : <strong>applis mobiles</strong></a>
+                    <a class="navbar-brand" href="index.html">420-4N6 : <strong>applications mobiles</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Accueil</a></li>
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Debug client - serveur</h3>
+                <h3 id="s8">Déploiement Heroku</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Vous pouvez regarder les différents projets à déboguer <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/DebugAndroid">ici</a>.
+                        Vous devez commencer par créer votre compte sur <a href="https://www.heroku.com/">Heroku</a>.
+                    </p>
+                    <p>
+                        Vous lirez la doc sur le déploiement d'application Spring Boot <a href="https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku">ici</a>. Il faut télécharger le Heroku CLI.
+                    </p>
+                    <p>
+                        Garder en tête que vous déploierez le projet serveur du cours. Vous n'avez pas à créer le projet Spring Boot. <strong>Ignorez donc la section "Creating a Spring Boot app"</strong>
+                    </p>
+                    <p>
+                        Nous avons également fourni le <a href="https://devcenter.heroku.com/articles/procfile">Procfile</a> pour le projet.
                     </p>
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Séance</strong>
+                    <strong>Déploiement</strong>
                     <p>
-                        On reviendra rapidement sur les avantages de rouler le serveur en local pour pouvoir déboguer, déterminer qui est fautif (client avant la requête, serveur ou client après la réponse). Également les 3 points d'arrêt importants pour un appel Retrofit: à l'appel, sur le onResponse et sur le onFailure.
+                        On parlera également des impacts des différents types d'instance
                     </p>
+                    <ul>
+                        <li>instance gratuite qui s'arrête et redémarre et perd ses fichiers</li>
+                        <li>instance toujours en fonctionnement</li>
+                        <li>multiples instances frontales avec une BD partagée</li>
+                    </ul>
                     <p>
-                        On déboguera ensemble le projetA pour lancer la séance. On parcourra rapidement le projet qui est la solution à l'exercice 2 de l'intra.
+                        Nous discuterons de l'impact sur la BD mais également sur les sessions qui sont conservées en mémoire vive.
                     </p>
                 </div>
                 <div class="col-md-12 well">
@@ -63,8 +77,16 @@
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div>
-                            Compléter le débogage de tous les projet fournis. Nous vous recommandons d'essayer de corriger chaque projet séparément, sans regarder les autres projets. Utilisez des points d'arrêt, de la logique, des recherches Internet avec les messages d'erreur etc.
+                        <div >
+                            <h3>Exercice</h3>
+                            <p>
+                                Vous devez faire le déploiement du serveur fourni par les profs sur votre compte Heroku. 
+                                Vous utiliserez la commande 
+                            </p>
+                            <pre>heroku logs --tail</pre>
+                            <p>
+                                pour voir les logs de votre serveur.
+                            </p>
                         </div>
                     </div>
                 </div>

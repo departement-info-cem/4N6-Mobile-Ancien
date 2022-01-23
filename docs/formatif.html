@@ -5,57 +5,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="page du cours professions informatiques">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
-        <title>Révisions</title>
+        <title>Programmation mobile</title>
+
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <style>
             body {
                 padding-top: 70px;
             }
         </style>
     </head>
-
     <body>
 
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">Révisions examen</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="theCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                    </ul>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">420-4N6 : <strong>applications mobiles</strong></a>
                 </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-        </nav>
+        </div>
 
         <div class="container">
             <div class="row">
-                <h3>Révisions</h3>
+                <h3>Formatif & Révision</h3>
             </div>
             <div class="row">
-                <div class="col-md alert alert-success">
+                <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
                         Pas de nouveau contenu. Révisions. Examen imminent!
                     </p>
                 </div>
-                <div class="col-md alert  alert-warning">
+                <div class="col-md-6 alert  alert-warning">
                     <strong>En classe</strong> 
                     <p>
-                        Pas de nouveau contenu. Révisions. Examen imminent!
-                    </p>
+                        Formatif
+					</p>
                 </div>
             </div>
+		
 			<div class="row">
                 <h3>Comment passer un examen</h3>
             </div>
             <div class="row">
-                <div class="col-md alert alert-dark">
+                <div class="col-md-5 well">
                     <h4>Préparation</h4>
                     <p>
                         Tu ne dois pas paniquer pendant un examen. Avoir une stratégie, ça aide. 
@@ -70,9 +76,9 @@
                         <li>
                             Lire tout l’énoncé au début de l’examen, pendant ta lecture, identifie les questions qui sont indépendantes les unes des autres et marque-les comme : 
                             <ul>
-                                <li><span class="badge badge-success">Ok</span> : je suis sûr d’être capable d’y répondre</li>
-                                <li><span class="badge badge-secondary">Bof</span> : je ne suis pas sûr mais en y réfléchissant c’est peut-être possible </li>
-                                <li><span class="badge badge-danger">Ko</span> : aucune chance que je sois capable de répondre à ça</li>
+                                <li><span class="label label-success">Ok</span> : je suis sûr d’être capable d’y répondre</li>
+                                <li><span class="label label-default">Bof</span> : je ne suis pas sûr mais en y réfléchissant c’est peut-être possible </li>
+                                <li><span class="label label-danger">Ko</span> : aucune chance que je sois capable de répondre à ça</li>
                             </ul>
                         </li>
                         <li>Déterminer le ratio minutes par point, par exemple pour un examen sur 13 points qui dure 120 minutes, tu devrais passer environ 9 minutes par points. Donc pour une question à 3 points environ 27 minutes.</li>
@@ -80,7 +86,7 @@
                     </ol>
                 </div>
                 
-                <div class="col-md alert alert-info">
+                <div class="col-md-7 alert alert-info">
                     <h4>Déroulement</h4>
                     <pre>
                         Aucune loi ne te force à commencer par la première question. 
@@ -89,16 +95,16 @@
                         Tu devrais plutôt commencer par ce qui augmente le plus vite ta note.
                     </p>
                     <ol>
-                        <li>Dans les questions marquées <span class="badge badge-success">Ok</span>, choisis celle qui te semble donner le meilleur rapport points/temps nécessaire. Au bout du temps logique (mettons 1 point = 9 minutes), Tu dois évaluer si tu t’en vas dans le mur ou si tu as une chance d’y arriver. Si tu penses que ça s’annonce mal, passe à la prochaine. </li>
-                        <li>Répète jusqu’à épuisement des questions <span class="badge badge-success">Ok</span>. </li>
+                        <li>Dans les questions marquées <span class="label label-success">Ok</span>, choisis celle qui te semble donner le meilleur rapport points/temps nécessaire. Au bout du temps logique (mettons 1 point = 9 minutes), Tu dois évaluer si tu t’en vas dans le mur ou si tu as une chance d’y arriver. Si tu penses que ça s’annonce mal, passe à la prochaine. </li>
+                        <li>Répète jusqu’à épuisement des questions <span class="label label-success">Ok</span>. </li>
                         <li>
-                            S’il reste des questions <span class="badge badge-success">Ok</span> non finies, il faut réévaluer si :
+                            S’il reste des questions <span class="label label-success">Ok</span> non finies, il faut réévaluer si :
                             <ul>
                                 <li>tu reviens dessus pour gagner des points</li>
-                                <li>tu tentes ta chance avec les <span class="badge badge-secondary">Bof</span></li>
+                                <li>tu tentes ta chance avec les <span class="label label-default">Bof</span></li>
                             </ul>
                         </li>
-                        <li>Continuer jusqu’à épuisement du temps de l’examen moins <span class="badge badge-warning">5 minutes</span>. </li>
+                        <li>Continuer jusqu’à épuisement du temps de l’examen moins <span class="label label-warning">5 minutes</span>. </li>
                         <li>Utilise les 5 dernières minutes pour réviser rapidement que tout fonctionne, que tu n’as rien cassé par erreur. </li>
                         
                     </ol>
@@ -106,9 +112,7 @@
                 </div>
             </div>
 			<br/>
-			<div class="col-xs-3 ">
-                <a href="img/testunitaire.png"><img src="img/testunitaire.png" style="width:100%"/></a>
-            </div>
+			
         </div>
         <!-- /container -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
