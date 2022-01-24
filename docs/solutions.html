@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>Problèmes fréquents</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style> body { padding-top: 70px;}</style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Problèmes et solutions</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <div>
+							<h3>J'ai besoin d'aide pour installer...</h3>
+                            <ul>
+								<li><a target="_blank" href="https://youtu.be/b7MgJDd1Iks">Amazon Corretto</a></li>
+								<li><a target="_blank" href="https://youtu.be/aWd160BjRYE">IntelliJ Idea</a></li>
+								<li><a target="_blank" href="https://youtu.be/v10jAu1ELac">GitKraken</a></li>
+							</ul>
+							<h3>Aucun projet ne démarre</h3>
+                            <p>
+                                Vous ne devez pas avoir d'accent dans le nom de votre usager windows
+                            </p>
+							<h3>The minCompileSdk (31) specified in a dependency’s AAR metadata is greater than this module’s compileSdkVersion</h3>
+							<ol>
+							<li>Dans build.gradle niveau module, compileSdkVersion 30 -> compileSdkVersion 31</li>
+							<li>Dans build.gradle niveau module, buildToolsVersion "30.0.3" ->  buildToolsVersion "31.0.0"</li>
+							<li>Dans build.gradle niveau module, targetSdkVersion 30 -> targetSdkVersion 31</li>
+							</ol>
+							<p> Continuez avec l'étape ci-dessous </p>
+							<h3>Installed Build Tools revision 31.0.0 is corrupted </h3>
+							<ol>
+							<li>
+							À la maison, aller dans "C:\Users\votreUsager\AppData\Local\Android\Sdk\build-tools\31.0.0"
+							<br/>
+							À l'école ce sera dans "C:\Android\Sdk\build-tools\31.0.0"
+							</li>
+							<li> Copiez d8.bat et renommer le en dx.bat</li>
+							<li> Allez dans le dossier lib, copiez d8.jar et renommez-le en dx.jar</li>
+							</ol>
+							<p> Continuez avec l'étape ci-dessous </p>
+							<h3>Manifest merger failed: Apps targeting Android 12 and higher are required to specify an explicit value for android: exported when the corresponding component has an intent filter defined</h3>
+							<ol>
+								<li>
+								Aller dans le Manifest, ajouter android:exported="true" pour votre Activity d'accueil	
+								| Exemple :<code> activity
+									  android:name=".MainActivity"
+									  android:exported="true"</code>
+								 </li>
+							</ol>
+							<h3>Les archetypes maven ne s'affichent pas lors de la création du projet</h3>
+                            <p>
+                                Essaie <strong>File</strong> > <strong>Invalide caches</strong> > <strong>Invalide and Restart</strong>
+                            </p>
+							
+							<h3>Les tests ne sont pas débogables (affiche "terminated unexpectedly")</h3>
+							  <p>
+                                Vous ne devez pas avoir d'accent dans le nom de vos méthodes, de votre package et de votre projet
+                            </p>
+							 <h3>Mes tests unitaires ne s'exécutent pas</h3>
+                            <p>Dans le fichier build.gradle (dans le dossier app), vérifier que</p>
+                            <ul>
+                                <li>on a la dépendance androidTestImplementation 'androidx.test:core:1.1.0'</li>
+                                <li>on a la dépendance
+    androidTestImplementation 'androidx.test:runner:1.1.0'</li>
+                                <li>la valeur de testInstrumentationRunner  est bien "androidx.test.runner.AndroidJUnitRunner"</li>
+                                <li>exemple ici : https://github.com/jorisdeguet/RoomSQL/blob/RoomTransaction/app/build.gradle</li>
+                            </ul> 
+                            <h3>Mon projet ne démarre plus après un changement de machine</h3>
+                            <p>
+                                Essaie <strong>Build</strong> > <strong>Clean Project</strong>.
+                            </p>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
+                            <p>
+                                Dans le dossier du projet, entre dans le dossier app, ensuite  supprime le dossier <strong>build</strong>. Cela supprime tous les fichiers compilés et force à recompiler l'ensemble de l'application.
+                            </p>
+                            <p>
+                                Force un sync gradle. <a href="https://stackoverflow.com/questions/29565263/android-studio-how-to-run-gradle-sync-manually">ici pour les différentes versions</a>
+                            </p>
+                            <h3>Le projet démarre mais il y a du rouge partout</h3>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
+                            <h3>AndroidX</h3>
+                            <p>
+                                Si on utilise une librairie androidX, il faut toutes les migrer. Je ne peux plus utiliser les support v7 et v4, voir <a href="https://developer.android.com/jetpack/androidx/migrate">ici</a>
+                            </p>
+                            <p>
+                                On doit mettre le <em>compileSdkVersion</em> à 28 dans le build.gradle (celui du dossier app)
+                            </p>
+                            <h3>Je ne vois pas mon périphérique au lancement de l'appli</h3>
+                            <p>
+                                Aller dans les options développeur de la tablette, désactiver Débogage USB, Annuler les autorisations relatives au …, réactiver Débogage USB
+                            </p>
+                            <p>
+                                Essayer un autre câble, un autre appareil (demander à un collègue)
+                            </p>
+                            <p>Redémarrer la tablette</p>
+                            <p>Redémarrer Android Studio</p>
+                            <p>
+                                Dans de Gestionnaire des tâches (CTRL + SHIFT + ESCAPE), dans l’onglet Détails, arrêter tous les processus adb.exe
+                            </p>
+                            <p>
+                                Redémarrer la machine de développement
+                            </p>
+                            <h3>Ça marche en run, ça ne marche pas en debug</h3>
+                            <ol>
+                                <li>Aller dans File > Settings</li>
+                                <li>Tape instant run dans le champs de recherche</li>
+                                <li>Décocher Enable Instant Run to hot swap ….</li>
+                            </ol>
+                            <h3><em>Cannot sync project with gradle files</em></h3>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
+                            <h3><em>Do you want to uninstall the existing application?</em></h3>
+                            <p>Vérifie que l'application n'est pas déjà sur le périphérique. Si c'est le cas supprime la.</p>
+                            <p>
+                                Dans le dossier du projet, entre dans le dossier app, ensuite  supprime le dossier <strong>build</strong>. Cela supprime tous les fichiers compilés et force à recompiler l'ensemble de l'application.
+                            </p>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
+                           
+                            <h3>Le projet est "syncing" mais tourne en boucle</h3>
+                            <ol>
+                                <li>Attendre 5min pour valider que ce n'est pas la machine</li>
+                                <li>En bas à droite, ouvrir le EVENT LOG</li>
+                                <li>NDK Version is UNKNOWN --> pas grave</li>
+                                <li>java lang nullpointerexception --> peut être plusieurs choses (voir ci-dessous)</li>
+                                <li>Tout d'abord, supprimer le dossier .idea et relancer Android Studio</li>
+                                <li>Si ça ne fonctionne pas, aller dans AndroidManifest.xml</li>
+                                <li>Si vous voyez le message suivant : Gradle project sync failed. Basic functionality will not work properly. </li>
+                                <li>Cliquez sur 'Show Log in Explorer'. Ouvrez idea.log dans notepad++. Cherchez l'erreur en question (nullpointer dans ce cas-ci)</li>
+                            </ol>
+                           Exemple : Module 'app': platform 'android-28' not found. Gradle sync failed: java.lang.NullPointerException (7 s 897 ms) 
+java.lang.NullPointerException at org.jetbrains.android.sdk.AndroidSdkData.getSdkData(AndroidSdkData.java:117)
+                            <br/>
+                            <strong>Solution </strong> : Vous n'avez pas la bonne version de SDK d'installé. Cliquez sur SDK Manager pour l'installer. Puis file - invalidate cache and restart pour redémarrer
+                           
+                            <h3>Je suis incapable d'ajouter un "package" ou une "class" (le menu offre seulement un folder ou un file)</h3>
+                            <ol>
+                                <li>Clic droit sur le dossier java</li>
+                                <li>Mark Directory As -> Source Root.</li>
+                            </ol>
+							
+							<h3>Mon projet fonctionne à la maison, mais pas à l'école</h3>
+                            <ol>
+                                <li>Vous devez mettre le projet sur le Bureau et non sur votre clé USB ou sur un disque dur externe</li>
+                                <li>Aller dans Help > About et regarder le numéro de version (ex : 4.2.1)</li>
+                                <li>Aller dans build.grable (niveau projet) et vérifier que le numéro de cette ligne correspond au numéro de version
+									<br/>
+									<code>    dependencies {
+												classpath 'com.android.tools.build:gradle:4.2.1'
+												}</code></li>
+                            </ol>
+							<h3>Je n'arrive pas à faire fonctionner la librairie MPChart</h3>
+                            <ol>
+                                <li>Assurez-vous d'avoir ajouté les deux lignes de code suivantes</li>
+									<ul><li><code>dependencies {implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'} // Dans le fichier build.gradle(module)</code></li>
+									<li> Si vous avez Android Studio 4.2.1 ou plus ancien  : <code>repositories {maven { url 'https://jitpack.io' }} // Dans le fichier build.gradle(module)</code></li>
+									<li> Si vous avez Android Studio 7.0.1 ou plus récent (Artic Fox) : <code>repositories {maven { url 'https://jitpack.io' }} // Dans le fichier settings.gradle</code></li></ul>
+									</ol>
+									
+                            </ol>
+							
+							<h3>Problèmes depuis l'ajout de dépendances ROOM </h3>
+							<ol>
+							<li>The minCompileSdk (31) specified in a
+				dependency's AAR metadata (META-INF/com/android/build/gradle/aar-metadata.properties)
+				is greater than this module's compileSdkVersion (android-30).</li>
+
+				Dans <b>build.gradle module</b>
+
+				Supprimer la ligne suivante <br/>
+	<code>
+    implementation "androidx.room:room-paging:2.4.0-beta01"
+	</code>
+	<br/>
+	<br/>
+	Retester. Ça ne fonctionne toujours pas?
+	<br/>
+    <code>compileSdkVersion 30 ->     compileSdkVersion 31</code><br/>
+	<code>targetSdkVersion 30 ->      targetSdkVersion 31</code>
+
+<li>Manifest merger failed : Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported`</li>
+Dans <b>Manifest</b>
+<code>activity android:name=".MainActivity"
+            android:exported="true"</code>
+	
+<li>Library dex files are not supported in multi-dex mode</li>
+Dans <b>build.gradle module</b>
+<code>dependencies {
+implementation 'com.android.support:multidex:1.0.3'
+
+    defaultConfig {
+        multiDexEnabled true
+		
+</code>
+<li>2 files found with path ‘androidsupportmultidexversion.txt’ </li>
+Dans <b>build.gradle module</b>
+<code>
+android {
+packagingOptions{
+pickFirst 'androidsupportmultidexversion.txt'
+}
+</code>
+<li>Instance already used </li>
+File > invalidate cache & restart > invalidate & restart</li>
+</ol>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- /container -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
