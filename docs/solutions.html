@@ -44,22 +44,52 @@
                             <p>
                                 Vous ne devez pas avoir d'accent dans le nom de votre usager windows
                             </p>
-							<h3>The minCompileSdk (31) specified in a dependency’s AAR metadata is greater than this module’s compileSdkVersion</h3>
+							<h3>🆕Mon projet BumbleBee fonctionne à la maison, mais pas à l'école</h3>
+							<ol>
+							<li>Effacer le contenu de votre build.gradle niveau projet et mettre ceci à la place</li>
+							<code>buildscript {
+									repositories {
+										google()
+										mavenCentral()
+									}
+									dependencies {
+										classpath "com.android.tools.build:gradle:4.2.1"
+
+									}
+								}
+
+								allprojects {
+									repositories {
+										google()
+										mavenCentral()
+										jcenter() 
+									}
+								}
+
+								task clean(type: Delete) {
+									delete rootProject.buildDir
+								}
+							</code>
+							<li>Effacer le contenu de votre settings.gradle et mettre ceci à la place</li>
+							<code>rootProject.name = "My Application"
+								include ':app'
+							</code>
+							</ol>
+							<h3>Mon projet Artic Fox fonctionne à la maison, mais pas à l'école</h3>
+                            <ol>
+                                <li>Vous devez mettre le projet sur le Bureau et non sur votre clé USB ou sur un disque dur externe</li>
+                                <li>Aller dans Help > About et regarder le numéro de version (ex : 4.2.1)</li>
+                                <li>Aller dans build.grable (niveau projet) et vérifier que le numéro de cette ligne correspond au numéro de version
+									<br/>
+									<code>    dependencies {
+												classpath 'com.android.tools.build:gradle:4.2.1'
+												}</code></li>
+                            </ol>
+							<h3>🆕The minCompileSdk (31) specified in a dependency’s AAR metadata is greater than this module’s compileSdkVersion</h3>
 							<ol>
 							<li>Dans build.gradle niveau module, compileSdkVersion 30 -> compileSdkVersion 31</li>
-							<li>Dans build.gradle niveau module, buildToolsVersion "30.0.3" ->  buildToolsVersion "31.0.0"</li>
 							<li>Dans build.gradle niveau module, targetSdkVersion 30 -> targetSdkVersion 31</li>
-							</ol>
-							<p> Continuez avec l'étape ci-dessous </p>
-							<h3>Installed Build Tools revision 31.0.0 is corrupted </h3>
-							<ol>
-							<li>
-							À la maison, aller dans "C:\Users\votreUsager\AppData\Local\Android\Sdk\build-tools\31.0.0"
-							<br/>
-							À l'école ce sera dans "C:\Android\Sdk\build-tools\31.0.0"
-							</li>
-							<li> Copiez d8.bat et renommer le en dx.bat</li>
-							<li> Allez dans le dossier lib, copiez d8.jar et renommez-le en dx.jar</li>
+							<li><b>!Changement!</b> <u>NE PAS TOUCHER</u> à buildToolsVersion "30.0.3"</li>
 							</ol>
 							<p> Continuez avec l'étape ci-dessous </p>
 							<h3>Manifest merger failed: Apps targeting Android 12 and higher are required to specify an explicit value for android: exported when the corresponding component has an intent filter defined</h3>
@@ -70,6 +100,16 @@
 									  android:name=".MainActivity"
 									  android:exported="true"</code>
 								 </li>
+							</ol>
+							<h3>Installed Build Tools revision 31.0.0 is corrupted </h3>
+							<ol>
+							<li>
+							À la maison, aller dans "C:\Users\votreUsager\AppData\Local\Android\Sdk\build-tools\31.0.0"
+							<br/>
+							À l'école ce sera dans "C:\Android\Sdk\build-tools\31.0.0"
+							</li>
+							<li> Copiez d8.bat et renommer le en dx.bat</li>
+							<li> Allez dans le dossier lib, copiez d8.jar et renommez-le en dx.jar</li>
 							</ol>
 							<h3>Les archetypes maven ne s'affichent pas lors de la création du projet</h3>
                             <p>
@@ -168,17 +208,7 @@ java.lang.NullPointerException at org.jetbrains.android.sdk.AndroidSdkData.getSd
                                 <li>Clic droit sur le dossier java</li>
                                 <li>Mark Directory As -> Source Root.</li>
                             </ol>
-							
-							<h3>Mon projet fonctionne à la maison, mais pas à l'école</h3>
-                            <ol>
-                                <li>Vous devez mettre le projet sur le Bureau et non sur votre clé USB ou sur un disque dur externe</li>
-                                <li>Aller dans Help > About et regarder le numéro de version (ex : 4.2.1)</li>
-                                <li>Aller dans build.grable (niveau projet) et vérifier que le numéro de cette ligne correspond au numéro de version
-									<br/>
-									<code>    dependencies {
-												classpath 'com.android.tools.build:gradle:4.2.1'
-												}</code></li>
-                            </ol>
+						
 							<h3>Je n'arrive pas à faire fonctionner la librairie MPChart</h3>
                             <ol>
                                 <li>Assurez-vous d'avoir ajouté les deux lignes de code suivantes</li>
