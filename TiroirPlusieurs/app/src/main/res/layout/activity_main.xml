@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- TODO peut pas faire include ici, parce qu'on veut le drawerLayout AVANT linearLayout et navigationView APRÈS -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutMain"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:paddingLeft="60dp"
+            android:paddingTop="60dp"
+            android:text="@string/the_main" />
+
+    </LinearLayout>
