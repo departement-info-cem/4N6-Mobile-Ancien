@@ -44,6 +44,10 @@
                             <p>
                                 Vous ne devez pas avoir d'accent dans le nom de votre usager windows
                             </p>
+							<h3>🆕android:exported needs to be explicitly specified for element activity#androidx.test.core.</h3>
+							<ol><li>Dans build.gradle changer compileSdkVersion et targetSdkVersion pour 30
+							</li></ol>
+							<code></code>
 							<h3>🆕Socket failed: EPERM (Operation not permitted)</h3>
 							<ol><li>Trouver l'application de votre projet sur votre téléphone et la désinstaller 
 							complètement, puis relancer votre application.
@@ -89,7 +93,7 @@
 												classpath 'com.android.tools.build:gradle:4.2.1'
 												}</code></li>
                             </ol>
-							<h3>🆕The minCompileSdk (31) specified in a dependency’s AAR metadata is greater than this module’s compileSdkVersion</h3>
+							<h3>The minCompileSdk (31) specified in a dependency’s AAR metadata is greater than this module’s compileSdkVersion</h3>
 							<ol>
 							<li>Dans build.gradle niveau module, compileSdkVersion 30 -> compileSdkVersion 31</li>
 							<li>Dans build.gradle niveau module, targetSdkVersion 30 -> targetSdkVersion 31</li>
@@ -120,16 +124,17 @@
                                 Essaie <strong>File</strong> > <strong>Invalide caches</strong> > <strong>Invalide and Restart</strong>
                             </p>
 							
-							<h3>Les tests ne sont pas débogables (affiche "terminated unexpectedly")</h3>
+							<h3>Les tests ne sont pas déboguables (affiche "terminated unexpectedly")</h3>
 							  <p>
                                 Vous ne devez pas avoir d'accent dans le nom de vos méthodes, de votre package et de votre projet
                             </p>
+							<p> Vous ne devez pas appeler votre classe de tests "test", car cela entre en conflit avec le nom du package "test"</p>
 							 <h3>Mes tests unitaires ne s'exécutent pas</h3>
                             <p>Dans le fichier build.gradle (dans le dossier app), vérifier que</p>
                             <ul>
-                                <li>on a la dépendance androidTestImplementation 'androidx.test:core:1.1.0'</li>
+                                <li>on a la dépendance androidTestImplementation 'androidx.test:core:1.1.1'</li>
                                 <li>on a la dépendance
-    androidTestImplementation 'androidx.test:runner:1.1.0'</li>
+    androidTestImplementation 'androidx.test:runner:1.1.1'</li>
                                 <li>la valeur de testInstrumentationRunner  est bien "androidx.test.runner.AndroidJUnitRunner"</li>
                                 <li>exemple ici : https://github.com/jorisdeguet/RoomSQL/blob/RoomTransaction/app/build.gradle</li>
                             </ul> 
