@@ -1,10 +1,12 @@
 package org.debug.server;
 
+import org.debug.server.exception.PipoException;
+import org.debug.server.exception.PopiException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class LoginController {
+public class GeneralController {
 
     private String ingredient = "Fromage";
 
@@ -23,8 +25,8 @@ public class LoginController {
     @GetMapping("/req2")
     public @ResponseBody String requeteDeux() throws PipoException, PopiException {
         System.out.println("REQUETE DEUX ");
-        JaImEPaSLaProGrAMMAtion j = new JaImEPaSLaProGrAMMAtion();
-        j.imAFunction();
+        Calculate j = new Calculate();
+        j.doStuff();
         return "Success";
     }
 
@@ -34,12 +36,10 @@ public class LoginController {
         ComptesPayables c = new ComptesPayables();
         try {
             c.calculerSommeTotaleMaximaleDesSalairesAnneeCours();
-            c.listeEmployesParAgeEtParAncienneté();
-            c.chercherDepartementInformatiqueNombreEmployésParSexeEtVilleNatale();
             c.calculerAncienneté();
             c.calculerMoyenneSalaires();
             c.calculerPrimes();
-            c.obtenirListeSalairesPourAnnee2020();
+            c.obtenirListeSalairesPourAnnee2022();
         }catch(Exception e){
             System.err.println("Erreur dans les calculs");
         }

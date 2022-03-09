@@ -1,15 +1,18 @@
 package org.debug.server;
 
+import org.debug.server.exception.PipoException;
+import org.debug.server.exception.PopiException;
+
 import java.util.Date;
 
-public class JaImEPaSLaProGrAMMAtion {
+public class Calculate {
 
     private String highlySecretValue = "5";
     String resultat = "Resultat";
-    public void imAFunction() throws PipoException, PopiException {
+    public void doStuff() throws PipoException, PopiException {
         try {
             int nombre = 89;
-            luckyNumber(nombre);
+            //luckyNumber(nombre);
             fixValPorto(nombre/2);
             fixValDumbo();
             fixValGino();
@@ -55,7 +58,7 @@ public class JaImEPaSLaProGrAMMAtion {
 
     public void calculateResult(){
         highlySecretValue = chiffre;
-        resultat += " 2021 - Officiel";
+        resultat += " 2022 - Officiel";
         System.out.println(Math.pow(Integer.parseInt(highlySecretValue)*10, 2));
     }
 }

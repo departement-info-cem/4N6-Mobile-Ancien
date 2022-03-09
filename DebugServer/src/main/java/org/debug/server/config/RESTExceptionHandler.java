@@ -1,4 +1,4 @@
-package org.debug.server;
+package org.debug.server.config;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
