@@ -12,7 +12,7 @@ public class Calculate {
     public void doStuff() throws PipoException, PopiException {
         try {
             int nombre = 89;
-            //luckyNumber(nombre);
+            luckyNumber(nombre);
             fixValPorto(nombre/2);
             fixValDumbo();
             fixValGino();
