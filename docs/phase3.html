@@ -55,22 +55,25 @@
                 </div>
                 <div class="col-xs-4 alert">
                     <strong>Git</strong>
-                    <span class="label label-success">1 point</span> Un minimum de 4 commits de tailles comparables. 
+                    <span class="label label-success">1 point</span> Un minimum de 4 commits de tailles comparables.
+                    Vous utilisez le même repo que pour le TP précédent.
                 </div>
             </div>
             <div class="row well">
 
 
 
-                <div class="col-xs-3 alert ">
+                <div class="col-xs-2 alert ">
                     <strong>Multilingue</strong>
                     <p>
-                        <span class="label label-primary">2 points</span> Vous devez traduire tous les textes de l'interface graphique existante.
-                        Vous devez avoir toutes les locales fr couvertes et l'application doit être en anglais par défaut.
+                        <span class="label label-primary">2 points</span>
+                        Vous devez traduire tous les textes de l'interface graphique existante en français et anglais:
                     </p>
-                    <p>
-                        Toutes les portions de l'application doivent être traduites incluant les messages de notifications, les messages d'erreur etc.
-                    </p>
+                    <ul>
+                        <li>texte de l'interface</li>
+                        <li>messages d'erreurs</li>
+                        <li>messages d'attente</li>
+                    </ul>
                     <p>
                         L'orthographe doit être correcte, les textes ne doivent pas contenir de fautes dans la version française.
                     </p>
@@ -98,29 +101,35 @@
                 </div> 
 
 
-                <div class="col-xs-5 alert ">
+                <div class="col-xs-6 alert ">
                     <strong>Attente dans l'interface graphique</strong>
                     <p>
-                        <span class="label label-primary">1 point</span>
-                        Vous devez inclure un délai côté serveur de 2 secondes au début de chaque méthode avec un @PostMapping ou @GetMapping afin de permettre de voir le délai.
+                        Note: vous pouvez modifier le délai d'attente du serveur dans le fichier
+                        <a  href="https://github.com/departement-info-cem/KickMyB-Server/blob/main/src/main/java/org/kickmyb/server/ConfigHTTP.java">
+                            ConfigHTTP.java
+                        </a> en changeant la valeur dans le <em>Thread.sleep</em>.
                     </p>
                     <p>
                         <span class="label label-primary">4 points</span>
-                        Quand vous envoyez une requête au serveur, la réponse n'est pas immédiate. Pendant l'attente, vous devez indiquer à l'utilisateur qu'il se passe quelque chose et désactiver l'action qu'il vient de déclencher pour éviter qu'ils envoient des rafales de requêtes.
+                        Quand vous envoyez une requête au serveur, la réponse n'est pas immédiate. Pour une action vous devez:
                     </p>
-
+                    <ul>
+                        <li>indiquer à l'utilisateur qu'il se passe quelque chose </li>
+                        <li>désactiver l'action qu'il vient de déclencher pour éviter que l'utilisateur puisse envoyer des requêtes</li>
+                    </ul>
                     <p>
-                        Pour chaque consultation (liste et consultation) vous devez indiquer à l'utilisateur que le chargement est en cours et afficher les informations quand elles sont reçues.
+                        Pour chaque consultation (liste et consultation) vous devez :
                     </p>
-                    <p>
-                        Pour toutes les actions de l'utilisateur, vous devez indiquer l'attente mais également désactiver l'action.
-                    </p>
+                    <ul>
+                        <li>indiquer à l'utilisateur que le chargement est en cours</li>
+                        <li>afficher les informations quand elles sont reçues</li>
+                    </ul>
                     <p>
                         L'interface doit revenir dans un état fonctionnel après le chargement, que le résultat soit correct ou en cas d'erreur.
                     </p>
                 </div> 
 
-				<div class="col-xs-5 alert ">
+				<div class="col-xs-6 alert ">
                     <strong>Mises à jour de l'interface</strong>
                     <p>
                         <span class="label label-primary">1 point</span>
@@ -136,31 +145,32 @@
 
             <div class="row well">
                 <div class="col-md-8">
-                    <h3>Sécurité / failles côté serveur</h3>
+                    <h3>Capture du drapeau / faille de sécurité du serveur</h3>
                     <p>
-                        Il y a plusieurs failles ou défauts dans le serveur qui vous a été fourni pour le cours. Il peut s'agir de tous les types de problèmes qui ont été évoqués pendant le cours. Vous devez un problème et le documenter voire le régler
+                        Notre serveur contient une faille de contrôle d'accès sur la mise à jour du pourcentage d'une
+                        tâche. Vous devez trouver un moyen d'exploiter cette faille.
+                        Pendant la séance 13.2 vous devrez montrer que vous êtes capables de modifier une tâche qui ne
+                        vous appartient pas.
                     </p>
-                    <ul>
-                        <li>Vous devez créer un fichier SECURITE.md à la racine de votre projet Android</li>
+                    <ol>
                         <li>
-                            <span class="label label-primary">1 point</span> 
-                            Dans une section <strong>FAILLE</strong>, expliquer quelle est la faille au niveau du code, l'erreur de programmation ou la faille de sécurité.
+                            <span class="label label-primary">3 points</span>
+                            Tu dois montrer pendant la séance 13.2 que tu es capable de modifier une tâche qui ne t'appartient
+                            pas.
                         </li>  
                         <li>
-                            <span class="label label-primary">2 points</span> 
-                            Dans une section <strong>EXPLOIT</strong>, expliquer précisément comment un attaquant peut tirer profit de la faille pour nuire au système ou à un utilisateur du système. Donnez les <strong> étapes numérotées détaillées </strong> afin qu'un autre étudiant puisse reproduire les étapes.
+                            <span class="label label-primary">1 point</span>
+                            <strong>UNIQUEMENT SI TU AS RÉSSI À EXPLOITER LA FAILLE</strong>,
+                            explique en détails les étapes qui t'ont permis d'exploiter la faille de sécurité dans un fichier
+                            nommé faille.md à la racine de ton projet.
                         </li>
-                        <li>
-                            <span class="label label-primary">1 point</span> 
-                            Dans une section <strong>CORRECTIF</strong>, expliquer comment combler la faille et éviter l'exploit. Vous pouvez indiquer quels fichiers de code modifier et donner le code source. Vous pouvez également pointer sur un commit d'un fork privé si vous en avez un.
-                        </li> 
-                    </ul>
+                    </ol>
                 </div>
                 <div class="col-md-4">
                     <h3>Fonctionnement global</h3>
                     <p>
                         <span class="label label-danger">5 points négatifs</span> 
-                        Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en 
+                        L'application fonctionne sans plantage et correctement. Ce pointage fonctionne en
                         négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
                         Dans le cas contraire, vous perdez des points avec un maximum de 5.
                     </p>
