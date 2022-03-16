@@ -42,44 +42,38 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Images, Multilingue et ressources</h3>
+                <h3 id="s8">HTTP réponses et codes d'erreur, exceptions</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/kP1o8F9qWfs" frameborder="0" allowfullscreen></iframe>
+                        Vous trouverez <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/HTTPResponse">plusieurs exemples</a> de serveur qui utilisent des éléments différents d'HTTP pour
+                        représenter les erreurs.
                     </p>
-                    <p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/_K-S2nEaoLU" frameborder="0" allowfullscreen></iframe>
-                    </p>            
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Multilingue, locales</strong>
+                    <strong>HTTP et erreurs</strong>
                     <p>
-                        On parlera de stratégie pour déterminer quelle sera la locale par défaut, comment fournir une traduction complète (français) ou un traduction partielle (québécois).
+                        On discutera de la gestion des erreurs côté serveur et des différentes stratégies
                     </p>
+                    <ul>
+                        <li>Envoyer la première ou toutes les erreurs (surtout pour les long formulaires)</li>  
+                        <li>Utiliser le code d'erreur, le message ou le corps de la réponse</li>  
+                        <li>Dans quelle langue doit être le message d'erreur, traduit sur le serveur ou dans la langue de programmation et traduit sur le client</li>
+                    </ul>
                     <p>
-                        On parlera de la possibilité d'ajouter un logo ou des images pour distinguer son application des autres.
+                        On expliquera la stratégie utilisée par le serveur fourni dans le cours.
                     </p>
                 </div>
+            
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
                         <div>
-                            <h3>Exercice multilingue</h3>
+                            <h3>Exercice</h3>
                             <p>
-                                Vous devez faire une application avec un titre (dans le ActionBar) et un TextView dans l'activité.
-                            </p>
-                            <ul>
-                                <li>en anglais, le titre est "SupaDupa app" et le TextView est "expansive"</li>
-                                <li>en français, le titre est "App en français" et le TextView est "cher"</li>
-                                <li>en québécois, le titre est "App en français" et le TextView est "dispendieux"</li>
-                            </ul>
-							<p> Votre application doit avoir un logo différent de celui par défaut</p>
-							<h3>Exercice de logo</h3>
-                            <p>
-                                Vous devez ajouter le logo <a href="images/logo.jpg">suivant</a> à votre projet ci-dessus. On voudrait un logo rond.
+                                Vous devez faire une copie du projet serveur des profs et voir comment construire une réponse d'erreur HTTP en y indiquant un code 499 et un corps avec la String "Ayoye"
                             </p>
                         </div>
                     </div>
@@ -87,5 +81,6 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyj
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
 </html>

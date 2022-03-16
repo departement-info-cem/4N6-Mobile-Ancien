@@ -42,34 +42,23 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Déploiement Heroku</h3>
+                <h3 id="s8">Images, Multilingue et ressources</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Vous devez commencer par créer votre compte sur <a href="https://www.heroku.com/">Heroku</a>.
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/kP1o8F9qWfs" frameborder="0" allowfullscreen></iframe>
                     </p>
                     <p>
-                        Vous lirez la doc sur le déploiement d'application Spring Boot <a href="https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku">ici</a>. Il faut télécharger le Heroku CLI.
-                    </p>
-                    <p>
-                        Garder en tête que vous déploierez le projet serveur du cours. Vous n'avez pas à créer le projet Spring Boot. <strong>Ignorez donc la section "Creating a Spring Boot app"</strong>
-                    </p>
-                    <p>
-                        Nous avons également fourni le <a href="https://devcenter.heroku.com/articles/procfile">Procfile</a> pour le projet.
-                    </p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/_K-S2nEaoLU" frameborder="0" allowfullscreen></iframe>
+                    </p>            
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Déploiement</strong>
+                    <strong>Multilingue, locales</strong>
                     <p>
-                        On parlera également des impacts des différents types d'instance
+                        On parlera de stratégie pour déterminer quelle sera la locale par défaut, comment fournir une traduction complète (français) ou un traduction partielle (québécois).
                     </p>
-                    <ul>
-                        <li>instance gratuite qui s'arrête et redémarre et perd ses fichiers</li>
-                        <li>instance toujours en fonctionnement</li>
-                        <li>multiples instances frontales avec une BD partagée</li>
-                    </ul>
                     <p>
-                        Nous discuterons de l'impact sur la BD mais également sur les sessions qui sont conservées en mémoire vive.
+                        On parlera de la possibilité d'ajouter un logo ou des images pour distinguer son application des autres.
                     </p>
                 </div>
                 <div class="col-md-12 well">
@@ -77,15 +66,20 @@
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div >
-                            <h3>Exercice</h3>
+                        <div>
+                            <h3>Exercice multilingue</h3>
                             <p>
-                                Vous devez faire le déploiement du serveur fourni par les profs sur votre compte Heroku. 
-                                Vous utiliserez la commande 
+                                Vous devez faire une application avec un titre (dans le ActionBar) et un TextView dans l'activité.
                             </p>
-                            <pre>heroku logs --tail</pre>
+                            <ul>
+                                <li>en anglais, le titre est "SupaDupa app" et le TextView est "expansive"</li>
+                                <li>en français, le titre est "App en français" et le TextView est "cher"</li>
+                                <li>en québécois, le titre est "App en français" et le TextView est "dispendieux"</li>
+                            </ul>
+							<p> Votre application doit avoir un logo différent de celui par défaut</p>
+							<h3>Exercice de logo</h3>
                             <p>
-                                pour voir les logs de votre serveur.
+                                Vous devez ajouter le logo <a href="images/logo.jpg">suivant</a> à votre projet ci-dessus. On voudrait un logo rond.
                             </p>
                         </div>
                     </div>
@@ -93,6 +87,5 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyj
 </html>

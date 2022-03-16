@@ -42,70 +42,37 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Sécurité : crypto HTTP(S) et hashing</h3>
+                <h3 id="s8">Compatibilité, taille et orientation</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        La cryptographie, ce sont des moyens de cacher certaines informations à des utilisateurs
-                        qui ne devraient pas y avoir accès quand on ne peut pas tout simplement leur en empêcher l'accès.
+                        Le but de cette séance est de voir si votre application est utilisable sur plusieurs tailles de périphériques et plusieurs orientations. 
+                    </p>
+                    <p>
+                        Vous pouvez essayer une tablette de 10 pouces en portrait et en paysage ainsi qu'un petit téléphone en portrait paysage.
                     </p>
                     <ul>
-                        <li>Pendant que l'information transite sur le réseau, on ne contrôle pas tout le chemin pris par les données</li>
-                        <li>Si la BD est accédée par un employé ou si un pirate arrive à faire une copie de la BD</li>
+                        <li>Est-ce que tous les éléments d'interface sont accessibles ou visibles?</li>
+                        <li>Si c'est trop petit, comment rendre l'activité scrollable?</li>
                     </ul>
-					
-                    <p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/r0apzpwCGA4" frameborder="0" allowfullscreen></iframe>
-                    </p>
-					<p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/V8IGEfWnh2s" frameborder="0" allowfullscreen></iframe>
-                    </p>
-					<p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/VCjJy7QfWJI" frameborder="0" allowfullscreen></iframe>
-                    </p>
-
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        On discutera de différentes possibilités cryptographiques et de leurs cas d'utilisation
+                        On discutera d'une combinaison de tests qui est minimale : un téléphone, une tablette et des tailles d'écran assez standards.
                     </p>
-                    <ul>
-                        <li>SSL et encryption asymétrique</li>
-                        <li>encryption symétrique et champs de données sensibles (NAS, carte de crédit)</li>
-                        <li>Fonction de hash et mode de passe</li>
-                    </ul>
                     <p>
-                        Les solutions de crypto sont en général diffiles à coder et très sensibles aux erreurs. Il s'agit donc ici de les utiliser correctement, en comprenant ce qu'on fait. 
+                        On discutera des 2 grandes familles de mise en page : scrollable ou pas.
                     </p>
                 </div>
+                
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div >
-                            <h3>Exercice A</h3>
-                            <p>
-                                Sur votre serveur en utilisant l'url http://localhost:8080/h2-console vous pouvez ouvrir une console qui permet d'explorer la base de données.
-                            </p>
-                            <p>
-                                Vous devez trouver le champ encrypté symétrique. Tu dois créer un fichier Symetrique.txt à la racine de ton projet où tu expliqueras : 
-                            </p>
-                            <ul>
-                                <li>Quel champ dans quelle classe a été encrypté ?</li>
-                                <li>Est-ce que c'était nécessaire d'encrypter ?</li>
-                                <li>Est-ce qu'il y a un ou plusieurs champ(s) dans le projet qui devraient être encryptés?</li>
-                            </ul>
-                            <h3>Exercice B</h3>
-                            <p>
-                                En cherchant dans le projet, vous devez trouver où se trouve la configuration du "password encoder". Tu dois créer un fichier EncodageMotDePasse.txt à la racine de ton projet où tu expliqueras : 
-                            </p>
-                            <ul>
-                                <li>Où se trouvait la configuration à modifier ?</li>
-                                <li>Qu'est-ce que ça change dans l'application ?</li>
-                                <li>Comment en pratique tu peux voir la différence, avec quel outil?</li>
-                            </ul>
+                        <div>
+                            Pas d'exercice, vous devez travailler à la compatibilité de votre appli avec les appareils mentionnés.
                         </div>
                     </div>
                 </div>
@@ -115,5 +82,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
-
 

@@ -42,83 +42,70 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Sécurité : contrôle d'accès</h3>
+                <h3 id="s8">Sécurité : crypto HTTP(S) et hashing</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Si on regarde le <a href="https://owasp.org/www-project-top-ten/">top 10</a> des problèmes de sécurité dans les applis web, on trouve
-                        <a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control">
-                            le contrôle d'accès défaillant
-                        </a>
-                        en position 5.
-                    </p>
-                    <p>
-                        C'est aussi la source de failles qu'on observe le plus souvent dans les projet des finissants.
-                    </p>
-                    <p>
-                        La raison principale est que le contrôle d'accès nécessite souvent du travail
-                        sans apporter de nouvelles fonctionnalités.
-                    </p>
-                    <p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/xKUarGFeDyo" frameborder="0" allowfullscreen></iframe>
-                    </p>
-                    <p>
-                        Vous trouverez ici les différentes branches du code du serveur de démo ici:
+                        La cryptographie, ce sont des moyens de cacher certaines informations à des utilisateurs
+                        qui ne devraient pas y avoir accès quand on ne peut pas tout simplement leur en empêcher l'accès.
                     </p>
                     <ul>
-                        <li>
-                            Aucun contrôle d'accès
-                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/open-bar">
-                                ici
-                            </a>
-                        </li>
-                        <li>
-                            Spring Security et authentification
-                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-basic">
-                                ici
-                            </a>
-                        </li>
-                        <li>
-                            Spring Security, authentification et extraction de l'utilisateur authentifié courant
-                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-auth">
-                                ici
-                            </a>
-                        </li>
-                        <li>
-                            Spring Security, authentification et extraction de l'utilisateur authentifié courant et test de propriété
-                            <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/test-proprio">
-                                ici
-                            </a>
-                        </li>
+                        <li>Pendant que l'information transite sur le réseau, on ne contrôle pas tout le chemin pris par les données</li>
+                        <li>Si la BD est accédée par un employé ou si un pirate arrive à faire une copie de la BD</li>
                     </ul>
+					
+                    <p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/r0apzpwCGA4" frameborder="0" allowfullscreen></iframe>
+                    </p>
+					<p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/V8IGEfWnh2s" frameborder="0" allowfullscreen></iframe>
+                    </p>
+					<p>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/VCjJy7QfWJI" frameborder="0" allowfullscreen></iframe>
+                    </p>
+
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        Nous discuterons des différences entre les différents projets.
-                    </p>
-                    <p>
-                        Nous verrons également comment rédiger une FAILLE, un EXPLOIT et un CORRECTIF sur l'exemple <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-basic">
-                        spring sec et authentification</a>.
+                        On discutera de différentes possibilités cryptographiques et de leurs cas d'utilisation
                     </p>
                     <ul>
-                        <li>Vérifier si l'utilisateur est authentifié, si ce n'est pas le cas exception</li>
-                        <li>Si c'est une lecture, il faut ensuite vérifier que l'utilisateur est le propriétaire (ou a le droit d'accès) sur l'objet demandé</li>
-                        <li>Si c'est une écriture, il faut s'assurer qu'on ne peut pas créer des données dans le compte d'un autre utilisateur</li>
+                        <li>SSL et encryption asymétrique</li>
+                        <li>encryption symétrique et champs de données sensibles (NAS, carte de crédit)</li>
+                        <li>Fonction de hash et mode de passe</li>
                     </ul>
+                    <p>
+                        Les solutions de crypto sont en général diffiles à coder et très sensibles aux erreurs. Il s'agit donc ici de les utiliser correctement, en comprenant ce qu'on fait. 
+                    </p>
                 </div>
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div>
-                            <h3>Exercice</h3>
+                        <div >
+                            <h3>Exercice A</h3>
                             <p>
-                                Vous devez rédiger
-                                FAILLE EXPLOIT et CORRECTIF pour la branche <a href="https://github.com/jorisdeguet/spring-boot-access-control/tree/spring-security-auth">
-                                spring sec et utilisateur courant</a>.
+                                Sur votre serveur en utilisant l'url http://localhost:8080/h2-console vous pouvez ouvrir une console qui permet d'explorer la base de données.
                             </p>
+                            <p>
+                                Vous devez trouver le champ encrypté symétrique. Tu dois créer un fichier Symetrique.txt à la racine de ton projet où tu expliqueras : 
+                            </p>
+                            <ul>
+                                <li>Quel champ dans quelle classe a été encrypté ?</li>
+                                <li>Est-ce que c'était nécessaire d'encrypter ?</li>
+                                <li>Est-ce qu'il y a un ou plusieurs champ(s) dans le projet qui devraient être encryptés?</li>
+                            </ul>
+                            <h3>Exercice B</h3>
+                            <p>
+                                En cherchant dans le projet, vous devez trouver où se trouve la configuration du "password encoder". Tu dois créer un fichier EncodageMotDePasse.txt à la racine de ton projet où tu expliqueras : 
+                            </p>
+                            <ul>
+                                <li>Où se trouvait la configuration à modifier ?</li>
+                                <li>Qu'est-ce que ça change dans l'application ?</li>
+                                <li>Comment en pratique tu peux voir la différence, avec quel outil?</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -128,3 +115,5 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
+
+

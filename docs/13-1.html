@@ -42,28 +42,27 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Compatibilité, taille et orientation</h3>
+                <h3 id="s8">Compatibilité et API</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Le but de cette séance est de voir si votre application est utilisable sur plusieurs tailles de périphériques et plusieurs orientations. 
-                    </p>
-                    <p>
-                        Vous pouvez essayer une tablette de 10 pouces en portrait et en paysage ainsi qu'un petit téléphone en portrait paysage.
+                        Le but de cette séance est de voir si votre application fonctionne sur différentes versions d'API Android.
                     </p>
                     <ul>
-                        <li>Est-ce que tous les éléments d'interface sont accessibles ou visibles?</li>
-                        <li>Si c'est trop petit, comment rendre l'activité scrollable?</li>
+                        <li>Est-ce que vous implémentez de nouvelles fonctionnalités sans offrir une alternative pour les vieilles versions ?</li>
+                        <li>Est-ce que la version minimale requise est trop restrictive ?</li>
                     </ul>
                 </div>
                 <div class="col-md-6 alert alert-warning">
                     <strong>Séance</strong>
                     <p>
-                        On discutera d'une combinaison de tests qui est minimale : un téléphone, une tablette et des tailles d'écran assez standards.
+                        On discutera de quelle version d'API utiliser pour le déploiement sur le Play Store.
                     </p>
                     <p>
-                        On discutera des 2 grandes familles de mise en page : scrollable ou pas.
+                        On discutera des <a href="https://abi-laboratory.pro/?view=timeline&lang=java&l=android">changements aux APIs</a> dans les dernières années et de l'impact des versions sur la rétro-compatibilité. 
                     </p>
+					<p> On regardera comment utiliser la <a href="https://developer.android.com/about/dashboards/index.html">documentation</a> pour obtenir de l'information sur les releases
+					</p>
                 </div>
                 
                 <div class="col-md-12 well">
@@ -71,8 +70,11 @@
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div>
-                            Pas d'exercice, vous devez travailler à la compatibilité de votre appli avec les appareils mentionnés.
+                        <div >
+                            <h3>Exercice A</h3>
+                            <p>
+                                Ouvrez 5 de vos exercices de la session et essayez de les rouler sur des versions antérieures de l'API. Pour chaque exercice, reculez de 5 versions (ex : API 30, 25, 20, 21 ...).
+                            </p>
                         </div>
                     </div>
                 </div>

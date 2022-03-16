@@ -36,44 +36,62 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Accueil</a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">HTTP réponses et codes d'erreur, exceptions</h3>
+                <h3 id="s8">Erreurs dans l'interface graphique</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
                     <p>
-                        Vous trouverez <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/HTTPResponse">plusieurs exemples</a> de serveur qui utilisent des éléments différents d'HTTP pour
-                        représenter les erreurs.
+                        Vous pouvez lire la doc d'Android sur les différents moyens d'afficher des erreurs
+                        dans un formulaire <a href="https://material.io/archive/guidelines/patterns/errors.html#errors-user-input-errors">ici</a>.
+                    </p>
+                    <p>
+                        Vous pouvez également regarder la doc technique sur les 
+                        <a href="https://material.io/components/snackbars/android#using-snackbars">snackbars</a>
+                        et les 
+                        <a href="https://material.io/components/dialogs#behavior">dialogues</a>.
+                    </p>
+                    <p>
+                        Vous vous familiariserez avec les démos de la semaine 
+                        <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/AffichageErreur">affichage d'erreurs</a>
+                        et
+                        <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/ErreurRetrofit">erreurs dans retrofit</a>.
                     </p>
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>HTTP et erreurs</strong>
+                    <strong>Affichage des erreurs</strong>
                     <p>
-                        On discutera de la gestion des erreurs côté serveur et des différentes stratégies
+                        On discutera des différents moyens d'afficher un message d'erreur: Toast, Snackbar, dialogues et erreur sur un champ texte. 
                     </p>
-                    <ul>
-                        <li>Envoyer la première ou toutes les erreurs (surtout pour les long formulaires)</li>  
-                        <li>Utiliser le code d'erreur, le message ou le corps de la réponse</li>  
-                        <li>Dans quelle langue doit être le message d'erreur, traduit sur le serveur ou dans la langue de programmation et traduit sur le client</li>
-                    </ul>
                     <p>
-                        On expliquera la stratégie utilisée par le serveur fourni dans le cours.
+                        On discutera du cas où il peut y avoir plusieurs erreurs au cours d'un seul appel au serveur
+                        comme dans un formulaire avec de nombreux champs. Quelle stratégie adopter: envoyer seulement la
+                        première erreur à l'utilisateur ou toutes les erreurs.
+                    </p>
+                    <p>
+                        On montrera comment traduire les messages d'erreur dans l'interface.
+                    </p>
+                    <p>
+                        On discutera du cas où l'erreur vient de l'absence de signal ou de réseau dans l'application.
                     </p>
                 </div>
-            
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div>
+                        <div >
                             <h3>Exercice</h3>
                             <p>
-                                Vous devez faire une copie du projet serveur des profs et voir comment construire une réponse d'erreur HTTP en y indiquant un code 499 et un corps avec la String "Ayoye"
+                                Copier un de vos exercices qui envoyait une requête à un web service. 
+                            </p>
+                            <p>Vous devez modifier votre application pour afficher 
+                                soit le résultat si ça a fonctionné
+                                soit une erreur si il n'y a pas de réseau (vous testerez avec l'appareil en mode avion)
                             </p>
                         </div>
                     </div>

@@ -36,62 +36,69 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Accueil</a></li>
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <h3 id="s8">Erreurs dans l'interface graphique</h3>
+                <h3 id="s8">Gestion de l'attente dans l'interface graphique</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance (2h)</strong>
+                    
                     <p>
-                        Vous pouvez lire la doc d'Android sur les différents moyens d'afficher des erreurs
-                        dans un formulaire <a href="https://material.io/archive/guidelines/patterns/errors.html#errors-user-input-errors">ici</a>.
+                        Vous devrez regarder l'exemple d'application fournie pour les indicateurs de progression
+                        <a class="btn btn-xs btn-primary" href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Progress">ici</a>. Il s'agit du projet Progress dans le repository du 
+                        <a href="https://github.com/departement-info-cem/4N6-Mobile">cours</a>.
                     </p>
                     <p>
-                        Vous pouvez également regarder la doc technique sur les 
-                        <a href="https://material.io/components/snackbars/android#using-snackbars">snackbars</a>
-                        et les 
-                        <a href="https://material.io/components/dialogs#behavior">dialogues</a>.
+                        OPTIONNEL : Regardez l'exemple de Google concernant les listes avec 
+                        <a href="https://developer.android.com/training/swipe/add-swipe-interface">swipe to refresh</a>
+                        <a class="btn btn-xs btn-primary" href="https://github.com/android/views-widgets-samples/tree/main/SwipeRefreshLayoutBasic">ici</a>.
+                        Vous pouvez le lancer dans Android Studio, aller à 
+                        <span class="label label-primary">File</span>  > 
+                        <span class="label label-primary">New</span>  > 
+                        <span class="label label-primary">Import sample</span> et taper "swipe" dans le champ de recherche.
                     </p>
-                    <p>
-                        Vous vous familiariserez avec les démos de la semaine 
-                        <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/AffichageErreur">affichage d'erreurs</a>
-                        et
-                        <a href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/ErreurRetrofit">erreurs dans retrofit</a>.
-                    </p>
+                    
+                    
                 </div>
                 <div class="col-md-6 alert alert-warning">
-                    <strong>Affichage des erreurs</strong>
+                    <strong>Pendant la séance</strong>
                     <p>
-                        On discutera des différents moyens d'afficher un message d'erreur: Toast, Snackbar, dialogues et erreur sur un champ texte. 
+                        On discutera du besoin d'indiquer à l'utilisateur qu'un accès réseau est en cours pour éviter de la frustration et le fait que l'utilisateur envoie plusieurs fois une même requête.
                     </p>
                     <p>
-                        On discutera du cas où il peut y avoir plusieurs erreurs au cours d'un seul appel au serveur
-                        comme dans un formulaire avec de nombreux champs. Quelle stratégie adopter: envoyer seulement la
-                        première erreur à l'utilisateur ou toutes les erreurs.
+                        On discutera les besoins d'avoir une action de rafraîchissement, en particulier si les informations d'une page peuvent être modifiées par un tiers.
                     </p>
                     <p>
-                        On montrera comment traduire les messages d'erreur dans l'interface.
-                    </p>
-                    <p>
-                        On discutera du cas où l'erreur vient de l'absence de signal ou de réseau dans l'application.
+                        On regardera le code des exemples en cours. En particulier, on prendra l'exemple <a class="btn btn-xs btn-primary" href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/SwipeRefresh">ici</a> et on identifiera les éléments importants pour un swipe to refresh.
                     </p>
                 </div>
+                
                 <div class="col-md-12 well">
                     <div>
                         <a class="btn btn-primary btn-xs" >
                             Exercices de la semaine
                         </a>
-                        <div >
-                            <h3>Exercice</h3>
+                        <div>
+                            <h3>Exercice A</h3>
                             <p>
-                                Copier un de vos exercices qui envoyait une requête à un web service. 
+                                Créez un projet appelé <strong>AttenteSimple</strong> avec un
+                                bouton et un textview avec un fond vert.
                             </p>
-                            <p>Vous devez modifier votre application pour afficher 
-                                soit le résultat si ça a fonctionné
-                                soit une erreur si il n'y a pas de réseau (vous testerez avec l'appareil en mode avion)
+                            <p>
+                                Faites la programmation nécessaire pour que quand on appuie sur le bouton,
+                                le textview soit remplacé par un indicateur de progression pendant une seconde puis que le textview revienne.
+                            </p>
+                            <h3>Exercice B (optionnel)</h3>
+                            <p>
+                                Créez un projet appelé <strong>AttenteListe</strong>.
+                            </p>
+                            <p>
+                                Implantez un "tirer pour rafraichir" et modifier le contenu de la liste
+                                à chaque fois avec un ensemble de 100 nombres entiers tirés au hasard entre
+                                333 et 444.
                             </p>
                         </div>
                     </div>
@@ -102,3 +109,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
+
