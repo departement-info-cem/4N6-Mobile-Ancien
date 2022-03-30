@@ -24,7 +24,7 @@ public class MyController {
     }
 
     @PostMapping("/ajouterSalaire")
-    public void ajouterSalaire(@RequestBody Integer salaire) throws WrongValueException {
+    public @ResponseBody void ajouterSalaire(@RequestBody Integer salaire) throws WrongValueException {
         if (salaire < 0){
             throw new WrongValueException("La valeur n'est pas valide");
         }
@@ -32,7 +32,7 @@ public class MyController {
     }
 
     @GetMapping("/unknown")
-    public void unknown() throws UnhandledException {
+    public @ResponseBody void unknown() throws UnhandledException {
             throw new UnhandledException("Le serveur a rencontré une erreur");
     }
 }
