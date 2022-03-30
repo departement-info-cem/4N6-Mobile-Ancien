@@ -12,7 +12,7 @@ The request has succeeded and a new resource has been created as a result. This 
 ## 202 Accepted  
 The request has been received but not yet acted upon. It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request. It is intended for cases where another process or server handles the request, or for batch processing.  
 <br />
-<hr />
+<br />
 # Redirection messages  
 ## 300 Multiple Choice  
 The request has more than one possible response. The user-agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)  
@@ -29,7 +29,7 @@ The server sends this response to direct the client to get the requested resourc
 ## 308 Permanent Redirect  
 This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request.  
 <br />
-<hr />
+<br />
 # Client error responses  
 ## 400 Bad Request  
 The server could not understand the request due to invalid syntax.  
@@ -60,7 +60,7 @@ The media format of the requested data is not supported by the server, so the se
 ## 429 Too Many Requests  
 The user has sent too many requests in a given amount of time ("rate limiting").  
 <br />
-<hr />
+<br />
 # Server error responses  
 ## 500 Internal Server Error  
 The server has encountered a situation it doesn't know how to handle.  
