@@ -1,32 +1,37 @@
 package org.sabourin.swiperefresh;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     SwipeRefreshLayout swiperefresh;
-    RecyclerView recyclerView;
-    MyAdapter adapter;
+    ListView listeView;
+    ArrayList<String> listeItems = new ArrayList<String>();
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initRecycler();
-
         swiperefresh = findViewById(R.id.swiperefresh);
+        listeView = findViewById(R.id.list);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listeItems);
+        listeView.setAdapter(adapter);
 
         swiperefresh.setOnRefreshListener(
                 () -> {
@@ -55,20 +60,25 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.refresh, menu);
+        return true;
+    }
 
     public void myUpdateOperation() {
 
         // Utilise le thread UI et bloque l'animation
         // Thread.sleep(3000);
-        adapter.maListe.clear();
+        listeItems.clear();
         for (int i = 0 ; i < 100 ; i ++){
-            adapter.maListe.add("Valeur " + i+ " ! ");
+            listeItems.add(i+ " ! ");
+            adapter.notifyDataSetChanged();
         }
-        adapter.notifyDataSetChanged();
 
         //Arrête l'animation de loading
         swiperefresh.setRefreshing(false);
-        recyclerView.smoothScrollToPosition(0);        // nécessaire si pas déjà en haut de la liste
+        listeView.smoothScrollToPosition(0);        // nécessaire si pas déjà en haut de la liste
     }
 
     private class DummyBackgroundTask extends AsyncTask<Void, Void, List<String>> {
@@ -91,20 +101,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void initRecycler(){
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        adapter = new MyAdapter();
-        recyclerView.setAdapter(adapter);
-    }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.refresh, menu);
-        return true;
-    }
 }
