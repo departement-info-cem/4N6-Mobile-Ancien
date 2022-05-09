@@ -115,10 +115,10 @@
                             </p>
 							<img src="images/Miami2.png" />
                             <p>
-                               Votre deuxième tâche est de créer le DTO qui permettra d'afficher les informations ci-dessus. Réfléchissez à qui devrait s'occuper de faire les calculs, quelles informations le client a besoin, etc.
+                               Votre deuxième tâche est de créer le(s) DTO(s) qui permettra d'afficher les informations ci-dessus. Réfléchissez à qui devrait s'occuper de faire les calculs, quelles informations le client a besoin, etc.
                             </p>
 							<h3>Exercice 3 : Écrire sur le blockchain</h3>
-							<p> Lorsqu'un joueur se créer un nouveau personnage, vous devez
+							<p> Lorsqu'un joueur se créer un nouveau personnage, vous effectuez les actions suivantes dans votre code : 
 								<ol><li> Créer le hero avec ses informations de base</li>
 									<li> Ajouter une arme au hero (toujours le Wooden Woopa Stick)</li>
 									<li> Envoyer le hero en quête</li>
@@ -128,16 +128,16 @@
                         </div>
 						<hr>
 						<div>
-						<h2>Insta Groom</h2>
+						<h2>Insta Groom <img src="images/logo.jpg" style="width:5%" /></h2>
 						<p>Vous êtes frustré contre le web3 et vous décidez de revenir à ce que vous connaissez : le web 2.0. Vous avez eu une idée de génie : coder un compétiteur à Instagram, mais pour les gens <u>bien groomés</u> uniquement.</p>
 						<p>Voici votre classe de modèle :</p>
 						<pre>
 <code>public class profilInstaGroom {
 	Long id;
-	String username;
+	String nomUtilisateur;
 	String alias; // @blabla
 	String bio;
-	boolean verified;
+	boolean estVerifie;
 	TypeCompte monCompte; //business, VIP, normal
 	Long nombreMedia;
 	String photoPrincipaleURL;
@@ -146,9 +146,10 @@
 	int scoreGrooming; //ne peut dépasser 9000
 }</code></pre>
 <p class="alert alert-warning" role="alert"> Psst ! Je me suis inspirée du vrai <a href="https://developers.facebook.com/docs/instagram-basic-display-api/reference/user">Instagram </a>pour le modèle 😉 </p>
-							<h3>Exercice 4 : Boss final</h3>
-							<p> On veut afficher la liste de nos comptes favoris, soit tous ceux qu'on follow. Pour chaque compte, on a son nom d'utilisateur, son tag et sa photo.</p>
-							<img src="images/Instagroom1.png" />
+							<h3>Exercice 1 : Boss final</h3>
+							<p> On veut afficher la liste de nos comptes favoris, soit tous ceux qu'on follow. Pour chaque compte, on a son nom d'utilisateur, son alias, sa photo et s'il est vérifié.</p>
+							<p>Écrivez le(s) DTO(s) qui permettra cet affichage.</p>
+							<img src="images/Instagroom1.PNG" />
 						</div>
                         </div>
                     </div>
