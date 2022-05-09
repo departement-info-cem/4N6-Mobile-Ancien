@@ -82,6 +82,74 @@
                             <p>
                                 En équipe de 3 ou 4, étudiez les mises en situation et formulez une solution potentielle au problème.
                             </p>
+							
+							<h2>Krypt'Eau Raideur</h2>
+							<p>Vous décidez de faire un jeu sur le réseau <b>Ethereum</b>. Sur la blockchain, chaque action coûte un montant (appelé <b>gas</b>). De 5$ à 50$ par transaction (selon l'achalandage). Nul besoin de vous expliquer à quel point vous souhaitez <b>réduire le nombre de transactions.</b> De plus, vous voulez <b>éviter l'envoi inutile de données</b> puisque la taille de la transaction augmente également le coût.</p>
+							
+							<p> Pour jouer, les participants devront se créer un héro. Voici la classe modèle : </p>
+							<pre>
+<code>public class hero {
+	Long id;
+	String nom;
+	int generation;
+	int niveau;
+	Date dateNaissance;
+	String race; // orc, elfe, humain
+	String job; // magicien, archer, guerrier
+	int strength;
+	int agility;
+	int magic;
+	Date dateEmbauche;
+	String nomPoste; // explorateur, collecteur, mineur
+	Float salaire;
+	Arme monArme;
+	boolean enQuete;
+}</code></pre>
+							<h3>Exercice 1 : Voir le héro </h3>
+							<p> Votre première tâche est de créer le DTO qui permettra d'afficher les informations suivantes. Notez que l'image affichée est aléatoire. </p>
+							<img src="images/Miami1.png" />
+							<h3>Exercice 2 : Transfer vs View Model</h3>
+
+                            <p>
+                                On veut maintenant créer une interface afin d'afficher quelques informations intéressantes. Le designer a fait un brouillon.
+                            </p>
+							<img src="images/Miami2.png" />
+                            <p>
+                               Votre deuxième tâche est de créer le DTO qui permettra d'afficher les informations ci-dessus. Réfléchissez à qui devrait s'occuper de faire les calculs, quelles informations le client a besoin, etc.
+                            </p>
+							<h3>Exercice 3 : Écrire sur le blockchain</h3>
+							<p> Lorsqu'un joueur se créer un nouveau personnage, vous devez
+								<ol><li> Créer le hero avec ses informations de base</li>
+									<li> Ajouter une arme au hero (toujours le Wooden Woopa Stick)</li>
+									<li> Envoyer le hero en quête</li>
+								</ol>
+							</p>
+							<p>Comment, avec des DTOs, pouvez-vous réduire au maximum le nombre de transactions ? </p>
+                        </div>
+						<hr>
+						<div>
+						<h2>Insta Groom</h2>
+						<p>Vous êtes frustré contre le web3 et vous décidez de revenir à ce que vous connaissez : le web 2.0. Vous avez eu une idée de génie : coder un compétiteur à Instagram, mais pour les gens <u>bien groomés</u> uniquement.</p>
+						<p>Voici votre classe de modèle :</p>
+						<pre>
+<code>public class profilInstaGroom {
+	Long id;
+	String username;
+	String alias; // @blabla
+	String bio;
+	boolean verified;
+	TypeCompte monCompte; //business, VIP, normal
+	Long nombreMedia;
+	String photoPrincipaleURL;
+	List&lt;profilInstaGroom&gt; jeFollow;
+	Feed feedActuel; 
+	int scoreGrooming; //ne peut dépasser 9000
+}</code></pre>
+<p class="alert alert-warning" role="alert"> Psst ! Je me suis inspirée du vrai <a href="https://developers.facebook.com/docs/instagram-basic-display-api/reference/user">Instagram </a>pour le modèle 😉 </p>
+							<h3>Exercice 4 : Boss final</h3>
+							<p> On veut afficher la liste de nos comptes favoris, soit tous ceux qu'on follow. Pour chaque compte, on a son nom d'utilisateur, son tag et sa photo.</p>
+							<img src="images/Instagroom1.png" />
+						</div>
                         </div>
                     </div>
                 </div>
