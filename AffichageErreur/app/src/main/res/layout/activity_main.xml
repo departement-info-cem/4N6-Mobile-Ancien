@@ -79,17 +79,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 android:background="#abc" />
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-<!--                <TextView-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    android:layout_weight="1" />-->
                 <Button
                     android:id="@+id/envoyer1"
                     android:layout_width="wrap_content"
@@ -108,16 +102,10 @@
                     android:layout_height="wrap_content"
                     android:text="E 3"
                     />
-<!--                <TextView-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    android:layout_weight="1" />-->
-
             </LinearLayout>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
