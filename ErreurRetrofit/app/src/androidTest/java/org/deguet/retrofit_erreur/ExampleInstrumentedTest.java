@@ -7,6 +7,7 @@ import androidx.test.runner.AndroidJUnit4;
 import org.deguet.retrofit_erreur.http.RetrofitUtil;
 import org.deguet.retrofit_erreur.http.Service;
 import org.deguet.retrofit_erreur.transfer.Repo;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,38 +25,25 @@ import retrofit2.Response;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
     @Test
-    public void testSimple() throws IOException {
+    public void testSucces() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<String> call = service.listReposString("jorisdeguet");
+        Repo repo = new Repo();
+        repo.nom = "pipo pipo";
+        Call<String> call = service.erreurOuPas(repo);
         Response<String> response = call.execute();
         String resultat = response.body();
+        Assert.assertTrue(response.isSuccessful());
         Log.i("RETROFIT", resultat);
     }
 
     @Test
-    public void testStructures() throws IOException {
+    public void testErreur() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<List<Repo>> call = service.listRepos("jorisdeguet");
-        Response<List<Repo>> response = call.execute();
-        List<Repo> resultat = response.body();
-        Log.i("RETROFIT", resultat.toString());
-    }
-
-    @Test
-    public void testSimpleUtilisateur() throws IOException {
-        Service service = RetrofitUtil.get();
-        Call<String> call = service.utilisateurString("jorisdeguet");
+        Repo repo = new Repo();
+        repo.nom = "pi";
+        Call<String> call = service.erreurOuPas(repo);
         Response<String> response = call.execute();
-        String resultat = response.body();
-        Log.i("RETROFIT", resultat);
+        Assert.assertFalse(response.isSuccessful());
     }
 
-    @Test
-    public void testSimpleUtilisateurStructure() throws IOException {
-        Service service = RetrofitUtil.get();
-        Call<Utilisateur> call = service.utilisateur("jorisdeguet");
-        Response<Utilisateur> response = call.execute();
-        Utilisateur resultat = response.body();
-        Log.i("RETROFIT", resultat.toString());
-    }
 }
