@@ -1,114 +1,163 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="page du cours programmation mobile">
-        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="page du cours programmation mobile" />
+    <meta
+      name="author"
+      content="Département informatique, collège Édouard Montpetit"
+    />
 
-        <title>Programmation mobile</title>
+    <title>Programmation mobile</title>
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-        <style>
-            body {
-                padding-top: 70px;
-            }
-        </style>
-    </head>
-    <body>
-
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">420-4N6 : <strong>applications mobiles</strong></a>
-                </div>
-                <div class="navbar-collapse collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Accueil</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            >420-4N6 : <strong>applications mobiles</strong></a
+          >
         </div>
-
-        <div class="container">
-            <div class="row">
-                <h3 id="s8">Sécurité : injections</h3>
-                <div class="col-md-6 alert alert-success">
-                    <strong>Avant la séance (2h)</strong>
-                    <p>
-                        Les injections (SQL et javascript) sont souvent les failles de sécurité qui viennent les premières en tête.
-                    </p>
-                    
-                    
-                    <p>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/je2xjYPOqZU" frameborder="0" allowfullscreen></iframe>
-                    </p>
-                    <p>
-                        Code avec les vulnérabilités en mode passoire
-                        <a class="btn btn-sm btn-warning" target="_blank" href="https://github.com/jorisdeguet/spring-boot-injection/tree/passoire">
-                            ici
-                        </a>.
-                    </p>
-                    <p>
-                        Code avec les correctifs
-                        <a class="btn btn-sm btn-success" target="_blank" href="https://github.com/jorisdeguet/spring-boot-injection/tree/sans-injection">
-                            ici
-                        </a>.
-                    </p>
-                    
-                    
-                    
-                </div>
-                <div class="col-md-6 alert alert-warning">
-                    <strong>Séance</strong>
-                    <p>
-                        On parlera de la confusion entre données et commandes qui arrive par le biais de langages qui ne sont pas compilés mais interprétés et des langages qui permettent un mode interprété.
-                    </p>
-                    <p>
-                        Paradoxalement, les injections sont aussi les moins susceptibles d'arriver sur des systèmes récents:
-                    </p>
-                    <ul>
-                        <li>La plupart des frameworks récents contiennent des protections</li>
-                        <li>Pour injection SQL, quand on utilise un ORM comme Hibernate, SpringData ou EntityFramework, on est protégés</li>
-                        <li>Pour l'injection Javascript, Angular Vue ou encore React vont par défaut désactiver les commandes JS avant de les inclure dans la page.</li>
-                    </ul>
-                    Les systèmes exposés sont habituellement:
-                    <ul>
-                        <li>Systèmes legacy ou patrimoniaux avec un lien très direct avec SQL ou html</li>
-                        <li>Systèmes produits par des programmeurs très juniors non sensibilisés</li>
-                    </ul>
-                </div>
-                <div class="col-md-12 well">
-                    <div>
-                        <a class="btn btn-primary btn-xs" >
-                            Exercices de la semaine
-                        </a>
-                        <div>
-                            <h3>Exercice</h3>
-                            <p>
-                                Essayez d'injecter du javascript dans la base de données et regarder si vous pouvez la déclencher sur le /index du serveur fourni dans le cours.
-                            </p>
-                            <p>
-                                Entrainez-vous à décrire dans un fichier texte, la FAILLE que vous avez découvert, décrivez étape par étape comment en tirer partie dans une session EXPLOIT et dans CORRECTIF, expliquez comment vous avez combler la faille.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+          </ul>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h3 id="s8">Sécurité : injections</h3>
+        <div class="col-md-6 alert alert-success">
+          <strong>Avant la séance (2h)</strong>
+          <p>
+            Les injections (SQL et javascript) sont souvent les failles de
+            sécurité qui viennent les premières en tête.
+          </p>
+
+          <p>
+            <iframe
+              width="300"
+              height="150"
+              src="https://www.youtube.com/embed/je2xjYPOqZU"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </p>
+          <p>
+            Code avec les vulnérabilités en mode passoire
+            <a
+              class="btn btn-sm btn-warning"
+              target="_blank"
+              href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/SpringBootInjection/02-Passoire"
+            >
+              ici </a
+            >.
+          </p>
+          <p>
+            Code avec les correctifs
+            <a
+              class="btn btn-sm btn-success"
+              target="_blank"
+              href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/SpringBootInjection/03-SansInjection"
+            >
+              ici </a
+            >.
+          </p>
+        </div>
+        <div class="col-md-6 alert alert-warning">
+          <strong>Séance</strong>
+          <p>
+            On parlera de la confusion entre données et commandes qui arrive par
+            le biais de langages qui ne sont pas compilés mais interprétés et
+            des langages qui permettent un mode interprété.
+          </p>
+          <p>
+            Paradoxalement, les injections sont aussi les moins susceptibles
+            d'arriver sur des systèmes récents:
+          </p>
+          <ul>
+            <li>
+              La plupart des frameworks récents contiennent des protections
+            </li>
+            <li>
+              Pour injection SQL, quand on utilise un ORM comme Hibernate,
+              SpringData ou EntityFramework, on est protégés
+            </li>
+            <li>
+              Pour l'injection Javascript, Angular Vue ou encore React vont par
+              défaut désactiver les commandes JS avant de les inclure dans la
+              page.
+            </li>
+          </ul>
+          Les systèmes exposés sont habituellement:
+          <ul>
+            <li>
+              Systèmes legacy ou patrimoniaux avec un lien très direct avec SQL
+              ou html
+            </li>
+            <li>
+              Systèmes produits par des programmeurs très juniors non
+              sensibilisés
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12 well">
+          <div>
+            <a class="btn btn-primary btn-xs"> Exercices de la semaine </a>
+            <div>
+              <h3>Exercice</h3>
+              <p>
+                Essayez d'injecter du javascript dans la base de données et
+                regarder si vous pouvez la déclencher sur le /index du serveur
+                fourni dans le cours.
+              </p>
+              <p>
+                Entrainez-vous à décrire dans un fichier texte, la FAILLE que
+                vous avez découvert, décrivez étape par étape comment en tirer
+                partie dans une session EXPLOIT et dans CORRECTIF, expliquez
+                comment vous avez combler la faille.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-

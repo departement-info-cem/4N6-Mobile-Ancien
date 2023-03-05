@@ -1,104 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="page du cours programmation mobile">
-        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="page du cours programmation mobile" />
+    <meta
+      name="author"
+      content="Département informatique, collège Édouard Montpetit"
+    />
 
-        <title>Programmation mobile</title>
+    <title>Programmation mobile</title>
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-        <style>
-            body {
-                padding-top: 70px;
-            }
-        </style>
-    </head>
-    <body>
-
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">420-4N6 : <strong>applications mobiles</strong></a>
-                </div>
-                <div class="navbar-collapse collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Accueil</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            >420-4N6 : <strong>applications mobiles</strong></a
+          >
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="">
-                    <h3 id="s1">Révisions : liste et RecyclerView</h3>
-                    <div class="col-md-4 alert alert-success">
-                        <strong>Avant la séance</strong>
-                        <p>
-                        Vidéos de révision : 
-                        </p>
-                        <div class="embed-responsive embed-responsive-16by9" >
-                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nkGseYC3QAw?rel=0" allowfullscreen></iframe>
-                        </div>
-                        <p>
-                            <a class="btn btn-success" href="https://github.com/jorisdeguet/recyclerview/tree/master"> code après la video 1</a>
-                        </p>
-                        <div class="embed-responsive embed-responsive-16by9" >
-                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gtHix80YUx0?rel=0" allowfullscreen></iframe>
-                        </div>
-                        <p>
-                            <a class="btn btn-success" href="https://github.com/jorisdeguet/recyclerview/tree/debogage"> code après la video 2</a>
-                        </p>
-
-                    </div>
-                    <div class="col-md-8 alert  alert-warning">
-                        <strong>Séance</strong>
-						<p>
-                            Vous devrez réaliser l'exercice ci-dessous
-                        </p>
-                        <p>
-                            Vous devrez avancer / compléter les mises en page des différentes activités du TP1
-                        </p>
-                        <p>
-                            Vous devrez commencer la programmation du recyclerView du TP1
-                        </p>
-                    </div>
-                    <div class="col-md-12 well">
-                        <strong>Exercices de la semaine</strong>
-                        <h3>Exercice A</h3>
-                        <p>
-                            Créez un projet appelé <b>SuperRecycler</b> qui affiche un recyclerView contenant 1000 objets que vous générerez avec une liste.
-                        </p>
-                        <p>
-                            Pour créer ces objets, vous devez d'abord créer une classe appelée <b>Secret</b> qui contient 
-							<ul>
-								<li>un champ <b>nom</b> de type String</li>
-								<li>un champ <b>date </b> de type java.time.LocalDateTime</li>
-								<li>un champ <b>nbGrand</b> de type Long</li>
-							</ul>
-						</p>
-						<p> Par exemple, un objet pourrait avoir le nom Objet #1, la date 01/01/2001 00:00:00 et le nombre 1.
-						<p>
-							Les 3 champs de chaque item doivent être affichés avec la mise en page de votre choix.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+          </ul>
         </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+    <div class="container">
+      <div class="row">
+        <div class="">
+          <h3 id="s1">Révisions : liste et RecyclerView</h3>
+          <div class="col-md-4 alert alert-success">
+            <strong>Avant la séance</strong>
+            <p>Vidéos de révision :</p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/nkGseYC3QAw?rel=0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                class="btn btn-success"
+                href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/RecyclerView/01-Depart"
+              >
+                code après la video 1</a
+              >
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/gtHix80YUx0?rel=0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                class="btn btn-success"
+                href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/RecyclerView/02-Deboguage"
+              >
+                code après la video 2</a
+              >
+            </p>
+          </div>
+          <div class="col-md-8 alert alert-warning">
+            <strong>Séance</strong>
+            <p>Vous devrez réaliser l'exercice ci-dessous</p>
+            <p>
+              Vous devrez avancer / compléter les mises en page des différentes
+              activités du TP1
+            </p>
+            <p>Vous devrez commencer la programmation du recyclerView du TP1</p>
+          </div>
+          <div class="col-md-12 well">
+            <strong>Exercices de la semaine</strong>
+            <h3>Exercice A</h3>
+            <p>
+              Créez un projet appelé <b>SuperRecycler</b> qui affiche un
+              recyclerView contenant 1000 objets que vous générerez avec une
+              liste.
+            </p>
+            <p>
+              Pour créer ces objets, vous devez d'abord créer une classe appelée
+              <b>Secret</b> qui contient
+            </p>
+            <ul>
+              <li>un champ <b>nom</b> de type String</li>
+              <li>un champ <b>date </b> de type java.time.LocalDateTime</li>
+              <li>un champ <b>nbGrand</b> de type Long</li>
+            </ul>
+            <p>
+              Par exemple, un objet pourrait avoir le nom Objet #1, la date
+              01/01/2001 00:00:00 et le nombre 1.
+            </p>
+            <p>
+              Les 3 champs de chaque item doivent être affichés avec la mise en
+              page de votre choix.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

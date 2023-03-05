@@ -1,169 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="page du cours programmation mobile">
-        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="page du cours programmation mobile" />
+    <meta
+      name="author"
+      content="Département informatique, collège Édouard Montpetit"
+    />
 
-        <title>Programmation mobile</title>
+    <title>Programmation mobile</title>
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-        <style>
-            body {
-                padding-top: 70px;
-            }
-        </style>
-    </head>
-    <body>
-
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">420-4N6 : <strong>applications mobiles</strong></a>
-                </div>
-                <div class="navbar-collapse collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Accueil</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            >420-4N6 : <strong>applications mobiles</strong></a
+          >
         </div>
-
-        <div class="container">
-            <div class="row">
-                <h3 id="s4">Accès réseau client et asynchronisme</h3>
-                <div class="col-md-6 alert alert-success">
-                    <strong>Avant la séance : théorie (2h)</strong>
-                    <p>
-                        Vous devez regarder les videos suivantes:
-                    </p>
-                    <iframe width="200" height="120" src="https://www.youtube.com/embed/wsF3t33jN8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <a class="btn btn-success" href="https://github.com/jorisdeguet/retrofit2-demo/tree/master">code</a>
-                    
-                    <iframe width="200" height="120" src="https://www.youtube.com/embed/rs8aSam5FT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    
-                    <iframe width="200" height="120" src="https://www.youtube.com/embed/CQo8CPBvlvw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <a class="btn btn-success" href="https://github.com/jorisdeguet/retrofit2-demo/tree/gui-async">code</a>
-                    
-                    
-                    <iframe width="200" height="120" src="https://www.youtube.com/embed/DbB5Ja33jic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <a class="btn btn-success" href="https://github.com/jorisdeguet/retrofit2-demo/tree/debogage">code</a>
-                </div>
-                <div class="col-md-6">
-                    
-                    <div class="alert alert-info">
-                        <strong>Séance 1</strong>
-                        <p>
-                            On expliquera comment envoyer une requête HTTP aux web services des exercices et réceptionner le résultat. On utilisera <b>RETROFIT</b>.
-                        </p>
-                        <p>
-                            On réitérera l'importance des tests et des points d'arrêt en appels synchrones et asynchrones
-                        </p>
-                    </div>
-                    <div class="alert alert-info">
-                        <strong>Séance 2</strong>
-						<p> Souvent, les classes de modèle ont beaucoup de champs, car la base de données garde énormément d'information. Mais pour plusieurs raisons (sécurité, espace, etc.), le client
-							n'a pas besoin de toutes ces informations. 
-						</p>
-						<p>On utilise alors des classes de transfert (<b>DTO</b>) qui permettent de transférer seulement l'information utile entre le client et le serveur.</p>
-                        <p>
-                            On expliquera à quoi servent les différentes classes de transfert dans la librairie 
-                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Library">
-                                librairie de DTO ou classes de transfert
-                            </a>
-                            On montrera comment inclure la librairie dans votre projet:
-                        </p>
-                        <ul>
-                            <li>Ajout du repository <a class="btn btn-primary"  href="https://jitpack.io">Jitpack</a> (permet d'accéder à un projet Github sans qu'il soit déployé sur un repo Maven)</li>
-                            <li>Ajout de la librairie et format de la dépendance :
-                                'com.github.<strong>compte-github</strong>:<strong>repo-github</strong>:<strong>hash-du-commit</strong>'
-                            </li>
-                            <li>Exemple à la ligne 31 <a class="btn btn-primary" href="https://github.com/departement-info-cem/KickMyB-Server/blob/main/build.gradle">ici</a></li>
-                        </ul>
-	
-                    </div>
-                </div>
-                <div class="col-md-12 well">
-                    <div>
-                        <strong>Exercices de la semaine</strong>
-                        <div >
-							<h3>Retrofit - Exercice simple</h3>
-                            <p>
-                                Créez un projet appelé <strong>Simple</strong>. 
-								Le web service <a class="btn btn-xs btn-primary" href="https://4n6.azurewebsites.net/exos/long/double/4" target="_blank">ici</a>
-								prend un nombre et retourne son double. 
-                            </p>
-                            <p>
-                                Tu dois démontrer un appel avec succès à ce web service dans une application Android depuis l'interface graphique. 
-                            </p>
-                            <p>
-                                Par exemple, une activité avec un EditText pour le nombre et un bouton pour déclencher l'appel. Au retour de la valeur (doublée), celle-ci est affichée dans un Toast.
-                            </p>
-                            <h3>Retrofit - Exercice Objet complexe</h3>
-                            <p>
-                                Créez un projet appelé <strong>Complexe</strong>. Le web service <a class="btn btn-xs btn-primary" href="https://4n6.azurewebsites.net/exos/truc/complexe?name=whippsie" target="_blank">ici</a>  prend un nom et retourne un objet complexe (remplacez whippsie par votre prénom dans l'URL).
-							</p>
-							<p>
-								Tu dois démontrer un appel avec succès à ce web service dans une application Android depuis l'interface graphique.
-							</p>
-							<p>
-								Par exemple, une activité avec un TextView qui affiche les données retournées par l'appel.
-                            </p>
-                            
-                            
-                            <h3>Retrofit - Exercice Listes</h3>
-                            <p>
-                                Créez un projet appelé <strong>Listes</strong>. Le projet doit partir une activité coupée en 2 dans le sense de la hauteur. Chaque moitié est occupée par un recyclerView qui sera peuplée par des appels suivants:
-                            </p>
-                            <ul>
-                                <li>
-                                    Webservice <a class="btn btn-xs btn-primary" href="https://4n6.azurewebsites.net/exos/long/list" target="_blank">
-                                        1
-                                    </a>
-                                    Renvoie une liste de Long, chaque élément dans le recyclerView est un simple champ text où vous affichez la valeur du nombre
-                                </li>
-                                <li>
-                                    Webservice <a class="btn btn-xs btn-primary" href="https://4n6.azurewebsites.net/exos/truc/list" target="_blank">
-                                        2
-                                    </a>
-                                    Renvoie une liste d'objets complexes. Chaque item du recyclerView doit afficher les 2 champs simple ainsi que la taille de la liste
-                                </li>
-                            </ul>
-                            
-                            <h3>Retrofit - Exercice Github API</h3>
-                            <p>
-                                Créez un projet appelé <strong>Repos</strong> dans lequel
-                                vous créerez un service simple en GET sur l'URL
-                                https://api.github.com/users/departement-info-cem/repos
-                            </p>
-							<h3>DTO - Exercice de compréhension </h3>
-							<p>Dans cet exercice, on vous donne la classe de modèle et on cherche les champs qu'on va mettre dans la classe de transfert (<b>PersonneDTO</b>) 
-							</p>
-							<p>L'interface à droite montre les informations nécessaires à l'application. </p>
-							<p>Créez la classe de transfert avec les champs choisis. Il n'est pas nécessaire de faire l'interface</p>
-							<img src="images/dto_tinder.png" style="width:40%"/>							<img src="images/dto_tinder2.png" style="width:20%"/>
-							<h3>DTO - Exercice de compréhension 2</h3>
-							<p>On reprend l'exercice précédent mais avec maintenant deux classes modèles. On cherche les champs qu'on va mettre dans la classe de transfert (<b>CompteDTO</b>) toujours avec la même interface. 
-							</p>
-							<p>Créez la classe de transfert avec les champs choisis. Il n'est pas nécessaire de faire l'interface</p>
-							<img src="images/dto_tinder3.png" style="width:60%"/>							<img src="images/dto_tinder2.png" style="width:20%"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+          </ul>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h3 id="s4">Accès réseau client et asynchronisme</h3>
+        <div class="col-md-6 alert alert-success">
+          <strong>Avant la séance : théorie (2h)</strong>
+          <p>Vous devez regarder les videos suivantes:</p>
+          <iframe
+            width="200"
+            height="120"
+            src="https://www.youtube.com/embed/wsF3t33jN8Y"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <a
+            class="btn btn-success"
+            href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/Retrofit/01-Depart"
+            >code</a
+          >
+
+          <iframe
+            width="200"
+            height="120"
+            src="https://www.youtube.com/embed/rs8aSam5FT8"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <iframe
+            width="200"
+            height="120"
+            src="https://www.youtube.com/embed/CQo8CPBvlvw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <a
+            class="btn btn-success"
+            href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/Retrofit/02-GuiAsync"
+            >code</a
+          >
+
+          <iframe
+            width="200"
+            height="120"
+            src="https://www.youtube.com/embed/DbB5Ja33jic"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <a
+            class="btn btn-success"
+            href="https://github.com/departement-info-cem/4N6-Mobile/tree/master/Demonstrations/Retrofit/03-Deboguage"
+            >code</a
+          >
+        </div>
+        <div class="col-md-6">
+          <div class="alert alert-info">
+            <strong>Séance 1</strong>
+            <p>
+              On expliquera comment envoyer une requête HTTP aux web services
+              des exercices et réceptionner le résultat. On utilisera
+              <b>RETROFIT</b>.
+            </p>
+            <p>
+              On réitérera l'importance des tests et des points d'arrêt en
+              appels synchrones et asynchrones
+            </p>
+          </div>
+          <div class="alert alert-info">
+            <strong>Séance 2</strong>
+            <p>
+              Souvent, les classes de modèle ont beaucoup de champs, car la base
+              de données garde énormément d'information. Mais pour plusieurs
+              raisons (sécurité, espace, etc.), le client n'a pas besoin de
+              toutes ces informations.
+            </p>
+            <p>
+              On utilise alors des classes de transfert (<b>DTO</b>) qui
+              permettent de transférer seulement l'information utile entre le
+              client et le serveur.
+            </p>
+            <p>
+              On expliquera à quoi servent les différentes classes de transfert
+              dans la librairie
+              <a
+                class="badge badge-success"
+                href="https://github.com/departement-info-cem/KickMyB-Library"
+              >
+                librairie de DTO ou classes de transfert
+              </a>
+              On montrera comment inclure la librairie dans votre projet:
+            </p>
+            <ul>
+              <li>
+                Ajout du repository
+                <a class="btn btn-primary" href="https://jitpack.io">Jitpack</a>
+                (permet d'accéder à un projet Github sans qu'il soit déployé sur
+                un repo Maven)
+              </li>
+              <li>
+                Ajout de la librairie et format de la dépendance :
+                'com.github.<strong>compte-github</strong>:<strong>repo-github</strong>:<strong>hash-du-commit</strong>'
+              </li>
+              <li>
+                Exemple à la ligne 31
+                <a
+                  class="btn btn-primary"
+                  href="https://github.com/departement-info-cem/KickMyB-Server/blob/main/build.gradle"
+                  >ici</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-12 well">
+          <div>
+            <strong>Exercices de la semaine</strong>
+            <div>
+              <h3>Retrofit - Exercice simple</h3>
+              <p>
+                Créez un projet appelé <strong>Simple</strong>. Le web service
+                <a
+                  class="btn btn-xs btn-primary"
+                  href="https://4n6.azurewebsites.net/exos/long/double/4"
+                  target="_blank"
+                  >ici</a
+                >
+                prend un nombre et retourne son double.
+              </p>
+              <p>
+                Tu dois démontrer un appel avec succès à ce web service dans une
+                application Android depuis l'interface graphique.
+              </p>
+              <p>
+                Par exemple, une activité avec un EditText pour le nombre et un
+                bouton pour déclencher l'appel. Au retour de la valeur
+                (doublée), celle-ci est affichée dans un Toast.
+              </p>
+              <h3>Retrofit - Exercice Objet complexe</h3>
+              <p>
+                Créez un projet appelé <strong>Complexe</strong>. Le web service
+                <a
+                  class="btn btn-xs btn-primary"
+                  href="https://4n6.azurewebsites.net/exos/truc/complexe?name=whippsie"
+                  target="_blank"
+                  >ici</a
+                >
+                prend un nom et retourne un objet complexe (remplacez whippsie
+                par votre prénom dans l'URL).
+              </p>
+              <p>
+                Tu dois démontrer un appel avec succès à ce web service dans une
+                application Android depuis l'interface graphique.
+              </p>
+              <p>
+                Par exemple, une activité avec un TextView qui affiche les
+                données retournées par l'appel.
+              </p>
+
+              <h3>Retrofit - Exercice Listes</h3>
+              <p>
+                Créez un projet appelé <strong>Listes</strong>. Le projet doit
+                partir une activité coupée en 2 dans le sense de la hauteur.
+                Chaque moitié est occupée par un recyclerView qui sera peuplée
+                par des appels suivants:
+              </p>
+              <ul>
+                <li>
+                  Webservice
+                  <a
+                    class="btn btn-xs btn-primary"
+                    href="https://4n6.azurewebsites.net/exos/long/list"
+                    target="_blank"
+                  >
+                    1
+                  </a>
+                  Renvoie une liste de Long, chaque élément dans le recyclerView
+                  est un simple champ text où vous affichez la valeur du nombre
+                </li>
+                <li>
+                  Webservice
+                  <a
+                    class="btn btn-xs btn-primary"
+                    href="https://4n6.azurewebsites.net/exos/truc/list"
+                    target="_blank"
+                  >
+                    2
+                  </a>
+                  Renvoie une liste d'objets complexes. Chaque item du
+                  recyclerView doit afficher les 2 champs simple ainsi que la
+                  taille de la liste
+                </li>
+              </ul>
+
+              <h3>Retrofit - Exercice Github API</h3>
+              <p>
+                Créez un projet appelé <strong>Repos</strong> dans lequel vous
+                créerez un service simple en GET sur l'URL
+                https://api.github.com/users/departement-info-cem/repos
+              </p>
+              <h3>DTO - Exercice de compréhension</h3>
+              <p>
+                Dans cet exercice, on vous donne la classe de modèle et on
+                cherche les champs qu'on va mettre dans la classe de transfert
+                (<b>PersonneDTO</b>)
+              </p>
+              <p>
+                L'interface à droite montre les informations nécessaires à
+                l'application.
+              </p>
+              <p>
+                Créez la classe de transfert avec les champs choisis. Il n'est
+                pas nécessaire de faire l'interface
+              </p>
+              <img src="images/dto_tinder.png" style="width: 40%" />
+              <img src="images/dto_tinder2.png" style="width: 20%" />
+              <h3>DTO - Exercice de compréhension 2</h3>
+              <p>
+                On reprend l'exercice précédent mais avec maintenant deux
+                classes modèles. On cherche les champs qu'on va mettre dans la
+                classe de transfert (<b>CompteDTO</b>) toujours avec la même
+                interface.
+              </p>
+              <p>
+                Créez la classe de transfert avec les champs choisis. Il n'est
+                pas nécessaire de faire l'interface
+              </p>
+              <img src="images/dto_tinder3.png" style="width: 60%" />
+              <img src="images/dto_tinder2.png" style="width: 20%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
