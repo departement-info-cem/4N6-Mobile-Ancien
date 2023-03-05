@@ -1,0 +1,57 @@
+package org.sbac.quizzz;
+
+import org.sbac.model.MUtilisateur;
+
+import org.sbac.transfert.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@Controller
+public class WebServiceQuiz {
+
+	@Autowired
+	private ServiceQuiz service;
+
+	@PostMapping("/api/creer")
+	public @ResponseBody String creerQuiz(@RequestBody CreerQuizReq request) throws ServiceQuiz.Existing {
+		System.out.println("Quiz : ajouter Quiz");
+		service.creerQuiz(request, utilisateurActuel(request.nomUtilisateur));
+		return "";
+	}
+
+	@PostMapping("/api/ajouter")
+	public @ResponseBody String ajouterQuestion(@RequestBody AjouterQuestionReq req) throws IllegalAccessException {
+		System.out.println("Quiz : ajouter question dans Quiz");
+		service.ajouterQuestion(req);
+		return "";
+	}
+
+	@PostMapping("/api/modifier")
+	public @ResponseBody String modifierQuestion(@RequestBody ModifierQuestionReq req) throws IllegalAccessException {
+		System.out.println("Quiz : modifier question dans Quiz");
+		service.modifierQuestion(req);
+		return "";
+	}
+
+	@GetMapping("/api/home/{nomUtilisateur}")
+	public @ResponseBody List<QuizResume> home(@PathVariable String nomUtilisateur) {
+		System.out.println("Accueil" );
+		MUtilisateur user = utilisateurActuel(nomUtilisateur);
+		return service.accueil(user.id);
+	}
+
+    @GetMapping("/api/detail/{id}")
+    public @ResponseBody QuizDetail detail(@PathVariable long id) {
+		System.out.println("Detail pour " + id);
+		return service.detail(id);
+    }
+
+	private MUtilisateur utilisateurActuel(String nomUtilisateur) {
+		MUtilisateur utilisateur = service.utilisateurParSonNom( nomUtilisateur );
+		return utilisateur;
+	}
+
+}
