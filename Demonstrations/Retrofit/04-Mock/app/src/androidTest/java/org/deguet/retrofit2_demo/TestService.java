@@ -27,7 +27,7 @@ public class TestService {
     @Test
     public void testSimple() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<String> call = service.listReposString("jorisdeguet");
+        Call<String> call = service.listReposString("departement-info-cem");
         Response<String> response = call.execute();
         String resultat = response.body();
         Log.i("RETROFIT", resultat);
@@ -36,7 +36,7 @@ public class TestService {
     @Test
     public void testStructures() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<List<Repo>> call = service.listRepos("jorisdeguet");
+        Call<List<Repo>> call = service.listRepos("departement-info-cem");
         Response<List<Repo>> response = call.execute();
         List<Repo> resultat = response.body();
         Log.i("RETROFIT", resultat.toString());
@@ -45,7 +45,7 @@ public class TestService {
     @Test
     public void testSimpleUtilisateur() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<String> call = service.utilisateurString("jorisdeguet");
+        Call<String> call = service.utilisateurString("departement-info-cem");
         Response<String> response = call.execute();
         String resultat = response.body();
         Log.i("RETROFIT", resultat);
@@ -54,7 +54,7 @@ public class TestService {
     @Test
     public void testSimpleUtilisateurStructure() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<Utilisateur> call = service.utilisateur("jorisdeguet");
+        Call<Utilisateur> call = service.utilisateur("departement-info-cem");
         Response<Utilisateur> response = call.execute();
         Utilisateur resultat = response.body();
         Log.i("RETROFIT", resultat.toString());

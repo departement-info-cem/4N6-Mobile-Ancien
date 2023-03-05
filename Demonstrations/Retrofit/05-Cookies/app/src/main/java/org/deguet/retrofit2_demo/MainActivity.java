@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         // appeler un service de liste et afficher dans le log
         final Service service = RetrofitUtil.get();
-        service.listRepos("jorisdeguet").enqueue(new Callback<List<Repo>>() {
+        service.listRepos("departement-info-cem").enqueue(new Callback<List<Repo>>() {
             @Override
             public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
                 if (response.isSuccessful()) {
