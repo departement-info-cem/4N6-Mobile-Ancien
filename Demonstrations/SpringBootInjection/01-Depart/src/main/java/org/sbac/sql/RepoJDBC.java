@@ -1,0 +1,56 @@
+package org.sbac.sql;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Repository
+public class RepoJDBC {
+
+    private JdbcTemplate jdbcTemplate;
+    private SimpleJdbcInsert simpleJdbcInsert;
+
+    @Autowired
+    public void setDataSource(final DataSource dataSource) {
+        jdbcTemplate = new JdbcTemplate(dataSource);
+        simpleJdbcInsert = new SimpleJdbcInsert(dataSource).withTableName("APPMESSAGE");
+    }
+
+    public List<String> allMessages() {
+        return jdbcTemplate.query("SELECT * FROM APPMESSAGE", new RowMapper<String>() {
+            @Override
+            public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return rs.getString("CONTENT");
+            }
+        });
+    }
+
+    public int addMessage2(String message) {
+        return jdbcTemplate.update(
+                "INSERT INTO APPMESSAGE VALUES (? ,?)", null, message
+        );
+    }
+
+    public int addMessage3(String message) {
+        return jdbcTemplate.update(
+                "INSERT INTO APPMESSAGE VALUES (NULL ,'"+message+"')"
+        );
+    }
+
+    public int addMessage(final String message) {
+        final Map<String, Object> parameters = new HashMap<>();
+        parameters.put("CONTENT", message);
+        return simpleJdbcInsert.execute(parameters);
+    }
+
+}
+
