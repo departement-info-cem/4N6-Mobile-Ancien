@@ -17,7 +17,7 @@ public class RetrofitCookie {
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client())
-                    .baseUrl("https://kickmyb-server.herokuapp.com/")
+                    .baseUrl("https://kickmyb-server.azurewebsites.net/")
                     .build();
 
             instance = retrofit.create(ServiceCookie.class);
