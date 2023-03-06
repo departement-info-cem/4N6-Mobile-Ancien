@@ -8,7 +8,7 @@ public class RetrofitUtil {
     public static Service get(){
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://exercices-web.herokuapp.com/")
+                .baseUrl("https://4n6.azurewebsites.net/")
                 .build();
 
         Service service = retrofit.create(Service.class);

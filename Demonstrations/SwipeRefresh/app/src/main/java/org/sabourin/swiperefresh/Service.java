@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 
 public interface Service {
 
-    // https://exercices-web.herokuapp.com/exos/truc/list
+    // https://4n6.azurewebsites.net/exos/truc/list
     @GET("exos/truc/list")
     Call<List<Truc>> vaChercherLaListe();
 

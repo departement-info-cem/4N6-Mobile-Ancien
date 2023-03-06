@@ -8,7 +8,7 @@ public class RetrofitUtil {
     public static ServiceAttente get(){
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(ScalarsConverterFactory.create())
-                .baseUrl("https://exercices-web.herokuapp.com/")
+                .baseUrl("https://4n6.azurewebsites.net/")
                 .build();
 
         ServiceAttente service = retrofit.create(ServiceAttente.class);

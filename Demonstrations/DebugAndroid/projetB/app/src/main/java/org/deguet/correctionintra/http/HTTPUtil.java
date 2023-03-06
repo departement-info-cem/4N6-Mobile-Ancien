@@ -12,7 +12,7 @@ public class HTTPUtil {
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client())
-                .baseUrl("https://exercises-web.herokuapp.com/")
+                .baseUrl("https://4n6.azurewebsites.net/")
                 .build();
 
         EndPoints service = retrofit.create(EndPoints.class);
