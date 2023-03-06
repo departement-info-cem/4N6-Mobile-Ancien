@@ -3,4 +3,5 @@
 **/.gradle
 **/build
 **/target
+**/bin
 **.log
