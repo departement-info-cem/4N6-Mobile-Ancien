@@ -15,6 +15,13 @@ public class GeneralController {
         return "SALUT";
     }
 
+    @GetMapping("/demo")
+    public @ResponseBody String[] demo() {
+        GrilleInsecte grilleInsecte1 = new GrilleInsecte();
+        grilleInsecte1.creerGrille();
+        return grilleInsecte1.tranformerGrille1D();
+    }
+
     @PostMapping("/req1")
     public @ResponseBody String requeteUne(@RequestBody String s){
         ingredient = s;
@@ -40,7 +47,7 @@ public class GeneralController {
             c.calculerMoyenneSalaires();
             c.calculerPrimes();
             c.obtenirListeSalairesPourAnnee2022();
-        }catch(Exception e){
+        } catch (Exception e) {
             System.err.println("Erreur dans les calculs");
         }
         return "Success";
