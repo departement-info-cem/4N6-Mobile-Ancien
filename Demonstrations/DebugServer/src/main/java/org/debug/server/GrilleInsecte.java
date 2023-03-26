@@ -38,7 +38,7 @@ public class GrilleInsecte {
     public String[] tranformerGrille1D() {
         // Interdit de modifier le code >:(
         // Vous pouvez mettre des breakpoints :)
-        String[] grille1d = new String[1000];
+        String[] grille1d = new String[999];
         for (int i = 0; i < grille3d.length; i++) {
             for (int j = 0; j < grille3d[0].length; j++) {
                 for (int k = 0; k < grille3d[0][0].length; k++) {
