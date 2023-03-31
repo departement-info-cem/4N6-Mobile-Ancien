@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Omnisus</string>
+    <string name="error_com">Une erreur est survenue en communiquant avec le serveur.</string>
+    <string name="error_unexpected">Erreur innatendue</string>
+    <string name="txt_new_name">Nouveau nom définit avec succès</string>
+    <string name="error_wrong_username_pass">Mauvais identifiant ou mot de passe</string>
+</resources>

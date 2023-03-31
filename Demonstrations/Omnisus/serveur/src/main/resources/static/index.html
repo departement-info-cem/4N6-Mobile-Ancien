@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tableau de bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col">Nom utilisateur</th>
+        <th scope="col">Nom public</th>
+        <th scope="col">Note</th>
+    </tr>
+    </thead>
+    <tbody id="grade-table">
+    </tbody>
+</table>
+</body>
+<script>
+    const FETCH_DELAY = 4000;
+
+    let lastSusCount = -1;
+    const url = window.location.protocol + "//" + window.location.host;
+
+    function createGradeElem(grade, index) {
+        const gradeElem = document.createElement('tr');
+        if (grade.grade === 100) {
+            gradeElem.className = 'table-success';
+        } else {
+            gradeElem.className = 'table-default';
+        }
+
+        const gradePositionElem = document.createElement('th');
+        gradePositionElem.className = 'text-center';
+        if (grade.grade === 100) {
+            gradePositionElem.innerText = index;
+        }
+        gradeElem.appendChild(gradePositionElem);
+
+        const gradeUsernameElem = document.createElement('th');
+        gradeUsernameElem.innerText = grade.username;
+        gradeElem.appendChild(gradeUsernameElem);
+
+        const gradePublicNameELem = document.createElement('th');
+        gradePublicNameELem.innerText = grade.publicName;
+        gradeElem.appendChild(gradePublicNameELem);
+
+        const gradeGradeELem = document.createElement('th');
+        gradeGradeELem.innerText = grade.grade;
+        gradeElem.appendChild(gradeGradeELem);
+
+        return gradeElem;
+    }
+
+    function susCheck(data) {
+        const count = data.filter(grade => grade.grade === 100).length
+        if (count > lastSusCount && lastSusCount != -1) {
+            new Audio('https://www.myinstants.com/media/sounds/among_EEsuT76.mp3').play();
+        }
+        lastSusCount = count;
+    }
+
+    async function fetchGrades() {
+        fetch(`${url}/dashboard`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                const table = document.getElementById('grade-table');
+                table.innerHTML = '';
+                let index = 1;
+                for (let dataKey in data) {
+                    const grade = data[dataKey];
+                    table.appendChild(createGradeElem(grade, index));
+                    index++;
+                }
+                susCheck(data);
+            });
+    }
+
+    fetchGrades();
+    setInterval(() => {
+        fetchGrades();
+    }, FETCH_DELAY)
+</script>
+</html>

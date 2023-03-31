@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "e42f0d0e-48ce-4166-8f38-d7614fd59d00",
+		"name": "Omnisus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3046437"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Create students",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\"username\" : \"2056006\", \"password\" : \"U8@Gh34x\"},\n    {\"username\" : \"2184803\", \"password\" : \"&3Y=m$Ng\"},\n    {\"username\" : \"2151688\", \"password\" : \"YEkN_7sF\"},\n    {\"username\" : \"2045396\", \"password\" : \"C4d9fB*R\"},\n    {\"username\" : \"1946724\", \"password\" : \"J$*S[8$r\"},\n    {\"username\" : \"2167686\", \"password\" : \"{X+du3bX\"},\n    {\"username\" : \"2035282\", \"password\" : \"Z5.>CNyv\"},\n    {\"username\" : \"1857439\", \"password\" : \"Z6m4Vg=n\"},\n    {\"username\" : \"2026275\", \"password\" : \"DB&de9Fy\"},\n    {\"username\" : \"2032422\", \"password\" : \"H^w3P[g6\"},\n    {\"username\" : \"1947602\", \"password\" : \"n4GQ+2y9\"},\n    {\"username\" : \"6153760\", \"password\" : \"4U(^ybYs\"},\n    {\"username\" : \"2052724\", \"password\" : \"w=B4zf@r\"},\n    {\"username\" : \"2129970\", \"password\" : \"2vPG)_)2\"},\n    {\"username\" : \"1876469\", \"password\" : \"YwQ${4u[\"},\n    {\"username\" : \"1924552\", \"password\" : \"r3fyJ%qm\"},\n    {\"username\" : \"1741104\", \"password\" : \"6{zBKc=D\"},\n    {\"username\" : \"2139752\", \"password\" : \"L>+jv_56\"}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{addr}}/api/admin/student",
+							"host": [
+								"{{addr}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{addr}}/dashboard",
+							"host": [
+								"{{addr}}"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{addr}}",
+							"host": [
+								"{{addr}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grade",
+			"item": [
+				{
+					"name": "Get grade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{addr}}/api/grade",
+							"host": [
+								"{{addr}}"
+							],
+							"path": [
+								"api",
+								"grade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"1946724\",\n    \"password\": \"J$*S[8$r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{addr}}/api/id/signin",
+							"host": [
+								"{{addr}}"
+							],
+							"path": [
+								"api",
+								"id",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "pobrillant"
+						},
+						"url": {
+							"raw": "{{addr}}/api/student",
+							"host": [
+								"{{addr}}"
+							],
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{addr}}/hello",
+					"host": [
+						"{{addr}}"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
