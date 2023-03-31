@@ -1,6 +1,6 @@
 # Omnisus
 
-J’ai trop de difficulté à utiliser Omnivox, alors j’ai décidé de développer ma propre version d’Omnivox, j’ai nommé Omnisus! C’est plus rapide, plus efficace que la vieille version d’Omnivox! Pour rendre le système plus rapide, j’ai décidé d’exécuter certaines requêtes SQL sans passer par le valideur.
+J’ai trop de difficulté à utiliser Omnivox, alors j’ai décidé de développer ma propre version d’Omnivox : j’ai nommé Omnisus! C’est plus rapide et plus efficace que la vieille version d’Omnivox! Pour rendre le système plus rapide, j’ai décidé d’exécuter certaines requêtes SQL sans passer par le valideur.
 
 L’examen 1 a vraiment mal été pour les étudiants, j’espère qu’ils ne vont pas essayer de pirater le système pour modifier leurs notes!
 
