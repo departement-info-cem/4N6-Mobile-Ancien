@@ -26,8 +26,30 @@ Un compte a été créé pour vous dans le système. Si vous n’avez pas reçu 
 
 ## Pour l’enseignant
 
-Le serveur doit être déployé pour l’exercice, et les comptes utilisateur des étudiants doivent être créés. Les comptes utilisateur peuvent être créés à l’aide de la requête Postman «Create students». Il faut définir un header nommé `admin-password` ayant pour valeur un mot de passe prédéterminé lors du déploiement du serveur (dans application. properties).
+Le serveur doit s'exécuter sur votre machine, de sorte que les étudiants s'y connecte, et les comptes utilisateur des étudiants doivent être créés. Les comptes utilisateur peuvent être créés à l’aide de la requête Postman «Create students». Un script python permet de générer rapidement le json pour la création des comptes étudiant. Il faut définir un header nommé `admin-password` ayant pour valeur un mot de passe prédéterminé lors du déploiement du serveur (dans application. properties).
 
-Affichez la page principale principale de l’URL déployée en avant de la classe. C’est un tableau des scores qui affiche qui a réussi l’exercice en premier pour qu’il y ait un peu de compétition entre les étudiants.
+Affichez la page principale principale de l’URL  en avant de la classe (ex: http://nom-de-votre-machine/). C’est un tableau des scores qui affiche qui a réussi l’exercice en premier pour qu’il y ait un peu de compétition entre les étudiants.
 
 > Cliquez quelque part sur la page du tableau des scores et allumez le son de l’ordinateur. Il devrait y avoir un signal sonore lorsqu’un étudiant réussit un exercice.
+
+### Déroulement de l'exercice
+
+Puisque l'exercice est assez complexe, il est recommendé de donner environs une heure aux étudiants pour tenter de compléter l'exercice, pour ensuite le compléter avec eux.
+
+De plus, il est recommendé de dessiner un schéma de la base de données au tableau pour les aider à progresser plus rapidement dans la création de leur requête.
+
+### Utilisation du script
+
+Le script s'attend à recevoir un fichier généré par Omnivox. 
+
+Pour générer un fichier sous le bon format :
+
+- Dans Omnivox, naviguer vers une classe dans LÉA
+- Liste des étudiants -> Paramètres d'affichage
+- Sélectionner les options suivantes
+  - Cocher "Pour Excel" et sélectionner le séparateur ";"
+  - Liste truée par: "Numéro d'étudiant"
+  - Taille de la police: "Petite"
+  - Sous les éléments à inclure dans la liste, cocher uniquement "Numéro d'étudiant"
+
+Dans un terminal, la commande ressemble donc à `python generate_users.py ListeEtudiants_cours4204N6EM_gr1030.csv`
