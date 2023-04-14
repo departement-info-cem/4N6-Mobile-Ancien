@@ -25,7 +25,7 @@ def students_to_json(students: list[str]) -> str:
     json: str = "["
 
     for student in students:
-        json += f'{{"username" : "{student}", "password": "Passw0rd" }}'
+        json += f'{{"username" : "{student}", "password": "pass" }}'
         if student != students[-1]:
             json += ", "
 
